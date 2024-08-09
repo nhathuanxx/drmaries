@@ -1,0 +1,1 @@
+6{z_<?php exit; ?>a:1:{s:7:"content";s:267:"Điều khiến mình ấn tượng nhất phải nói đến thái độ rất thân thiện của tất cả nhân viên tại phòng khám Hà Nội 03. Quy trình cấy que rất nhẹ nhàng, nhanh chóng, không hề đáng sợ như mình lo lắng chút nào.";}

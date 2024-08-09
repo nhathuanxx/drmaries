@@ -1,0 +1,1 @@
+6{z_<?php exit; ?>a:1:{s:7:"content";s:258:"Hey girls, just want to say I had an appointment with Marie stopes. It was beyond amazing and inexpensive. They speak English and have translators if need be. They were so nice and the environment was pleasent. I went for a general exam. It really was great.";}

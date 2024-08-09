@@ -1,0 +1,2 @@
+6{z_<?php exit; ?>a:1:{s:7:"content";s:478:" Highly recommend! ❤️ recently got my implant removed and they were so helpful and looked after me so well as I have a bit of a “fainting” issue due to low blood pressure. After an episode they made sure I was well fed/oxygenated and had someone come fetch me before they thought I was okay to go. Honestly have never felt more looked after and cared for before! These women are absolute gems ❤️
+Would recommend them 100 times over and will be back soon for my IUD!";}

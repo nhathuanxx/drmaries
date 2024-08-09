@@ -1,0 +1,1 @@
+	z_<?php exit; ?>a:1:{s:7:"content";s:227:"a:2:{s:45:"enhanced-text-widget/enhanced-text-widget.php";a:2:{i:0;s:15:"Account\Account";i:1;s:25:"onUninstallPluginListener";}s:27:"redirection/redirection.php";a:2:{i:0;s:17:"Redirection_Admin";i:1;s:16:"plugin_uninstall";}}";}
