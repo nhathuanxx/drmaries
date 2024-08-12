@@ -20,25 +20,27 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="profile" href="https://gmpg.org/xfn/11" />
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
 
 	<?php wp_head(); ?>
 	<!-- Google Tag Manager -->
-<!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	<!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-K9MNM9S');</script> -->
-<!-- End Google Tag Manager -->
-<meta name="google-site-verification" content="LH4iz-JrIFNrQgMJsV6lwNGOVhbLnRId-JiOPxZcRU0" />
+	<!-- End Google Tag Manager -->
+	<meta name="google-site-verification" content="LH4iz-JrIFNrQgMJsV6lwNGOVhbLnRId-JiOPxZcRU0" />
 </head>
 
 <body <?php body_class();
 		?>>
-        <!-- Google Tag Manager (noscript) -->
-<!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9MNM9S"
+	<!-- Google Tag Manager (noscript) -->
+	<!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9MNM9S"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
-<!-- End Google Tag Manager (noscript) -->
+	<!-- End Google Tag Manager (noscript) -->
 
 	<?php wp_body_open();
 	?>
@@ -50,10 +52,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				<a href="<?php echo get_home_url(); ?>">
 					<?php
 					$logoUrl = get_field('logo_image', pll_current_language('slug'));
-					if( is_front_page() ) {
-						?>
+					if (is_front_page()) {
+					?>
 						<h1 style="display: none;">Hệ thống phòng khám Sản phụ khoa Dr.Marie</h1>
-						<?php
+					<?php
 					}
 					?>
 					<img src="<?php echo $logoUrl; ?>" alt="<?php echo bloginfo(); ?>">
@@ -145,13 +147,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			</div>
 			<div class="header__info display-flex-center only-desktop">
 				<div class="header__desc text-right">
-				    <?php
-                        while (the_repeater_field('header_slogan', pll_current_language('slug'))) : 
-?>
-<p class="primary-color font-weight-bold margin-0 font-size-14 text-uppercase"><?php echo get_field('title', pll_current_language('slug')); ?>
-					<p class="text-uppercase margin-0"><?php echo get_field('sub_title', pll_current_language('slug')); ?></p>
-<?php endwhile; ?>
-					
+					<?php
+					while (the_repeater_field('header_slogan', pll_current_language('slug'))) :
+					?>
+						<p class="primary-color font-weight-bold margin-0 font-size-14 text-uppercase"><?php echo get_field('title', pll_current_language('slug')); ?>
+						<p class="text-uppercase margin-0"><?php echo get_field('sub_title', pll_current_language('slug')); ?></p>
+					<?php endwhile; ?>
+
 				</div>
 				<a href="javascript:;" class="header__book btn btn-secondary btn-secondary--gradient font-size-16 font-weight-bold book-calendar btn-box-shadow btn-h50 btn-i-lg-12 text-uppercase">
 					<i class="icon-calendar"></i> <?php echo get_field('book_an_appointment', pll_current_language('slug')); ?>
@@ -271,11 +273,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					</div>
 					<div class="header__desc text-center">
 						<?php
-                        while (the_repeater_field('header_slogan', pll_current_language('slug'))) : 
-				?>
-				<p class="primary-color font-weight-bold margin-0 font-size-14 text-uppercase"><?php echo get_field('title', pll_current_language('slug')); ?>
-									<p class="text-uppercase margin-0"><?php echo get_field('sub_title', pll_current_language('slug')); ?></p>
-				<?php endwhile; ?>
+						while (the_repeater_field('header_slogan', pll_current_language('slug'))) :
+						?>
+							<p class="primary-color font-weight-bold margin-0 font-size-14 text-uppercase"><?php echo get_field('title', pll_current_language('slug')); ?>
+							<p class="text-uppercase margin-0"><?php echo get_field('sub_title', pll_current_language('slug')); ?></p>
+						<?php endwhile; ?>
 					</div>
 					<a href="javascript:;" class="header__book btn btn-secondary btn-secondary--gradient font-size-16 font-weight-bold book-calendar btn-box-shadow btn-h50 btn-i-lg-12 text-uppercase">
 						<i class="icon-calendar"></i> <?php echo get_field('book_an_appointment', pll_current_language('slug')); ?>
