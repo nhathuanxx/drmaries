@@ -5,8 +5,7 @@
 get_header(); ?>
 
 <main class="main-content home-page">
-    <div class="slider-main">
-
+    <div class="slider-main home-banner">
         <div class="sun-slider" data-slick='{"slidesToShow": 1, "slidesToScroll": 1, "fade": true, "autoplay": true, "autoplaySpeed": 6000}'>
             <?php if (get_field('banner', pll_current_language('slug'))) : ?>
                 <?php while (the_repeater_field('banner', pll_current_language('slug'))) : 
@@ -30,7 +29,7 @@ get_header(); ?>
         </div>
     </div>
 
-    <div class="introduce">
+    <!-- <div class="introduce">
         <div class="container">
             <div class="introduce__wrap bg-color-light">
                 <?php if (get_field('general_info', pll_current_language('slug'))) : ?>
@@ -50,8 +49,9 @@ get_header(); ?>
                 <?php endif; ?>
             </div>
         </div>
-    </div>
-    <div class="service">
+    </div> -->
+    <?php require get_template_directory() . '/template-parts/clinic-address.php'; ?>
+    <!-- <div class="service">
         <div class="container">
             <div class="home__title">
                 <h2>
@@ -129,7 +129,12 @@ get_header(); ?>
                 <?php endif; ?>
             </figure>
         </div>
-    </div>
+    </div> -->
+    <?php require get_template_directory() . '/template-parts/care-service.php'; ?>
+    <?php require get_template_directory() . '/template-parts/msi-doctors.php'; ?>
+
+
+
     <?php require get_template_directory() . '/template-parts/confirm.php'; ?>
     <?php require get_template_directory() . '/template-parts/feedback.php'; ?>
 

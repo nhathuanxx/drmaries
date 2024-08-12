@@ -20,7 +20,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="profile" href="https://gmpg.org/xfn/11" />
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
 
 	<?php wp_head(); ?>
 	<!-- Google Tag Manager -->
@@ -147,15 +152,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				<div class="header__desc text-right">
 				    <?php
                         while (the_repeater_field('header_slogan', pll_current_language('slug'))) : 
-?>
-<p class="primary-color font-weight-bold margin-0 font-size-14 text-uppercase"><?php echo get_field('title', pll_current_language('slug')); ?>
-					<p class="text-uppercase margin-0"><?php echo get_field('sub_title', pll_current_language('slug')); ?></p>
-<?php endwhile; ?>
+					?>
+					<p class="primary-color font-weight-bold margin-0 font-size-14 text-uppercase"><?php echo get_field('title', pll_current_language('slug')); ?>
+										<p class="text-uppercase margin-0"><?php echo get_field('sub_title', pll_current_language('slug')); ?></p>
+					<?php endwhile; ?>
 					
 				</div>
-				<a href="javascript:;" class="header__book btn btn-secondary btn-secondary--gradient font-size-16 font-weight-bold book-calendar btn-box-shadow btn-h50 btn-i-lg-12 text-uppercase">
-					<i class="icon-calendar"></i> <?php echo get_field('book_an_appointment', pll_current_language('slug')); ?>
+
+				<span class="header__search">
+						<input id="search-data-input-val"  type="search" placeholder="Search" name="s" value=""/>
+						<img class="icon-calendar" src="<?php bloginfo('wpurl'); ?>/wp-content/themes/m5/assets/images/os/icon-search.svg" alt="icon-calendar">
+				</span>
+
+				<a href="javascript:;" class="header__book btn btn-custom btn-secondary btn-secondary--gradient font-size-16 font-weight-bold book-calendar btn-box-shadow btn-h50 btn-i-lg-12 text-uppercase">
+					<span class="header__book-icon">
+						<!-- <i class="icon-calendar"></i> -->
+						<img class="icon-calendar" src="<?php bloginfo('wpurl'); ?>/wp-content/themes/m5/assets/images/os/icon-calendar.svg" alt="icon-calendar">
+					</span>
+					<?php echo get_field('book_an_appointment', pll_current_language('slug')); ?>
 				</a>
+				<a href="tel:1900 55 88 82" class="call-button">
+				    <div class="header__book-icon">
+						<img class="icon-calendar" src="<?php bloginfo('wpurl'); ?>/wp-content/themes/m5/assets/images/os/icon-phone.svg" alt="icon-calendar">
+				    </div>
+				    <div class="text">
+				        <span>Call us now!</span>
+				        <span class="phone-number">1900 55 88 82</span>
+				    </div>
+				</a>
+
 				<div class="header__lang only-desktop">
 					<?php $translations = pll_the_languages(array('raw' => 1)); ?>
 
@@ -261,12 +286,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						<?php if (!empty($translations)) : ?>
 							<select class="select-circle" onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
 
-								<?php foreach ($translations as $translation) : ?>
-									<option selected="<?php echo ($translation['current_lang'] == true) ? 'selected' : ''; ?>" value="<?php echo $translation['url']; ?>">
-										<?php echo $translation['slug']; ?>
-									</option>
-								<?php endforeach; ?>
-							</select>
+							<?php foreach ($translations as $translation) : ?>
+							<option selected="<?php echo ($translation['current_lang'] == true) ? 'selected' : ''; ?>"
+								value="<?php echo $translation['url']; ?>">
+								<?php echo $translation['slug']; ?>
+							</option>
+							<?php endforeach; ?>
+						</select>
 						<?php endif; ?>
 					</div>
 					<div class="header__desc text-center">

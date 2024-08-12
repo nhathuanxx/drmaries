@@ -20,7 +20,8 @@ html {
 }
 
 body {
-    font-family: "Open Sans", sans-serif;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    /* font-family: "Open Sans", sans-serif; */
     line-height: 1.3;
     font-size: 14px;
     letter-spacing: -0.02em;
@@ -29,7 +30,7 @@ body {
 
 @media screen and (min-width: 1200px) {
     .container {
-        max-width: 1200px;
+        max-width: 1600px;
     }
 }
 
@@ -98,7 +99,7 @@ body {
 .footer__menu ul li a:hover i,
 .footer__intro ul li a:hover,
 .footer__intro ul li a:hover i {
-    color: #ed3893;
+    color: #00ACEE;
 }
 
 .secondary-bg-color,
@@ -295,7 +296,7 @@ h6,
 .branch__areas .item__name__store,
 .branch__areas .item__list li a,
 .rule__body .item__title {
-    color: #000;
+    color: #292929;
 }
 
 .color-light,
@@ -1027,7 +1028,8 @@ img {
 .timeline,
 .about-staff__big,
 .award,
-.about-count {
+.about-count,
+.clinic-nearby-u {
     position: relative;
 }
 
@@ -1987,6 +1989,12 @@ h6,
     border: 0;
 }
 
+.btn-custom {
+    letter-spacing: 0.03em;
+    padding: .25rem 1rem .25rem .25rem;
+    border: 0;
+}
+
 .btn:before {
     content: "";
     border-radius: 45px;
@@ -2040,8 +2048,8 @@ h6,
 .service-package__lists .item--feature .item__foot a,
 .footer__fixed__hotline__icon,
 .footer__fixed__hotline__content {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#f167ac), to(#ed3893));
-    background-image: linear-gradient(to bottom, #f167ac, #ed3893);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#00ACEE), to(#00ACEE));
+    background-image: linear-gradient(to bottom, #00ACEE, #00ACEE);
 }
 
 .btn-gray {
@@ -2055,12 +2063,12 @@ h6,
 }
 
 .btn-h50 {
-    height: 42px;
+    height: 54px;
 }
 
 @media screen and (min-width: 1701px) {
     .btn-h50 {
-        height: 50px;
+        height: 54px;
     }
 }
 
@@ -2315,31 +2323,31 @@ h6,
         font-size: 14px;
     }
     .primary-menu>li:not(:first-child) {
-        margin-left: 10px;
+        margin-left: 20px;
     }
     .primary-menu>li:not(:last-child) {
-        margin-right: 10px;
+        margin-right: 20px;
     }
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1700px) {
     .primary-menu>li>a {
-        font-size: 13px;
+        font-size: 16px;
     }
 }
 
 @media screen and (min-width: 992px) and (max-width: 1299px) {
     .primary-menu>li:not(:first-child) {
-        margin-left: 5px;
+        margin-left: 10px;
     }
     .primary-menu>li:not(:last-child) {
-        margin-right: 5px;
+        margin-right: 13px;
     }
 }
 
 @media screen and (min-width: 992px) and (max-width: 1199px) {
     .primary-menu>li>a {
-        font-size: 11px;
+        font-size: 13px;
     }
 }
 
@@ -2475,12 +2483,16 @@ h6,
 
 .header {
     padding: 0 15px;
-    height: 87px;
+    height: 154.88px;
+    background-color: #fff;
 }
 
 .header__lang select {
-    width: 40px;
-    height: 40px;
+    width: 82px;
+    height: 48px;
+    background-color: #F7F7F7;
+    border-color: transparent;
+    border-radius: 100px;
 }
 
 @media screen and (min-width: 1701px) {
@@ -2492,12 +2504,12 @@ h6,
 }
 
 .header__info>*:not(:last-child) {
-    margin-right: 15px;
+    margin-right: 10px;
 }
 
 @media screen and (min-width: 1701px) {
     .header__info>*:not(:last-child) {
-        margin-right: 20px;
+        margin-right: 15px;
     }
 }
 
@@ -2569,6 +2581,78 @@ h6,
 .header__menu__mobile .header__book {
     max-width: 220px;
 }
+
+.header__book-icon {
+    background-color: #fff;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    position: relative;
+    margin-right: 10px;
+}
+
+.header__book-icon .icon-calendar {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+}
+
+.header__search {
+    background-color: #f7f7f7;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    border-radius: 100px;
+    padding: 1rem;
+}
+
+.header__search input{
+    border: none;
+    background-color: #f7f7f7;
+}
+
+.call-button {
+    display: flex;
+    align-items: center;
+    padding: 4px 12px 4px 4px;
+    background-color: #E50C75; /* Your pink color */
+    border-radius: 40px; /* Adjust to your preference */
+    color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-family: 'Be Vietnam Pro', sans-serif;
+    color: #fff;
+}
+
+.call-button .icon {
+    background-color: #fff;
+    color: #E50C75; /* Your pink color */
+    border-radius: 50%;
+    padding: 10px;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.call-button .text {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    color: #fff;
+}
+
+.call-button .text .phone-number {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.call-button .text span:first-child {
+    margin-bottom: 5px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+}
+
 
 @media screen and (min-width: 1200px) and (max-width: 1700px) {
     .header__logo {
@@ -2715,8 +2799,8 @@ body {
     display: none !important;
 }*/
 .sun-slider .slick-next::before, .sun-slider .slick-prev::before {
-    font-size: 47px;
-    color: black;
+    font-size: 42px;
+    color: #fff;
 }
 .sun-slider button.slick-prev {
     width: 50px !important;
@@ -4002,6 +4086,9 @@ body {
     .home-page .home__title h2:before {
         display: none;
     }
+}
+.home-page .home-banner .sun-slider.slick-slider {
+    margin-bottom: 0;
 }
 
 .footer__main {
@@ -5342,4 +5429,353 @@ body {
     .about-count {
         padding: 50px 0 30px;
     }
+}
+
+/* custom home clinic nearby u */
+.clinic-nearby-u {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-color: #fff;
+}
+
+.clinic-nearby-u .clinic-nearby-u__header_title {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 56px;
+    font-weight: 500;
+    line-height: 67px;
+    text-align: left;
+    color: #292929;
+}
+
+.clinic-nearby-u .clinic-nearby-u__header_see-all {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: #292929;
+    padding: 8px 12px;
+}
+
+.clinic-nearby-u .clinic-nearby-u__header_see-all .clinic-nearby-u__header_see-all__icon {
+    width: 32px;
+    height: 32px;
+    margin-left: 8px;
+}
+
+.clinic-nearby-u__select .clinic-nearby-u__select-city {
+    background-color: #F7F7F7;
+    height: 40px;
+    border-radius: 100px;
+    padding: 11px 16px;
+    margin-top: 24px;
+}
+.clinic-nearby-u__select .clinic-nearby-u__select-city select {
+    border: none;
+    background-color: #f7f7f7;
+    border-radius: 100px;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    text-align: left;
+    min-width: 200px;
+}
+
+.clinic-nearby-u-slider {
+    margin-top: 40px;
+}
+.clinic-nearby-u-slider .clinic-nearby-u-slider__item {
+    /* margin-right: 56px; */
+    padding-left: 28px;
+    padding-right: 28px;
+}
+.clinic-nearby-u-slider .clinic-nearby-u-slider__item .clinic-nearby-u-slider__item_img img{
+    border-radius: 40px;
+    max-height: 350px;
+}
+
+.clinic-nearby-u-slider .clinic-nearby-u-slider__item .clinic-nearby-u-slider__item_content {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+}
+
+.clinic-nearby-u-slider .clinic-nearby-u-slider__item .clinic-nearby-u-slider__item_content .clinic-nearby-u-slider__item_title {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: left;
+    color: #292929;
+}
+
+.clinic-nearby-u-slider .clinic-nearby-u-slider__item .clinic-nearby-u-slider__item_content .clinic-nearby-u-slider__item_subtitle {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+}
+.clinic-nearby-u-slider .clinic-nearby-u-slider__item .clinic-nearby-u-slider__item_content .clinic-nearby-u-slider__item_subtitle .clinic-nearby-u-slider__item_info:not(:first-child) {
+    margin-top: 8px;
+}
+.clinic-nearby-u-slider .clinic-nearby-u-slider__item .clinic-nearby-u-slider__item_content .clinic-nearby-u-slider__item_subtitle .clinic-nearby-u-slider__item_info img {
+    margin-right: 8px;
+    width: 24px;
+    height: 24px;
+}
+.clinic-nearby-u-slider .clinic-nearby-u-slider__item .clinic-nearby-u-slider__item_content .clinic-nearby-u-slider__item_subtitle .clinic-nearby-u-slider__item_info span {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: #292929;
+}
+
+.clinic-nearby-u-slider .clinic-nearby-u-slider__item .clinic-nearby-u-slider__item_content .clinic-nearby-u-slider__item_action {
+    gap: 10px;
+    margin-top: 24px;
+}
+
+.clinic-nearby-u-slider .clinic-nearby-u-slider__item .clinic-nearby-u-slider__item_content .clinic-nearby-u-slider__item_action .clinic-nearby-u-slider__item_action-item {
+    height: 48px;
+    border-radius: 100px;
+    padding: 12px 24px 12px 24px;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: left;
+    color: #fff;
+}
+
+.clinic-nearby-u-slider .clinic-nearby-u-slider__item .clinic-nearby-u-slider__item_content .clinic-nearby-u-slider__item_action .clinic-nearby-u-slider__item_action-call {
+    background-color: #00ACEE;
+}
+
+.clinic-nearby-u-slider .clinic-nearby-u-slider__item .clinic-nearby-u-slider__item_content .clinic-nearby-u-slider__item_action .clinic-nearby-u-slider__item_action-book {
+    background-color: #E50C75;
+}
+
+.clinic-nearby-u__nav {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.clinic-nearby-u__nav button {
+    cursor: pointer;
+}
+
+.clinic-nearby-u__nav button:first-child img {
+    transform: rotate(180deg);
+}
+
+
+.clinic-nearby-u__nav button:hover img{
+    filter: opacity(0.5);
+}
+
+/* care service */
+
+.care-service {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-color: #DEF3FF;
+}
+
+.care-service-title {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 56px;
+    font-weight: 500;
+    line-height: 67px;
+    text-align: center;
+    color: #292929;
+}
+
+.care-service .care-service-item {
+    margin-top: 56px;
+    gap: 32px;
+}
+.care-service-item .care-service-item__container {}
+
+.care-service-item__container .care-service-item__container-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 32px;
+    background-color: #fff;
+    border-radius: 40px;
+    flex: 1;
+    justify-content: center;
+}
+
+.care-service-item__container .care-service-item__container-content:hover {
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.05);
+}
+
+.care-service-item__container_img {
+    width: 100px;
+    height: 100px;
+}
+
+.care-service-item__container_label {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 38px;
+    text-align: left;
+    color: #292929;
+}
+
+/* danh sách bsi màn home */
+.list-doctors {
+    padding-top: 200px;
+     background-color: #fff;
+}
+
+.list-doctors__head { 
+    max-width: 665px;
+}
+
+.list-doctors__head .list-doctors__head_title {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 56px;
+    font-weight: 500;
+    line-height: 67px;
+    text-align: center;
+    color: #292929;
+}
+
+.list-doctors__head .list-doctors__head_title-2 {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 56px;
+    font-weight: 500;
+    line-height: 67px;
+    text-align: center;
+    color: #00ACEE;
+}
+
+.list-doctors__head .list-doctors__head_subtitle {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    color: #000000;
+}
+
+.list-doctors__slider {
+    margin-top: 56px;
+}
+
+.list-doctors__slider_item {
+    background-color: #F7F7F7;
+    padding: 24px 68px 24px 24px;
+    margin-left: 28px;
+    margin-right: 28px;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.list-doctors__slider_item-img {
+    max-width: 329px;
+}
+
+.list-doctors__slider_item-img img {
+    max-width: 329px;
+    border-radius: 16px;
+    height: 372px;
+    object-fit: cover;
+}
+
+
+.list-doctors__slider_item-content {
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.list-doctors__slider_item-content_title {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: left;
+    color: #000000;
+}
+
+.list-doctors__slider_item-content_subtitle {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: #292929;
+    margin-top: 16px;
+}
+
+.list-doctors__slider_item-content_language_title {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-family: Be Vietnam Pro;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: left;
+    margin-top: 16px;
+    color: #292929;
+}
+
+.list-doctors__slider_item-content_language {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: row;
+}
+
+.list-doctors__slider_item-content_language__item {
+    padding: 8px 12px;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    border-radius: 100px;
+}
+
+.list-doctors__slider_item-content_language__item.vietnamese {
+    background-color: #FFE4F4;
+    color: #D40261;
+}
+
+.list-doctors__slider_item-content_language__item.english {
+    background-color: #DEF3FF;
+    color: #0072AB;
+}
+
+
+.list-doctors__slider_item-content_language__item:not(:first-child) {
+    margin-left: 16px;
+}
+
+.list-doctors__see-more {
+    margin-top: 56px;
+}
+
+.list-doctors__see-more .list-doctors__see-more_text {
+    margin-right: 8px;
+    background-color: #F7F7F7;
+    padding: 8px 12px;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: #292929;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+.list-doctors__see-more .list-doctors__see-more_next {
+    cursor: pointer;
 }
