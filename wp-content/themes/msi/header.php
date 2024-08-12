@@ -44,6 +44,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	?>
 
 	<div id="page" class="wrap-main">
+	<div>222222222222</div>
 		<header id="header" class="header display-flex-center justify-content-between bg-f9">
 			<div class="header__logo">
 				<a href="<?php echo get_home_url(); ?>">
@@ -141,14 +142,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				<div class="header__desc text-right">
 				    <?php
                         while (the_repeater_field('header_slogan', pll_current_language('slug'))) : 
-?>
-<p class="primary-color font-weight-bold margin-0 font-size-14 text-uppercase"><?php echo get_field('title', pll_current_language('slug')); ?>
-					<p class="text-uppercase margin-0"><?php echo get_field('sub_title', pll_current_language('slug')); ?></p>
-<?php endwhile; ?>
+					?>
+					<p class="primary-color font-weight-bold margin-0 font-size-14 text-uppercase"><?php echo get_field('title', pll_current_language('slug')); ?>
+										<p class="text-uppercase margin-0"><?php echo get_field('sub_title', pll_current_language('slug')); ?></p>
+					<?php endwhile; ?>
 					
 				</div>
 				<a href="javascript:;" class="header__book btn btn-secondary btn-secondary--gradient font-size-16 font-weight-bold book-calendar btn-box-shadow btn-h50 btn-i-lg-12 text-uppercase">
-					<i class="icon-calendar"></i> <?php echo get_field('book_an_appointment', pll_current_language('slug')); ?>
+					<i class="icon-calendar"></i> <?php echo get_field('book_an_appointment', pll_current_language('slug')); ?>cccccccccccc
 				</a>
 				<div class="header__lang only-desktop">
 					<?php $translations = pll_the_languages(array('raw' => 1)); ?>
@@ -266,13 +267,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					<div class="header__desc text-center">
 						<?php
                         while (the_repeater_field('header_slogan', pll_current_language('slug'))) : 
-?>
-<p class="primary-color font-weight-bold margin-0 font-size-14 text-uppercase"><?php echo get_field('title', pll_current_language('slug')); ?>
-					<p class="text-uppercase margin-0"><?php echo get_field('sub_title', pll_current_language('slug')); ?></p>
-<?php endwhile; ?>
+						?>
+						<p class="primary-color font-weight-bold margin-0 font-size-14 text-uppercase"><?php echo get_field('title', pll_current_language('slug')); ?>
+											<p class="text-uppercase margin-0"><?php echo get_field('sub_title', pll_current_language('slug')); ?></p>
+						<?php endwhile; ?>
 					</div>
 					<a href="javascript:;" class="header__book btn btn-secondary btn-secondary--gradient font-size-16 font-weight-bold book-calendar btn-box-shadow btn-h50 btn-i-lg-12 text-uppercase">
-						<i class="icon-calendar"></i> <?php echo get_field('book_an_appointment', pll_current_language('slug')); ?>
+						<i class="icon-calendar"></i> <?php echo get_field('book_an_appointment', pll_current_language('slug')); ?>vvvvvvvvvvv
 					</a>
 				</div>
 			</div>
