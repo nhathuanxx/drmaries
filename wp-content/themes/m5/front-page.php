@@ -133,53 +133,6 @@ get_header(); ?>
     <?php require get_template_directory() . '/template-parts/care-service.php'; ?>
     <?php require get_template_directory() . '/template-parts/msi-doctors.php'; ?>
 
-
-
-    <?php require get_template_directory() . '/template-parts/confirm.php'; ?>
-    <?php require get_template_directory() . '/template-parts/feedback.php'; ?>
-
-    <div class="schedule-book position-rel">
-        <div class="schedule-book__data">
-            <div class="container">
-                <div class="schedule-book__wrap">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="schedule-book__content">
-
-
-                                <h2 class="schedule-book__title">
-                                    <?php echo get_field('book_in_home_title', pll_current_language('slug')); ?></h2>
-                                <p class="schedule-book__desc">
-                                    <?php echo get_field('book_in_home_subTile', pll_current_language('slug')); ?></p>
-                                <div class="schedule-book__btn display-inline-block">
-                                    <a href="javascript:;" class="btn btn-secondary btn-secondary--gradient btn-h60 font-size-16 font-weight-bold text-uppercase book-calendar">
-                                        <i class="icon-calendar"></i>
-                                        <?php echo get_field('book_an_appointment', pll_current_language('slug')); ?>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="schedule-book__banner">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-5">
-                    </div>
-                    <div class="col-md-7">
-                        <div class="schedule-book__img">
-                            <figure class="margin-0">
-                                <img src="<?php echo get_field('book_in_home_image', pll_current_language('slug')); ?>" alt="Đặt lịch khám">
-                            </figure>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <?php require get_template_directory() . '/template-parts/os-package.php'; ?>
 
     <div class="news bg-f9 os_news">

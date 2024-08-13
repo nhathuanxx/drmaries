@@ -30,7 +30,7 @@ body {
 
 @media screen and (min-width: 1200px) {
     .container {
-        max-width: 1600px;
+        max-width: 1400px;
     }
 }
 
@@ -2306,7 +2306,7 @@ h6,
 }
 
 .primary-menu>li:not(:last-child) {
-    margin-right: 23px;
+    margin-right: 20px;
 }
 
 .primary-menu>li>a:before {
@@ -2320,19 +2320,21 @@ h6,
 
 @media screen and (min-width: 1300px) and (max-width: 1700px) {
     .primary-menu>li>a {
-        font-size: 14px;
+        font-size: 16px;
+        white-space: nowrap;
     }
     .primary-menu>li:not(:first-child) {
         margin-left: 20px;
     }
     .primary-menu>li:not(:last-child) {
-        margin-right: 20px;
+        margin-right: 16px;
     }
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1700px) {
     .primary-menu>li>a {
-        font-size: 16px;
+        font-size: 14px;
+        white-space: nowrap;
     }
 }
 
@@ -2341,13 +2343,14 @@ h6,
         margin-left: 10px;
     }
     .primary-menu>li:not(:last-child) {
-        margin-right: 13px;
+        margin-right: 12px;
     }
 }
 
 @media screen and (min-width: 992px) and (max-width: 1199px) {
     .primary-menu>li>a {
-        font-size: 13px;
+        font-size: 12px;
+        white-space: nowrap;
     }
 }
 
@@ -2654,6 +2657,21 @@ h6,
 }
 
 
+@media screen and (min-width: 1200px) and (max-width: 1399px) {
+    .call-button {
+        padding: 4px;
+    }
+
+    .call-button .header__book-icon {
+        margin-right: 0px; 
+    }
+
+    .call-button .text {
+        display: none;
+    }
+}
+
+
 @media screen and (min-width: 1200px) and (max-width: 1700px) {
     .header__logo {
         max-width: 150px;
@@ -2672,6 +2690,9 @@ h6,
     .header__desc p {
         font-size: 12px;
     }
+    .header {
+        height: 120px;
+    }
 }
 
 @media screen and (min-width: 992px) and (max-width: 1199px) {
@@ -2682,11 +2703,38 @@ h6,
     .header__desc p {
         font-size: 11px;
     }
+
+    .call-button {
+        padding: 4px;
+    }
+
+    .call-button .header__book-icon {
+        margin-right: 0px; 
+    }
+
+    .call-button .text {
+        display: none;
+    }
+    .header {
+        height: 112px;
+    }
 }
 
 @media screen and (max-width: 991px) {
     .header {
         height: 70px;
+    }
+    
+    .call-button {
+        padding: 4px;
+    }
+
+    .call-button .header__book-icon {
+        margin-right: 0px; 
+    }
+
+    .call-button .text {
+        display: none;
     }
 }
 
@@ -5684,7 +5732,7 @@ body {
 }
 
 .list-doctors__slider_item-img img {
-    max-width: 329px;
+    /* max-width: 329px; */
     border-radius: 16px;
     height: 372px;
     object-fit: cover;

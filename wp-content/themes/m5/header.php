@@ -169,7 +169,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						<!-- <i class="icon-calendar"></i> -->
 						<img class="icon-calendar" src="<?php bloginfo('wpurl'); ?>/wp-content/themes/m5/assets/images/os/icon-calendar.svg" alt="icon-calendar">
 					</span>
-					<?php echo get_field('book_an_appointment', pll_current_language('slug')); ?>
+					<span class="header__book-text"><?php echo get_field('book_an_appointment', pll_current_language('slug')); ?></span>
 				</a>
 				<a href="tel:1900 55 88 82" class="call-button">
 				    <div class="header__book-icon">
