@@ -159,9 +159,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					
 				</div>
 
-				<span class="header__search">
-						<input id="search-data-input-val"  type="search" placeholder="Search" name="s" value=""/>
-						<img class="icon-calendar" src="<?php bloginfo('wpurl'); ?>/wp-content/themes/m5/assets/images/os/icon-search.svg" alt="icon-calendar">
+				<span class="header__search ">
+					<form method="get" action="" role="search">
+						<input type="hidden" name="post_type" value="post">
+						<input type="hidden" name="taxonomy" value="category">
+						<input type="hidden" name="term" value="tin-tuc-y-hoc">
+						<div class="search-data">
+							<input id="search-data-input-val" type="search" name="s" value=""/>
+							<label>Search</label>
+							<img class="icon-calendar" src="<?php bloginfo('wpurl'); ?>/wp-content/themes/m5/assets/images/os/icon-search.svg" alt="icon-calendar">
+						</div>
+					</form>
 				</span>
 
 				<a href="javascript:;" class="header__book btn btn-custom btn-secondary btn-secondary--gradient font-size-16 font-weight-bold book-calendar btn-box-shadow btn-h50 btn-i-lg-12 text-uppercase">

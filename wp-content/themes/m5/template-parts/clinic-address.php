@@ -15,17 +15,19 @@
                 ?>
             </div>
             <a href="#" class="clinic-nearby-u__header_see-all">
-                <?php
-                if (pll_current_language('slug') == 'vi') {
-                    echo 'Tất cả phòng khám';
-                }
-                if (pll_current_language('slug') == 'en') {
-                    echo 'See all Clinics';
-                }
-                if (pll_current_language('slug') == 'zh') {
-                    echo '诊所科';
-                }
-                ?>
+                <span>
+                    <?php
+                    if (pll_current_language('slug') == 'vi') {
+                        echo 'Tất cả phòng khám';
+                    }
+                    if (pll_current_language('slug') == 'en') {
+                        echo 'See all Clinics';
+                    }
+                    if (pll_current_language('slug') == 'zh') {
+                        echo '诊所科';
+                    }
+                    ?>
+                </span>
                 <img class="clinic-nearby-u__header_see-all__icon"
                     src="<?php bloginfo('wpurl'); ?>/wp-content/themes/m5/assets/images/os/icon-see-all.svg"
                     alt="icon-see-all">
@@ -43,7 +45,7 @@
         </div>
 
         <div class="sun-slider sun-slider--center"
-            data-slick='{"slidesToShow": 3, "nextArrow": ".clinic-nearby-u__next", "prevArrow": ".clinic-nearby-u__prev", "centerPadding": "20px", "dots": false, "autoplay": true, "infinite": true, "autoplaySpeed": 2000}'>
+            data-slick='{"slidesToShow": 3, "nextArrow": ".clinic-nearby-u__next", "prevArrow": ".clinic-nearby-u__prev", "centerPadding": "20px", "dots": false, "autoplay": true, "infinite": true, "autoplaySpeed": 2000, "responsive": [ { "breakpoint": 1200, "settings": { "centerMode": false, "slidesToShow": 2 } }, { "breakpoint": 776, "settings": { "centerMode": false, "slidesToShow": 1 } } ]}'>
             <?php if (get_field('clinic_nearby_you', pll_current_language('slug'))): ?>
                 <?php while (the_repeater_field('clinic_nearby_you', pll_current_language('slug'))): ?>
                     <div class="clinic-nearby-u-slider">

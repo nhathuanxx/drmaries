@@ -17,15 +17,15 @@
         </div>
         <div class="list-doctors__slider">
             <div class="sun-slider sun-slider--center"
-                data-slick='{"slidesToShow": 2, "nextArrow": ".list-doctors__see-more_next", "prevArrow": "", "centerPadding": "20px", "dots": false, "autoplay": true, "infinite": true, "autoplaySpeed": 2000}'>
+                data-slick='{"slidesToShow": 2, "nextArrow": ".list-doctors__see-more_next", "prevArrow": "", "centerPadding": "20px", "dots": false, "autoplay": false, "infinite": true, "autoplaySpeed": 2000, "responsive": [{"breakpoint": 1200, "settings": {"centerMode": false, "slidesToShow": 1 } } ]}'>
                 <?php if (get_field('clinic_nearby_you', pll_current_language('slug'))): ?>
                     <?php while (the_repeater_field('clinic_nearby_you', pll_current_language('slug'))): ?>
                         <div>
-                            <div class="list-doctors__slider_item">
-                                <div class="list-doctors__slider_item-img">
+                            <div class="list-doctors__slider_item row align-items-center justify-content-center">
+                                <div class="list-doctors__slider_item-img col-12 col-lg-6">
                                     <img src="<?php echo get_sub_field('image') ?>" alt="<?php echo get_sub_field('name') ?>" />
                                 </div>
-                                <div class="list-doctors__slider_item-content">
+                                <div class="list-doctors__slider_item-content col-12 col-lg-6">
                                     <div class="list-doctors__slider_item-content_title">
                                         <?php echo get_sub_field('name') ?>
                                     </div>

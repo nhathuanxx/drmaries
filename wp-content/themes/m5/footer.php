@@ -261,6 +261,20 @@
             return val + '&rel=0';
         });
     });
+
+    // thanh search, khi nhập data thì ẩn text default
+    jQuery("#search-data-input-val").on("input", function() {
+    	if(jQuery("#search-data-input-val").val()){
+            jQuery(".search-data label").css("opacity",0);
+        } else {
+             jQuery(".search-data label").css("opacity",1);
+        }
+    });
+
+    jQuery(".header__search").on("click", function() {
+        jQuery("#search-data-input-val").focus();
+    });
+    
 </script>
 <style>
     .footer__main {

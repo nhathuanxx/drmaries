@@ -653,7 +653,7 @@ get_header(); ?>
         .experienced__list .item__head>* * {
             max-height: 100%;
             height: 100%;
-            margin-bottom: 40px
+            /* margin-bottom: 40px */
         }
 
         .news__list__small .item__body .item__title {

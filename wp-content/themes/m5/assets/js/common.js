@@ -8,8 +8,10 @@
         
         $('.slider-nav').slick({
              slidesToShow: 4,
-             slidesToScroll: 4,
+             slidesToScroll: 1,
              dots: true,
+             autoplay: true,
+             autoplaySpeed: 2000,
         });
 
         // $('.form-day-book').datetimepicker({format: 'LT'});
