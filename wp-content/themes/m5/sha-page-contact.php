@@ -176,8 +176,8 @@ get_footer(); ?>
     }
 
     .btn-secondary--gradient {
-        background-image: none;
-        background-color: #E50C75;
+        /* background-image: none; */
+        /* background-color: #E50C75; */
     }
 
     @media screen and (max-width: 1199) {
