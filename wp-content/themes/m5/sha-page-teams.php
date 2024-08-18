@@ -102,7 +102,7 @@ get_header();
     </div>
 </main>
 
-<?php require get_template_directory() . '/template-parts/os-partner-logo.php'; ?>
+<?php require get_template_directory() . '/template-parts/os-partner-logo-2.php'; ?>
 <?php require get_template_directory() . '/template-parts/content-us-now.php'; ?>
 
 <?php get_footer(); ?>

@@ -204,6 +204,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				</div>
 			</div>
 			<div class="header__menu__mobile">
+				
+				<span class="header__search ">
+					<form method="get" action="" role="search">
+						<input type="hidden" name="post_type" value="post">
+						<input type="hidden" name="taxonomy" value="category">
+						<input type="hidden" name="term" value="tin-tuc-y-hoc">
+						<div class="search-data">
+							<input id="search-data-input-val" type="search" name="s" value=""/>
+							<label class="search-data-label">Search</label>
+							<img class="icon-calendar" src="<?php bloginfo('wpurl'); ?>/wp-content/themes/m5/assets/images/os/icon-search.svg" alt="icon-calendar">
+						</div>
+					</form>
+				</span>
 				<div class="header__menu">
 					<?php
 

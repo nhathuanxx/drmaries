@@ -48,7 +48,8 @@
                                                 style="border-radius: 100%; height: 40px; width: 40px;"></a></li>
                                 <?php endwhile; ?>
                             <?php endif; ?>
-                            <li><a href="<?php echo get_field('option_zalo', 'option') ? get_field('option_zalo', 'option') : '#'; ?>" target="_blank" rel="nofollow">
+                            <li><a href="<?php echo get_field('option_zalo', 'option') ? get_field('option_zalo', 'option') : '#'; ?>"
+                                    target="_blank" rel="nofollow">
                                     <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/os/twitter_icon.svg'); ?>"
                                         alt="zalo" style="border-radius: 100%; height: 40px; width: 40px;"></a></li>
                         </ul>
@@ -143,21 +144,62 @@
 
     <div class="modal fade" id="modal_schedule_book" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
         aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header primary-bg-color display-flex-center justify-content-center">
+        <div class="modal-dialog modal-dialog-centered modal_book-now__custom" role="document">
+            <div class="modal-content book-now__custom">
+                <!-- <div class="modal-header primary-bg-color display-flex-center justify-content-center">
                     <p class="modal-title font-size-30 font-weight-bold color-light margin-auto">
                         <i class="icon-calendar font-size-40"></i> Đặt lịch khám
                     </p>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close" class="color-light">
                         <span aria-hidden="true">&times;</span>
                     </button>
-                </div>
+                </div> -->
                 <div class="modal-body">
-                    <div class="form-book-exam">
-                        <?php if (get_field('booking_form_setting', pll_current_language('slug'))) : ?>
-                            <?php echo do_shortcode(get_field('booking_form_setting', pll_current_language('slug'))); ?>
-                        <?php endif; ?>
+                    <div class="row justify-content-between">
+                        <div class="form-book-exam col-12 col-lg-7">
+                            <div class="book-now__custom-head">
+                                <div class="book-now__custom-title">
+                                    <?php
+                                    if (pll_current_language('slug') == 'vi') {
+                                        echo 'Đặt lịch khám';
+                                    }
+                                    if (pll_current_language('slug') == 'en') {
+                                        echo 'Booking Service:';
+                                    }
+                                    if (pll_current_language('slug') == 'zh') {
+                                        echo '预订服务:';
+                                    }
+                                    ?>
+                                </div>
+                                <img class="book-now__custom-head_icon"
+                                    src="http://localhost/drmarie/wp-content/themes/m5/assets/images/os/icon_bufterfly.svg">
+                            </div>
+                            <div class="book-now__custom-subtitle">
+                                <?php
+                                if (pll_current_language('slug') == 'vi') {
+                                    echo 'Đặt lịch khám sức khỏe ngay hôm nay';
+                                }
+                                if (pll_current_language('slug') == 'en') {
+                                    echo "Book Your Women's Health Appointments Today";
+                                }
+                                if (pll_current_language('slug') == 'zh') {
+                                    echo '立即预约女性健康';
+                                }
+                                ?>
+                            </div>
+                            <div class="book-now__custom-form">
+                            <?php if (get_field('booking_form_setting', pll_current_language('slug'))): ?>
+                                    <?php echo do_shortcode(get_field('booking_form_setting', pll_current_language('slug'))); ?>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                        <div class="col-0 col-lg-4 d-flex align-items-end">
+                            <?php if (get_field('book_doctor_image', pll_current_language('slug'))): ?>
+                                <img class="book-now__custom-img"
+                                    src="<?php echo do_shortcode(get_field('book_doctor_image', pll_current_language('slug'))); ?>"
+                                    alt="img-doctor">
+                            <?php endif; ?>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -174,11 +216,11 @@
         }
         ?>
         <ul>
-            <li class="ctb-phone"><a href="<?php echo $option_phone_num_link; ?>" target="_blank" rel="nofollow"><img width="50" height="50" src="<?php echo get_template_directory_uri(); ?>/assets/images/call.png" alt="Gọi cho tôi"></a></li>
+            <!-- <li class="ctb-phone"><a href="<?php echo $option_phone_num_link; ?>" target="_blank" rel="nofollow"><img width="50" height="50" src="<?php echo get_template_directory_uri(); ?>/assets/images/call.png" alt="Gọi cho tôi"></a></li>
             <li class="ctb-fbm"><a href="<?php echo get_field('option_link_fb_mes', 'option') ? get_field('option_link_fb_mes', 'option') : '#'; ?>" target="_blank" rel="nofollow">
                     <img width="50" height="50" src="<?php echo get_template_directory_uri(); ?>/assets/images/messenger-icon.png" alt="Nhắn tin facebook"></a></li>
-            <li class="ctb-mail"><a href="<?php echo get_field('option_zalo', 'option') ? get_field('option_zalo', 'option') : '#'; ?>" target="_blank" rel="nofollow"><img width="50" height="50" src="<?php echo get_template_directory_uri(); ?>/assets/images/zalo-logo.png" alt="Zalo"></a></li>
-            <?php if (is_front_page()) : ?>
+            <li class="ctb-mail"><a href="<?php echo get_field('option_zalo', 'option') ? get_field('option_zalo', 'option') : '#'; ?>" target="_blank" rel="nofollow"><img width="50" height="50" src="<?php echo get_template_directory_uri(); ?>/assets/images/zalo-logo.png" alt="Zalo"></a></li> -->
+            <!-- <?php if (is_front_page()) : ?>
                 <li>
                     <div class="footer__fixed__address__wrap position-rel">
                         <a href="#position-rel" class="footer__fixed__address__icon">
@@ -214,13 +256,17 @@
                         </div>
                     </div>
                 </li>
-            <?php endif; ?>
-
+            <?php endif; ?> -->
+            <li class="book-calendar"><img width="50" height="50" src="<?php echo get_template_directory_uri(); ?>/assets/images/os/icon-book-now.svg" alt="book-now"></li>
+            <li class="icon-center" id="toggleIcon"><img width="50" height="50" src="<?php echo get_template_directory_uri(); ?>/assets/images/os/icon-social.svg" alt="icon-social"></li>
+            <li class="icon-satellite"><a href="<?php echo get_field('option_zalo', 'option') ? get_field('option_zalo', 'option') : '#'; ?>" target="_blank" rel="nofollow"><img width="42" height="42" src="<?php echo get_template_directory_uri(); ?>/assets/images/os/icon-zalo.svg" alt="icon-zalo"></a></li>
+            <li class="icon-satellite"><a href="<?php echo get_field('option_link_fb_mes', 'option') ? get_field('option_link_fb_mes', 'option') : '#'; ?>" target="_blank" rel="nofollow"><img width="42" height="42" src="<?php echo get_template_directory_uri(); ?>/assets/images/os/icon-messenger.svg" alt="icon-messenger"></a></li>
+            <li class="icon-satellite"><a href="<?php echo $option_phone_num_link; ?>" target="_blank" rel="nofollow"><img width="42" height="42" src="<?php echo get_template_directory_uri(); ?>/assets/images/os/icon-call.svg" alt="icon-call"></a></li>
             <li>
                 <div class="back-to-top">
                     <a href="javascript:;" class="footer__fixed__to-top">
                         <figure class="margin-0 padding-0">
-                            <img style="padding: 0;" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/to-top.svg'); ?>"
+                            <img style="padding: 0;" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/os/to-top.svg'); ?>"
                                 alt="Back to top">
                         </figure>
                     </a>
@@ -266,14 +312,32 @@
     jQuery("#search-data-input-val").on("input", function() {
     	if(jQuery("#search-data-input-val").val()){
             jQuery(".search-data label").css("opacity",0);
+            jQuery(".header__menu__mobile .search-data .search-data-label").css("opacity", 0);
         } else {
-             jQuery(".search-data label").css("opacity",1);
+             jQuery(".search-data label").css("opacity", 1);
+            jQuery(".header__menu__mobile .search-data .search-data-label").css("opacity", 1);
+
         }
     });
 
     jQuery(".header__search").on("click", function() {
         jQuery("#search-data-input-val").focus();
     });
+
+    // event icon social với các vệ tinh
+    jQuery('#toggleIcon').on('click', function(event) {
+        jQuery(this).toggleClass('active');
+        event.stopPropagation(); // Ngăn chặn sự kiện lan rộng
+    });
+
+    // Khi nhấp vào bất cứ đâu trên trang
+    jQuery(document).on('click', function(event) {
+        // Kiểm tra xem có nhấp vào ngoài icon trung tâm và icon vệ tinh
+        if (!jQuery(event.target).closest('#toggleIcon').length && !$(event.target).closest('.icon-satellite').length) {
+            jQuery('#toggleIcon').removeClass('active'); // Xóa class 'active'
+        }
+    });
+
     
 </script>
 <style>
@@ -359,6 +423,212 @@
         font-weight: 600 !important;
         color: #000000 !important;
     }
+
+    /* custom css book now */
+    .modal_book-now__custom {
+        /* width: 1200px; */
+        max-width: 1200px;
+        /* height: 749px; */
+        /* max-height: 749px; */
+        border-radius: 40px;
+        /* box-shadow: 0px 9px 30px 0px #00000012; */
+        /* background-color: #fff; */
+    }
+
+    .book-now__custom {
+        border: none;
+        background-image: url('../wp-content/themes/m5/assets/images/os/booking-now-bgr.png');
+        padding: 64px 64px 0 64px;
+        background-size: cover;
+        background-position: left;
+        background-repeat: no-repeat;
+        border-radius: 40px;
+        box-shadow: 0px 9px 30px 0px #00000012;
+    }
+
+    .book-now__custom-head {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .book-now__custom-title {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 56px;
+        font-weight: 500;
+        line-height: 67px;
+        text-align: left;
+    }
+
+    .book-now__custom-head_icon {
+        width: 64px;
+        height: 64px;
+        margin-left: -16px;
+    }
+
+    .book-now__custom-subtitle {
+        font-family: 'Be Vietnam Pro', sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        text-align: left;
+        margin-top: 8px;
+        margin-bottom: 40px;
+    }
+
+    .book-now__custom-form {
+        background-color: #fff;
+        padding: 32px;
+        border-radius: 24px;
+        margin-bottom: 64px;
+    }
+
+    .book-now__custom-form .form-control{
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        border-radius: 0px;
+        padding-left: 0px;
+    }
+
+    .book-now__custom-form .form-control:focus{
+        box-shadow: none;
+    }
+
+    .book-now__custom-form .form-group {
+        margin-bottom: 32px;
+    }
+
+    .form-book-exam .book-now__custom-form .form-action button {
+        min-width: 100%;
+        background-color: #E50C75;
+        background-image: none;
+    }
+
+    .book-now__custom-img {
+        max-width: 328px;
+        object-fit: cover;
+    }
+
+    
+    @media screen and (max-width: 991px) {
+        .book-now__custom {
+            padding: 40px;
+        }
+        .book-now__custom-title {
+            font-size: 48px;
+            line-height: 56px;
+        }
+        .book-now__custom-head_icon {
+            width: 48px;
+            height: 48px;
+        }
+        .book-now__custom-subtitle {
+            margin-bottom: 32px;
+        }
+        .book-now__custom-img {
+            display: none;
+        }
+        .book-now__custom-form {
+            margin-bottom: 48px;
+        }
+
+        .book-now__custom .form-book-exam {
+            padding: 0px;
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        .book-now__custom {
+            padding: 24px;
+        }
+        .book-now__custom-title {
+            font-size: 40px;
+            line-height: 48px;
+        }
+        .book-now__custom-head_icon {
+            width: 40px;
+            height: 40px;
+        }
+        .book-now__custom-subtitle {
+            margin-bottom: 24px;
+        }
+        .book-now__custom-form {
+            margin-bottom: 32px;
+        }
+    }
+    @media screen and (max-width: 575px) {
+        .book-now__custom {
+            padding: 16px;
+        }
+
+        .book-now__custom-title {
+            font-size: 28px;
+            line-height: 35.73px;
+        }
+        .book-now__custom-head_icon {
+            width: 32px;
+            height: 32px;
+        }
+
+        .book-now__custom-subtitle {
+            margin-bottom: 16px;
+        }
+
+        .book-now__custom-form {
+            margin-bottom: 16px;
+        }
+    }
+
+    /* end custom css book now */
+
+    /* custom contact bar */
+    
+    #contact-bar li {
+        margin: 24px 0;
+    }
+
+    #contact-bar img {
+        padding: 0px;
+        cursor: pointer;
+        max-width: 48px;
+    }
+    #contact-bar ul li.icon-center {
+        position: relative;
+        cursor: pointer;
+        z-index: 10; /* Đảm bảo icon trung tâm luôn trên cùng */
+    }
+    
+    #contact-bar ul li.icon-satellite {
+        position: absolute;
+        opacity: 0;
+        transform: scale(0); /* Thu nhỏ icon vệ tinh khi ẩn */
+        transition: all 0.3s ease;
+    }
+    #contact-bar ul li.icon-center.active ~ .icon-satellite {
+        opacity: 1;
+        transform: scale(1); /* Phóng to icon vệ tinh khi hiện */
+    }
+
+    #contact-bar ul li.icon-satellite:nth-child(2) {
+        top: -80px; /* Điều chỉnh vị trí cho icon vệ tinh 1 */
+        left: 0;
+    }
+
+    #contact-bar ul li.icon-satellite:nth-child(3) {
+        top: 130px;
+        left: -48px;
+    }
+
+    #contact-bar ul li.icon-satellite:nth-child(4) {
+        top: 80px;
+        left: -56px;
+    }
+
+    #contact-bar ul li.icon-satellite:nth-child(5) {
+        top: 32px;
+        left: -44px;
+    }
+    /* end custom contact bar */
 
     @media screen and (max-width: 767px) {
         .footer__bar {

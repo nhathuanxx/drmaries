@@ -90,7 +90,7 @@
                                     }
                                     ?>
                                 </a>
-                                <div class="clinic-nearby-u-slider__item_action-item clinic-nearby-u-slider__item_action-book">
+                                <a href="javascript:;" class="clinic-nearby-u-slider__item_action-item clinic-nearby-u-slider__item_action-book book-calendar">
                                     <?php
                                     if (pll_current_language('slug') == 'vi') {
                                         echo 'Đặt lịch';
@@ -102,7 +102,7 @@
                                         echo '立即预订';
                                     }
                                     ?>
-                                </div>
+                                </a>
                             </div>
                         </div>
                     </div>

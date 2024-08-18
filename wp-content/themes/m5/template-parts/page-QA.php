@@ -60,6 +60,7 @@ $url = get_template_directory_uri();
     .page-qa {
         padding-top: 64px;
         padding-bottom: 160px;
+        background-color: #fff;
     }
 
 

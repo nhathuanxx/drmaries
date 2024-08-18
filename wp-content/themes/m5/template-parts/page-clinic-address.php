@@ -84,8 +84,8 @@ $url = get_template_directory_uri();
                                         }
                                         ?>
                                     </a>
-                                    <a
-                                        class="clinic-nearby-u-slider__item_action-item clinic-nearby-u-slider__item_action-book">
+                                    <a href="javascript:;"
+                                        class="clinic-nearby-u-slider__item_action-item clinic-nearby-u-slider__item_action-book book-calendar">
                                         <?php
                                         if (pll_current_language('slug') == 'vi') {
                                             echo 'Đặt lịch';
@@ -120,7 +120,7 @@ $url = get_template_directory_uri();
         </div>
     </div>
 
-    <?php require get_template_directory() . '/template-parts/os-partner-logo.php'; ?>
+    <?php require get_template_directory() . '/template-parts/os-partner-logo-2.php'; ?>
     <?php require get_template_directory() . '/template-parts/content-us-now.php'; ?>
 </div>
 <?php get_footer(); ?>

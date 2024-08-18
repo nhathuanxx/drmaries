@@ -29,7 +29,7 @@ $url = get_template_directory_uri();
 
                 <div class="col-xs-12 col-xl-6">
 
-                    <div class="w-form">
+                    <div class="w-form w-form-custom">
                         <?php
                         $page_contact_form_contact = get_field('page_contact_form_contact');
                         echo do_shortcode($page_contact_form_contact, false); ?>
@@ -120,7 +120,7 @@ get_footer(); ?>
 
 
 <style>
-    #pagetitle{
+    #pagetitle {
         display: none;
     }
 
@@ -175,9 +175,36 @@ get_footer(); ?>
         color: #292929;
     }
 
-    .btn-secondary--gradient {
+    /* css for form contact */
+    .w-form-custom .form-group {
+        margin-bottom: 32px;
+
+    }
+
+    .w-form-custom .form-group input:first-child {
+        color: #989898;
+        background-image: url(<? get_bloginfo('wpurl'); ?>.'/wp-content/themes/m5/assets/images/os/icon-form-name.svg');
+        background-position: right 10px center;
+        background-repeat: no-repeat;
+        padding-right: 30px;
+    }
+
+    .w-form-custom .form-action button {
         background-image: none;
         background-color: #E50C75;
+
+    }
+
+    .w-form-custom .form-group select {
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        padding-left: 0;
+        border-radius: 0;
+    }
+
+    .w-form-custom .form-group select.form-control:focus {
+        box-shadow: none;
     }
 
     @media screen and (max-width: 1199) {
@@ -188,11 +215,37 @@ get_footer(); ?>
         .page-content-info {
             margin-top: 40px;
         }
+
+        .contact-content .page-content-info__content {
+            padding: 56px;
+        }
     }
 
+    @media screen and (max-width: 991) {
+        .contact-content .page-content-info__content {
+            padding: 48px;
+        }
+    }
     @media screen and (max-width: 767) {
         .content-info-title {
             margin-bottom: 16px;
         }
+        .contact-content .page-content-info__content {
+            padding: 32px;
+        }
+        .page-content-info {
+            margin-top: 40px;
+        }
     }
+
+    @media screen and (max-width: 575px) {
+        .contact-content .page-content-info__content {
+            padding: 16px 0;
+        }
+        .page-content-info {
+            margin-top: 40px;
+        }
+    }
+    /* end  css for form contact*/
+
 </style>

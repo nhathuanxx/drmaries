@@ -30,7 +30,7 @@
             <?php endif; ?>
             <div
                 class="col-6 col-sm-6 col-md-4 col-xl-3 row care-service-item__container <?php echo get_sub_field('main_color_class') ?>">
-                <div class="care-service-item__container-content">
+                <div class="care-service-item__container-content care-service-item__container-content__custom">
                     <a href="#" class="care-service-item__container_label text-center">
                         <?php
                         if (pll_current_language('slug') == 'vi') {
