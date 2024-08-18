@@ -9,7 +9,7 @@
         $('.slider-nav').slick({
              slidesToShow: 4,
              slidesToScroll: 1,
-             dots: true,
+             dots: false,
              autoplay: true,
              autoplaySpeed: 2000,
         });

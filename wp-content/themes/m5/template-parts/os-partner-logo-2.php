@@ -9,62 +9,32 @@
             <h2>Đối tác MSI</h2>
         </div> -->
         <div class="row partner-row-header">
-            <div class="col-md-8 col-lg-4 partner-row-header-1">
+            <div class="col-md-6 col-lg-6 partner-row-header-1">
                 <div>
                     <?php
                     if (pll_current_language('slug') == 'vi') {
-                        echo 'Chúng tôi làm việc với những đối tác tốt nhất';
+                        echo 'Nhiều dịch vụ dành cho bạn';
                     }
                     if (pll_current_language('slug') == 'en') {
-                        echo 'We work with the best Partners';
+                        echo 'Many service for you';
                     }
                     if (pll_current_language('slug') == 'zh') {
                         echo '我们与最优秀的合作伙伴合作';
                     }
                     ?>
                 </div>
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/os/arrow_insert.svg'); ?>">
             </div>
-            <div class="col-md-4 col-lg-1 partner-row-header-2">
-                <div>
-                    <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/os/star_icon.svg'); ?>">
+            <div class="col-md-6 col-lg-6 partner-row-header-2">
+                <div class="os-partner-2-btn-container">
+                    <a class="os-btn-partner-2" href="tel:<?php echo get_field('hotline', pll_current_language('slug')); ?>">Liên hệ</a>
+                    <a class="os-btn-partner-2" href="">Đặt lịch</a>
+                    <a class="os-btn-partner-2" href="<?php bloginfo('wpurl'); ?>/phong-kham-gan-ban/">Tìm phòng khám</a>
+
 
                 </div>
             </div>
-            <div class="col-md-9 col-lg-5 partner-row-header-3">
-                <div>
-                    <?php
-                    if (pll_current_language('slug') == 'vi') {
-                        echo 'Dựa trên chuyên môn của chúng tôi trong các dự án thiết kế-xây dựng và sự hiểu biết sâu sắc về các phương pháp thực hiện khác nhau, bạn có thể tin tưởng chúng tôi để xác định phương pháp phù hợp nhất với mục tiêu của bạn và dẫn đến kết quả thành công. Đội ngũ của chúng tôi cam kết tìm ra chiến lược đúng đắn cho bạn, đảm bảo kết quả tích cực mỗi lần.';
-                    }
-                    if (pll_current_language('slug') == 'en') {
-                        echo 'Drawing on our expertise in design-build projects and a deep understanding of different delivery methods, you can trust us to pinpoint the approach that perfectly matches your objectives and leads to successful results. Our team is dedicated to finding the right strategy for you, guaranteeing a positive outcome every time.
-';
-                    }
-                    if (pll_current_language('slug') == 'zh') {
-                        echo '凭借我们在设计建造项目方面的专业知识以及对不同交付方式的深刻理解，您可以信任我们为您找到最适合您目标的方法，并取得成功的结果。我们的团队致力于为您找到正确的策略，确保每次都能获得积极的结果';
-                    }
-                    ?>
-                </div>
-            </div>
-            <div class="col-md-3 col-lg-2 partner-row-header-4">
-                <div>
-                    <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/os/arrow_insert.svg'); ?>">
 
-                </div>
-            </div>
-        </div>
-
-        <div id="msi-partner-logo-carousel" class="slider slider-nav">
-            <?php if (get_field('partner_logo_list', pll_current_language('slug'))) : ?>
-                <?php while (the_repeater_field('partner_logo_list', pll_current_language('slug'))) : ?>
-                    <div>
-                        <!-- <a href="<?php //echo get_sub_field('partner_link'); 
-                                        ?>"> -->
-                        <img class="os-slider-nav-img" src="<?php echo get_sub_field('logo_image'); ?>" alt="Partner logo" />
-                        <!-- </a> -->
-                    </div>
-                <?php endwhile; ?>
-            <?php endif; ?>
         </div>
     </div>
 </div>
@@ -80,9 +50,9 @@
         padding: 100px 0px;
     }
 
-    .partner-row-header {
+    /* .partner-row-header {
         padding-bottom: 140px;
-    }
+    } */
 
     .partner-row-header {
         display: flex;
@@ -99,7 +69,10 @@
         color: #FFFFFF;
         display: flex;
         justify-content: left;
-        align-items: center;
+        align-items: start;
+
+        gap: 40px;
+
     }
 
     .partner-row-header-2 {
@@ -166,8 +139,29 @@
         /* mất nút chuyển ở banner màn home */
         /* display: none !important; */
     }
-    .slick-slide img{
+
+    .slick-slide img {
         background: white;
+    }
+
+    .os-partner-2-btn-container {
+        display: flex;
+        gap: 32px;
+    }
+
+    .os-btn-partner-2 {
+        height: 48px;
+        padding: 12px 24px 12px 24px;
+        border-radius: 100px;
+        opacity: 0px;
+        background: var(--Alias-Text-White, #FFFFFF);
+        font-family: 'Be Vietnam Pro', sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        text-align: left;
+        color: var(--Alias-Text-Primary-DarkPink, #D40261);
+        ;
     }
 
     @media screen and (max-width: 767px) {
@@ -175,7 +169,6 @@
             padding: 40px 16px;
         }
 
-        .partner-row-header-2,
         .partner-row-header-4 {
             display: none;
         }
@@ -189,7 +182,8 @@
             margin-bottom: 24px;
 
         }
-        .slick-dots{
+
+        .slick-dots {
             display: none !important;
         }
 
@@ -212,6 +206,29 @@
             height: 48.69px;
             gap: 0px;
             border-radius: 7.64px;
+        }
+
+        .partner-row-header-1 img {
+            width: 32px;
+            height: 32px;
+        }
+
+        .os-partner-2-btn-container {
+            display: block;
+        }
+
+        .partner-row-header-2 {
+            display: flex;
+            justify-content: start;
+
+        }
+
+        .os-partner-2-btn-container {
+            display: grid;
+            gap: 16px;
+        }
+        .os-btn-partner-2{
+            width: fit-content;
         }
     }
 
