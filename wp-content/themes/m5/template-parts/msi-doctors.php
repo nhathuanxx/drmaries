@@ -18,19 +18,45 @@
         <div class="list-doctors__slider">
             <div class="sun-slider sun-slider--center"
                 data-slick='{"slidesToShow": 2, "nextArrow": ".list-doctors__see-more_next", "prevArrow": "", "centerPadding": "20px", "dots": false, "autoplay": false, "infinite": true, "autoplaySpeed": 2000, "responsive": [{"breakpoint": 1200, "settings": {"centerMode": false, "slidesToShow": 1 } } ]}'>
-                <?php if (get_field('clinic_nearby_you', pll_current_language('slug'))): ?>
-                    <?php while (the_repeater_field('clinic_nearby_you', pll_current_language('slug'))): ?>
+                <?php
+                $arg_team = array(
+                    'post_type' => 'sha-teams',
+                    'posts_per_page' => -1,
+                );
+
+                $query_teams = new WP_Query($arg_team);
+
+                if ($query_teams->have_posts()) {
+                    while ($query_teams->have_posts()):
+                        $query_teams->the_post();
+                        $team_id = get_the_ID();
+                        ?>
                         <div>
                             <div class="list-doctors__slider_item row align-items-center justify-content-center">
                                 <div class="list-doctors__slider_item-img col-12 col-lg-6">
-                                    <img src="<?php echo get_sub_field('image') ?>" alt="<?php echo get_sub_field('name') ?>" />
+                                    <a href="<?php the_permalink($team_id); ?>">
+                                        <!-- <?php $image = wp_get_attachment_image_src(get_post_thumbnail_id($team_id), 'full'); ?> -->
+                                        <?php
+                                        if (has_post_thumbnail($team_id)):
+                                            $image = wp_get_attachment_image_src(get_post_thumbnail_id($team_id), 'full');
+                                            $image_url = $image[0];
+                                        else:
+                                            $link = get_bloginfo('wpurl');
+                                            $image_url = $link . '/wp-content/themes/m5/assets/images/os/icon-menu-item.svg';
+                                        endif;
+                                        ?>
+                                        <img src="<?php echo $image_url; ?>" alt="<?php echo get_the_title($team_id); ?>" />
+                                    </a>
                                 </div>
                                 <div class="list-doctors__slider_item-content col-12 col-lg-6">
-                                    <div class="list-doctors__slider_item-content_title">
-                                        <?php echo get_sub_field('name') ?>
-                                    </div>
+                                    <a href="<?php echo get_permalink($team_id); ?>"
+                                        title="<?php echo get_the_title($team_id); ?>">
+                                        <div class="list-doctors__slider_item-content_title">
+                                            <?php echo get_the_title($team_id); ?>
+                                        </div>
+                                    </a>
                                     <div class="list-doctors__slider_item-content_subtitle">
-                                        <?php echo get_sub_field('address') ?>
+                                        <?php echo get_field('descriptions', $team_id); ?>
                                     </div>
                                     <div class="list-doctors__slider_item-content_language_title">
                                         <?php
@@ -56,11 +82,14 @@
                                 </div>
                             </div>
                         </div>
-                    <?php endwhile; ?>
-                <?php endif; ?>
+                        <?php
+                    endwhile;
+                }
+                ?>
             </div>
         </div>
-        <div class="list-doctors__see-more text-center d-flex justify-content-center align-items-center">
+        <a href="<?php bloginfo('wpurl'); ?>/doi-ngu-msi/"
+            class="list-doctors__see-more text-center d-flex justify-content-center align-items-center">
             <div class="list-doctors__see-more_text">
                 <?php
                 if (pll_current_language('slug') == 'vi') {
@@ -77,6 +106,6 @@
             <img class="list-doctors__see-more_next"
                 src="<?php bloginfo('wpurl'); ?>/wp-content/themes/m5/assets/images/os/arrow_circle_right.svg"
                 alt="arrow_circle_right.svg">
-        </div>
+        </a>
     </div>
 </div>

@@ -14,7 +14,7 @@
                 }
                 ?>
             </div>
-            <a href="#" class="clinic-nearby-u__header_see-all">
+            <a href="<?php bloginfo('wpurl'); ?>/phong-kham-gan-ban/" class="clinic-nearby-u__header_see-all">
                 <span>
                     <?php
                     if (pll_current_language('slug') == 'vi') {
@@ -50,12 +50,13 @@
                 <?php while (the_repeater_field('clinic_nearby_you', pll_current_language('slug'))): ?>
                     <div class="clinic-nearby-u-slider">
                         <div class="clinic-nearby-u-slider__item">
-                            <div class="clinic-nearby-u-slider__item_img">
+                            <a href="<?php bloginfo('wpurl'); ?>/phong-kham-gan-ban/" class="clinic-nearby-u-slider__item_img">
                                 <figure>
                                     <img src="<?php echo get_sub_field('image') ?>" alt="<?php echo get_sub_field('name') ?>" />
                                 </figure>
-                            </div>
-                            <div class="clinic-nearby-u-slider__item_content">
+                            </a>
+                            <a href="<?php bloginfo('wpurl'); ?>/phong-kham-gan-ban/"
+                                class="clinic-nearby-u-slider__item_content">
                                 <div class="clinic-nearby-u-slider__item_title">
                                     <?php echo get_sub_field('name') ?>
                                 </div>
@@ -73,36 +74,34 @@
                                         </span>
                                     </div>
                                 </div>
-                                <div class="clinic-nearby-u-slider__item_action d-flex justify-content-start">
-                                    <div
-                                        class="clinic-nearby-u-slider__item_action-item clinic-nearby-u-slider__item_action-call">
-                                        <?php
-                                        if (pll_current_language('slug') == 'vi') {
-                                            echo 'Gọi điện';
-                                        }
-                                        if (pll_current_language('slug') == 'en') {
-                                            echo 'Call now';
-                                        }
-                                        if (pll_current_language('slug') == 'zh') {
-                                            echo '立即致电';
-                                        }
-                                        ?>
-                                    </div>
-                                    <div
-                                        class="clinic-nearby-u-slider__item_action-item clinic-nearby-u-slider__item_action-book">
-
-                                        <?php
-                                        if (pll_current_language('slug') == 'vi') {
-                                            echo 'Đặt lịch';
-                                        }
-                                        if (pll_current_language('slug') == 'en') {
-                                            echo 'Book now';
-                                        }
-                                        if (pll_current_language('slug') == 'zh') {
-                                            echo '立即预订';
-                                        }
-                                        ?>
-                                    </div>
+                            </a>
+                            <div class="clinic-nearby-u-slider__item_action d-flex justify-content-start">
+                                <a href="tel:<?php echo get_sub_field('number_phone') ?>"
+                                    class="clinic-nearby-u-slider__item_action-item clinic-nearby-u-slider__item_action-call">
+                                    <?php
+                                    if (pll_current_language('slug') == 'vi') {
+                                        echo 'Gọi điện';
+                                    }
+                                    if (pll_current_language('slug') == 'en') {
+                                        echo 'Call now';
+                                    }
+                                    if (pll_current_language('slug') == 'zh') {
+                                        echo '立即致电';
+                                    }
+                                    ?>
+                                </a>
+                                <div class="clinic-nearby-u-slider__item_action-item clinic-nearby-u-slider__item_action-book">
+                                    <?php
+                                    if (pll_current_language('slug') == 'vi') {
+                                        echo 'Đặt lịch';
+                                    }
+                                    if (pll_current_language('slug') == 'en') {
+                                        echo 'Book now';
+                                    }
+                                    if (pll_current_language('slug') == 'zh') {
+                                        echo '立即预订';
+                                    }
+                                    ?>
                                 </div>
                             </div>
                         </div>
@@ -120,5 +119,20 @@
                     alt="icon-next" />
             </button>
         </div>
+        <div class="row map_iframe">
+            <div class="col-12 pl-0">
+                <iframe id="map_frame"
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3724.414269783198!2d105.7947488!3d21.0161038!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac9787d4def3%3A0x65205b8781585239!2zQ2h1bmcgY8awIFnDqm4gSMOyYQ!5e0!3m2!1svi!2s!4v1666067932401!5m2!1svi!2s"
+                    width="600" height="677" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                    tabindex="0"></iframe>
+            </div>
+        </div>
     </div>
 </div>
+
+<style>
+    .map_iframe {
+        display: none;
+    }
+
+</style>

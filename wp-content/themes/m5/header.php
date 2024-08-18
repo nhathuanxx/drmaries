@@ -322,5 +322,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				<span></span>
 			</div>
 		</header>
-
+		
+		<!-- tạm ẩn background đầu trang -->
 		<?php get_template_part('template-parts/page-title'); ?>

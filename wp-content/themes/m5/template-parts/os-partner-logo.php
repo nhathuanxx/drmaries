@@ -163,7 +163,8 @@
 
     .slick-next,
     .slick-prev {
-        display: none !important;
+        /* mất nút chuyển ở banner màn home */
+        /* display: none !important; */
     }
 
     @media screen and (max-width: 767px) {

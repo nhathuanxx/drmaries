@@ -6,7 +6,7 @@ get_header(); ?>
 
 <main class="main-content home-page">
     <div class="slider-main home-banner">
-        <div class="sun-slider" data-slick='{"slidesToShow": 1, "slidesToScroll": 1, "fade": true, "autoplay": true, "autoplaySpeed": 6000}'>
+        <div class="sun-slider" data-slick='{"slidesToShow": 1, "slidesToScroll": 1, "fade": true, "dots": false, "autoplay": true, "infinite": true, "autoplaySpeed": 5000}'>
             <?php if (get_field('banner', pll_current_language('slug'))) : ?>
                 <?php while (the_repeater_field('banner', pll_current_language('slug'))) :
                 ?>

@@ -5625,12 +5625,12 @@ body {
     color: #292929;
 }
 
-.clinic-nearby-u-slider .clinic-nearby-u-slider__item .clinic-nearby-u-slider__item_content .clinic-nearby-u-slider__item_action {
+.clinic-nearby-u-slider .clinic-nearby-u-slider__item .clinic-nearby-u-slider__item_action {
     gap: 10px;
     margin-top: 24px;
 }
 
-.clinic-nearby-u-slider .clinic-nearby-u-slider__item .clinic-nearby-u-slider__item_content .clinic-nearby-u-slider__item_action .clinic-nearby-u-slider__item_action-item {
+.clinic-nearby-u-slider .clinic-nearby-u-slider__item .clinic-nearby-u-slider__item_action .clinic-nearby-u-slider__item_action-item {
     height: 48px;
     border-radius: 100px;
     padding: 12px 24px 12px 24px;
@@ -5642,11 +5642,11 @@ body {
     color: #fff;
 }
 
-.clinic-nearby-u-slider .clinic-nearby-u-slider__item .clinic-nearby-u-slider__item_content .clinic-nearby-u-slider__item_action .clinic-nearby-u-slider__item_action-call {
+.clinic-nearby-u-slider .clinic-nearby-u-slider__item .clinic-nearby-u-slider__item_action .clinic-nearby-u-slider__item_action-call {
     background-color: #00ACEE;
 }
 
-.clinic-nearby-u-slider .clinic-nearby-u-slider__item .clinic-nearby-u-slider__item_content .clinic-nearby-u-slider__item_action .clinic-nearby-u-slider__item_action-book {
+.clinic-nearby-u-slider .clinic-nearby-u-slider__item .clinic-nearby-u-slider__item_action .clinic-nearby-u-slider__item_action-book {
     background-color: #E50C75;
 }
 
@@ -5941,6 +5941,7 @@ body {
     text-align: left;
     color: #292929;
     margin-top: 16px;
+    max-height: 144px;
 }
 
 .list-doctors__slider_item-content_language_title {
