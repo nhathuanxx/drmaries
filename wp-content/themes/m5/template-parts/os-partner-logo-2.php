@@ -28,7 +28,7 @@
             <div class="col-md-6 col-lg-6 partner-row-header-2">
                 <div class="os-partner-2-btn-container">
                     <a class="os-btn-partner-2" href="tel:<?php echo get_field('hotline', pll_current_language('slug')); ?>">Liên hệ</a>
-                    <a class="os-btn-partner-2" href="">Đặt lịch</a>
+                    <a class="os-btn-partner-2 book-calendar" href="">Đặt lịch</a>
                     <a class="os-btn-partner-2" href="<?php bloginfo('wpurl'); ?>/phong-kham-gan-ban/">Tìm phòng khám</a>
 
 

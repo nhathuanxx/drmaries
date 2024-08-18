@@ -437,7 +437,7 @@
 
     .book-now__custom {
         border: none;
-        background-image: url('../wp-content/themes/m5/assets/images/os/booking-now-bgr.png');
+        background-image: url("<?php echo get_template_directory_uri(); ?>/assets/images/os/booking-now-bgr.png");
         padding: 64px 64px 0 64px;
         background-size: cover;
         background-position: left;
@@ -575,14 +575,14 @@
         }
 
         .book-now__custom-form {
-            margin-bottom: 16px;
+            margin-bottom: 0px;
         }
     }
 
     /* end custom css book now */
 
     /* custom contact bar */
-    
+
     #contact-bar li {
         margin: 24px 0;
     }

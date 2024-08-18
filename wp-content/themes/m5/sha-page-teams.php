@@ -136,14 +136,6 @@ get_header();
         margin-bottom: 72px;
     }
 
-
-    .partner-row-header-2,
-    .partner-row-header-3,
-    #msi-partner-logo-carousel {
-        display: none;
-    }
-
-
     @media screen and (min-width: 768px) and (max-width: 991px) {
         .doctor-title {
             font-size: 40px;

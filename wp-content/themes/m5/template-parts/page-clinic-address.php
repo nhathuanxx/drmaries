@@ -144,12 +144,6 @@ $url = get_template_directory_uri();
         margin-right: 0px;
     }
 
-    .partner-row-header-2,
-    .partner-row-header-3,
-    #msi-partner-logo-carousel {
-        display: none;
-    }
-
     @media screen and (min-width: 991px) and (max-width: 1199px) {
         .clinic-nearby-u {
             padding-top: 48px;
