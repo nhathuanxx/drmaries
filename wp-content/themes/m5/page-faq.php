@@ -51,7 +51,7 @@ get_header(); ?>
                                                 <a href="<?php the_permalink(); ?>">
                                                     <?php if (has_post_thumbnail($post->ID)) : ?>
                                                         <?php $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'large'); ?>
-                                                        
+                                                        <img class="" alt="Post Thumbnail" src="<?php echo $image[0]; ?>">
                                                     <?php endif; ?>
                                                     <img class="" alt="Post Thumbnail" src="https://dummyimage.com/600x400/dddddd/fff.jpg&text=FAQ">
                                                 </a>
@@ -122,7 +122,7 @@ get_header(); ?>
                                                 <a href="<?php the_permalink(); ?>">
                                                     <?php if (has_post_thumbnail($post->ID)) : ?>
                                                         <?php $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'large'); ?>
-                                                        <img class="" alt="Post Thumbnail" src="https://dummyimage.com/600x400/dddddd/fff.jpg&text=FAQ">
+                                                        <img class="" alt="Post Thumbnail" src="<?php echo $image[0]; ?>">
                                                     <?php endif; ?>
                                                     <img class="" alt="Post Thumbnail" src="https://dummyimage.com/600x400/dddddd/fff.jpg&text=FAQ">
                                                 </a>
@@ -194,7 +194,7 @@ get_header(); ?>
                                                 <a href="<?php the_permalink(); ?>">
                                                     <?php if (has_post_thumbnail($post->ID)) : ?>
                                                         <?php $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'large'); ?>
-                                                        <img class="" alt="Post Thumbnail" src="https://dummyimage.com/600x400/dddddd/fff.jpg&text=FAQ">
+                                                        <img class="" alt="Post Thumbnail" src="<?php echo $image[0]; ?>">
                                                     <?php endif; ?>
                                                     <img class="" alt="Post Thumbnail" src="https://dummyimage.com/600x400/dddddd/fff.jpg&text=FAQ">
                                                 </a>

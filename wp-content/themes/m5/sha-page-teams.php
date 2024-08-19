@@ -102,7 +102,7 @@ get_header();
     </div>
 </main>
 
-<?php require get_template_directory() . '/template-parts/os-partner-logo.php'; ?>
+<?php require get_template_directory() . '/template-parts/os-partner-logo-2.php'; ?>
 <?php require get_template_directory() . '/template-parts/content-us-now.php'; ?>
 
 <?php get_footer(); ?>
@@ -135,14 +135,6 @@ get_header();
         margin-right: inherit;
         margin-bottom: 72px;
     }
-
-
-    .partner-row-header-2,
-    .partner-row-header-3,
-    #msi-partner-logo-carousel {
-        display: none;
-    }
-
 
     @media screen and (min-width: 768px) and (max-width: 991px) {
         .doctor-title {
