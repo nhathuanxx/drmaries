@@ -161,17 +161,25 @@
         color: transparent;
     }
 
-    .os-partner-content .slick-next,
-    .slick-prev {
+    .os-partner-content .slick-next {
         /* mất nút chuyển ở banner màn home */
-        /* display: none !important; */
+        display: none !important;
+    }
+    .os-partner-content .slick-prev {
+        /* mất nút chuyển ở banner màn home */
+        display: none !important;
     }
     .slick-slide img{
         background: white;
+        padding: 20px;
     }
 
     @media screen and (max-width: 767px) {
-        .os-partner-content {
+
+        .slick-slide img{
+        background: white;
+        padding: 12px;
+    }        .os-partner-content {
             padding: 40px 16px;
         }
 

@@ -5,14 +5,26 @@
         $('.sun-slider').slick({
             arrows: true
         });
-        
-        $('.slider-nav').slick({
-             slidesToShow: 4,
-             slidesToScroll: 1,
-             dots: false,
-             autoplay: true,
-             autoplaySpeed: 2000,
-        });
+        var screenWidth = $(window).width(); 
+        console.log(screenWidth)
+        if(screenWidth > 767){
+            $('.slider-nav').slick({
+                slidesToShow: 6,
+                slidesToScroll: 4,
+                dots: true,
+                autoplay: true,
+                autoplaySpeed: 3000,
+           });
+        }
+        else{
+            $('.slider-nav').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                dots: true,
+                autoplay: true,
+                autoplaySpeed: 3000,
+           });
+        }
 
         // $('.form-day-book').datetimepicker({format: 'LT'});
         // $('#form_time_book').datetimepicker({format: 'LT'});

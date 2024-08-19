@@ -48,7 +48,10 @@ $url = get_template_directory_uri();
     <div class="container">
         <ul class="nav nav-pills msi-post-tab-nav" id="pills-tab" role="tablist">
             <li class="nav-item">
-                <a class="nav-link active" id="msi-post-cat-1-tab" data-toggle="pill" href="#msi-post-cat-1" role="tab" aria-controls="msi-post-cat-1" aria-selected="true">Sức khỏe sinh sản</a>
+                <a class="nav-link active" id="msi-post-cat-0-tab" data-toggle="pill" href="#msi-post-cat-0" role="tab" aria-controls="msi-post-cat-0" aria-selected="true">All</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="msi-post-cat-1-tab" data-toggle="pill" href="#msi-post-cat-1" role="tab" aria-controls="msi-post-cat-1" aria-selected="true">Sức khỏe sinh sản</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" id="msi-post-cat-2-tab" data-toggle="pill" href="#msi-post-cat-2" role="tab" aria-controls="msi-post-cat-2" aria-selected="false">Biện pháp tránh thai</a>
@@ -58,7 +61,73 @@ $url = get_template_directory_uri();
             </li>
         </ul>
         <div class="tab-content" id="pills-tabContent">
-            <div class="tab-pane fade show active" id="msi-post-cat-1" role="tabpanel" aria-labelledby="msi-post-cat-1-tab">
+            <div class="tab-pane fade show active" id="msi-post-cat-0" role="tabpanel" aria-labelledby="msi-post-cat-0-tab">
+                <div class="row msi-post-tab-content">
+                    <div class="col-md-12 msi-post-tab-content-left">
+                        <div class="msi-post-list row">
+
+                            <?php
+                            $args = array(
+                                'post_type' => 'hoi-dap',
+                                'orderby' => 'post_date',
+                                'posts_per_page' => 6,
+                                'tax_query' => array(
+                                    array(
+                                        'taxonomy' => 'hoi-dap-cat',
+                                        'terms' => 10,11,12,
+                                        'field' => 'term_id',
+                                    )
+                                ),
+                            );
+                            $query = new WP_Query($args); ?>
+
+                            <?php if ($query->have_posts()) : ?>
+                                <?php while ($query->have_posts()) : $query->the_post(); ?>
+                                    <div class="msi-post-item col-md-6 col-lg-4">
+                                        <div class="row" style="height: 100%; position:relative">
+                                            <div class="col-md-12 post-thumbnail-img">
+                                                <a href="<?php the_permalink(); ?>">
+                                                    <?php if (has_post_thumbnail($post->ID)) : ?>
+                                                        <?php $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'large'); ?>
+                                                        <img class="" alt="Post Thumbnail" src="<?php echo $image[0]; ?>">
+                                                    <?php endif; ?>
+                                                    <img class="" alt="Post Thumbnail" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/os/qapost.png'); ?>">
+                                                </a>
+                                            </div>
+                                            <div class="col-md-12 post-item-content">
+                                                <h3 class="post-item-title">
+                                                    <a href="<?php the_permalink(); ?>">
+                                                        <?php the_title(); ?>
+                                                    </a>
+                                                </h3>
+                                                <!-- <div class="msi-post-created">
+                                                    <?php the_date(); ?>
+                                                </div> -->
+                                                <div class="post-item-description">
+                                                    <?php echo wp_trim_words(get_the_content(), 40, '...'); ?>
+                                                </div>
+                                                <div class="msi-read-more">
+                                                    <a href="<?php the_permalink(); ?>">Xem chi tiết</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!-- End .msi-post-item -->
+                                <?php endwhile; ?>
+                                <!-- <div class="text-center mt-5 mb-5">
+                                    <a href="<?php echo get_category_link(4); ?>">
+                                        <b>Xem thêm <i class="fas fa-angle-double-right"></i></b>
+                                    </a>
+                                </div> -->
+                                <?php wp_reset_postdata(); ?>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                    <!-- <div class="col-md-4  msi-post-tab-sidebar-right">
+                        
+                    </div> -->
+                </div><!-- .msi-post-tab-content -->
+            </div>
+            <div class="tab-pane fade show" id="msi-post-cat-1" role="tabpanel" aria-labelledby="msi-post-cat-1-tab">
                 <div class="row msi-post-tab-content">
                     <div class="col-md-12 msi-post-tab-content-left">
                         <div class="msi-post-list row">
@@ -456,11 +525,13 @@ $url = get_template_directory_uri();
             text-align: center;
             margin-top: 0px;
         }
-        .page-qa__banner{
+
+        .page-qa__banner {
             height: auto;
             padding: 18.17px 10.17px;
             border-radius: 24px;
         }
+
         .os-page-qa .msi-post-tab-nav {
             display: flex;
             justify-content: start;
@@ -468,7 +539,8 @@ $url = get_template_directory_uri();
             white-space: nowrap;
             overflow: scroll;
         }
-        .os-page-qa .msi-post-tab-content-left{
+
+        .os-page-qa .msi-post-tab-content-left {
             padding-left: 0px;
         }
     }
