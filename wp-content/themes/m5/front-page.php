@@ -692,5 +692,10 @@ get_header(); ?>
             line-height: 30px;
 
         }
+        
+        .footer__main .footer__item__title {
+            font-size: 24px;
+            line-height: 30px;
+        }
     }
 </style>

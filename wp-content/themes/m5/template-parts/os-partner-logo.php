@@ -169,14 +169,14 @@
         /* mất nút chuyển ở banner màn home */
         display: none !important;
     }
-    .slick-slide img{
+    .os-partner-content .slick-slide img{
         background: white;
         padding: 20px;
     }
 
     @media screen and (max-width: 767px) {
 
-        .slick-slide img{
+        .os-partner-content .slick-slide img{
         background: white;
         padding: 12px;
     }        .os-partner-content {

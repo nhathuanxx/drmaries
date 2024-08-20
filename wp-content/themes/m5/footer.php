@@ -333,11 +333,24 @@
     // Khi nhấp vào bất cứ đâu trên trang
     jQuery(document).on('click', function(event) {
         // Kiểm tra xem có nhấp vào ngoài icon trung tâm và icon vệ tinh
-        if (!jQuery(event.target).closest('#toggleIcon').length && !$(event.target).closest('.icon-satellite').length) {
+        if (!jQuery(event.target).closest('#toggleIcon').length && !jQuery(event.target).closest('.icon-satellite').length) {
             jQuery('#toggleIcon').removeClass('active'); // Xóa class 'active'
         }
     });
 
+    document.getElementById('city').addEventListener('change', function() {
+        var selectedCity = this.value;
+        var clinics = document.querySelectorAll('.clinic-nearby-u-slider');
+
+        clinics.forEach(function(clinic) {
+            const z = clinic.getAttribute('data-city');
+            if (selectedCity === "" || z == selectedCity) {
+                clinic.style.display = "block";
+            } else {
+                clinic.style.display = "none";
+            }
+        });
+    });
     
 </script>
 <style>
@@ -615,18 +628,18 @@
     }
 
     #contact-bar ul li.icon-satellite:nth-child(3) {
-        top: 130px;
-        left: -48px;
+        top: 124px;
+        left: -40px;
     }
 
     #contact-bar ul li.icon-satellite:nth-child(4) {
-        top: 80px;
-        left: -56px;
+        top: 75px;
+        left: -60px;
     }
 
     #contact-bar ul li.icon-satellite:nth-child(5) {
-        top: 32px;
-        left: -44px;
+        top: 28px;
+        left: -40px;
     }
     /* end custom contact bar */
 

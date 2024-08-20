@@ -109,10 +109,16 @@ $team_id_curent =  get_the_ID();
 	                            <div class="item">
 	                                <div class="im">
 	                                    <a href="<?php the_permalink($team_id); ?>">
-	                                        <?php if (has_post_thumbnail($team_id)) : ?>
-	                                            <?php $image = wp_get_attachment_image_src(get_post_thumbnail_id($team_id), 'full'); ?>
-	                                            <img class="" alt="<?php echo get_the_title($team_id); ?>" src="<?php echo $image[0]; ?>">
-	                                        <?php endif; ?>
+	                                        <?php 
+												if (has_post_thumbnail($team_id)):
+													$image = wp_get_attachment_image_src(get_post_thumbnail_id($team_id), 'full');
+													$image_url = $image[0];
+												else:
+													$link = get_bloginfo('wpurl');
+													$image_url = $link . '/wp-content/themes/m5/assets/images/os/icon-menu-item.svg';
+												endif;	
+											?>
+	                                        <img class="" alt="<?php echo get_the_title($team_id); ?>" src="<?php echo $image_url; ?>">
 	                                    </a>
 	                                </div>
 	                                <div class="info">
@@ -139,4 +145,15 @@ $team_id_curent =  get_the_ID();
 </div><!-- #primary -->
 
 <?php
-get_footer();
+get_footer(); ?>
+
+<style>
+	.team-recent .teams .item .im {
+    	text-align: center;
+    	height: 200px;
+    	margin-bottom: 8px;
+	}
+	.team-recent .teams .item .im img {
+		height: 200px;
+	}
+</style>
