@@ -52,7 +52,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<header id="header" class="header display-flex-center justify-content-between bg-f9">
 			<div class="overlay-mobile"></div>
 			<div class="header__logo">
-				<a href="<?php echo get_home_url(); ?>">
+				<a href="<?php bloginfo('wpurl'); ?>">
 					<?php
 					$logoUrl = get_field('logo_image', pll_current_language('slug'));
 					if (is_front_page()) {

@@ -18,13 +18,13 @@
             <?php if (get_field('featured_services', pll_current_language('slug'))): ?>
                 <?php while (the_repeater_field('featured_services', pll_current_language('slug'))): ?>
                     <div class="col-6 col-sm-6 col-md-4 col-xl-3 row care-service-item__container">
-                        <div href="<?php echo get_sub_field('url') ?>" class="care-service-item__container-content">
+                        <a href="<?php echo get_sub_field('url') ?>" class="care-service-item__container-content">
                             <img class="care-service-item__container_img" src="<?php echo get_sub_field('icon_image') ?>"
                                 alt="" />
-                            <a href="<?php echo get_sub_field('url') ?>" class="care-service-item__container_label">
+                            <div href="<?php echo get_sub_field('url') ?>" class="care-service-item__container_label">
                                 <?php echo get_sub_field('title') ?>
-                            </a>
-                        </div>
+                            </div>
+                        </a>
                     </div>
                 <?php endwhile; ?>
             <?php endif; ?>

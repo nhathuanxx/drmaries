@@ -32,8 +32,8 @@
                         $team_id = get_the_ID();
                         ?>
                         <div>
-                            <div class="list-doctors__slider_item row align-items-center justify-content-center">
-                                <div class="list-doctors__slider_item-img col-12 col-lg-6">
+                            <div class="list-doctors__slider_item row align-items-center justify-content-around">
+                                <div class="list-doctors__slider_item-img col-12 col-lg-6 pl-0 pr-0">
                                     <a href="<?php the_permalink($team_id); ?>">
                                         <!-- <?php $image = wp_get_attachment_image_src(get_post_thumbnail_id($team_id), 'full'); ?> -->
                                         <?php

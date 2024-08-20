@@ -32,6 +32,17 @@
                     src="<?php bloginfo('wpurl'); ?>/wp-content/themes/m5/assets/images/os/icon-see-all.svg"
                     alt="icon-see-all">
             </a>
+            
+            <div class="clinic-nearby-u__nav_custom">
+                <button type="button" class="bg-transparent border-0 clinic-nearby-u__prev">
+                    <img src="<?php bloginfo('wpurl'); ?>/wp-content/themes/m5/assets/images/os/icon-next.svg"
+                        alt="icon-next" />
+                </button>
+                <button type="button" class="bg-transparent border-0 clinic-nearby-u__next">
+                    <img src="<?php bloginfo('wpurl'); ?>/wp-content/themes/m5/assets/images/os/icon-next.svg"
+                        alt="icon-next" />
+                </button>
+            </div>
         </div>
         <div class="clinic-nearby-u__select d-flex justify-content-between align-items-center">
             <span class="clinic-nearby-u__select-city">
