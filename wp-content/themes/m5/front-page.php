@@ -138,9 +138,9 @@ get_header(); ?>
     <div class="news bg-f9 os_news">
         <div class="container">
 
-            <?php if (get_field('news_section')) : ?>
+            <?php if (get_field('news_section', pll_current_language('slug'))) : ?>
                 <?php
-                while (the_repeater_field('news_section')) :
+                while (the_repeater_field('news_section', pll_current_language('slug'))) :
                     $home_select_category_tab_1 = get_sub_field('home_select_category_tab_1');
                     $home_select_category_tab_2 = get_sub_field('home_select_category_tab_2');
 
