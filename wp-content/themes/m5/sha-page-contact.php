@@ -133,7 +133,7 @@ get_footer(); ?>
 
 
 <style>
-    #pagetitle , .clinic-nearby-u__nav, {
+    #pagetitle, .clinic-nearby-u__nav {
         display: none;
     }
     .clinic-nearby-u .clinic-nearby-u__header_see-all {
@@ -173,6 +173,7 @@ get_footer(); ?>
 
     .map_iframe {
         display: block;
+        margin-top: 56px;
     }
 
     .clinic-nearby-u {
