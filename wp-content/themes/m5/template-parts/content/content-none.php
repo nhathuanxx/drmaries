@@ -11,7 +11,8 @@
 
 ?>
 
-<section class="no-results not-found">
+<section class="os-not-found no-results not-found">
+	<div class="container">
 	<header class="page-header">
 		<h1 class="page-title"><?php _e( 'Nothing Found', 'twentynineteen' ); ?></h1>
 	</header><!-- .page-header -->
@@ -50,4 +51,13 @@
 		endif;
 		?>
 	</div><!-- .page-content -->
+	</div>
+
 </section><!-- .no-results -->
+
+<style>
+	.os-not-found{
+		font-family: 'Be Vietnam Pro', sans-serif;
+		background-color: white;
+	}
+</style>

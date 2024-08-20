@@ -8,9 +8,10 @@
                     $background_image = get_sub_field('background_image');
                     $class_name = ($counter == 0) ? 'primary-box' : 'secondary-box';
                 ?>
-                    <div class="box-package <?php echo $class_name; ?> <?php echo get_sub_field('template_name'); ?> swiper-slide" style="background-image: url('<?php echo esc_url($background_image); ?>'); background-size: cover; background-position: center;">
+                    <div class="os-box-package <?php echo $class_name; ?> <?php echo get_sub_field('template_name'); ?> swiper-slide" style="background-image: url('<?php echo esc_url($background_image); ?>'); background-size: cover; background-position: center;">
+                    <div class="os-overlay" style="display: none;"></div>
                         <a class="arrow-package" href=""><img class="" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/os/arrow_white_btn.svg'); ?>"></a>
-                        <div class="package-content">
+                        <div class="os-package-content">
                             <div class="package-title">
                                 <div class="package-title-main">
                                     <?php echo get_sub_field('title'); ?>
@@ -20,7 +21,7 @@
                                 </div>
                             </div>
                             <div class="package-btn-group">
-                                <a href="tel:<?php echo get_field('hotline', pll_current_language('slug')); ?>" class="book-now">
+                                <a href="tel:<?php echo get_field('hotline', pll_current_language('slug')); ?>" class="book-now book-calendar">
                                     <?php
                                     if (pll_current_language('slug') == 'vi') {
                                         echo 'Đặt ngay';
@@ -70,7 +71,7 @@
         height: 700px;
     }
 
-    .box-package {
+    .os-box-package {
         transition: all 0.3s ease;
         padding: 10px;
         text-align: center;
@@ -85,11 +86,11 @@
         flex: 3;
     }
 
-    .box-package:hover {
+    .os-box-package:hover {
         flex: 6;
     }
 
-    .box-package:not(:hover) .primary-box {
+    .os-box-package:not(:hover) .primary-box {
         flex: 3;
     }
 
@@ -97,12 +98,13 @@
         flex: 3 !important;
     }
 
-    .box-package {
+    .os-box-package {
         border-radius: 40px;
-        padding: 32px;
+        padding: 0px;
         text-align: left;
         display: flex;
         align-items: end;
+        overflow: hidden;
     }
 
     .arrow-package {
@@ -116,12 +118,14 @@
         height: 44px;
     }
 
-    .package-content {
+    .os-package-content {
         gap: 16px;
         width: 100%;
+        padding: 32px;
+        z-index: 99;
     }
 
-    .package-content .package-title-main {
+    .os-package-content .package-title-main {
         font-family: 'Be Vietnam Pro', sans-serif;
         color: white;
         font-size: 32px;
@@ -131,7 +135,7 @@
 
     }
 
-    .package-content .package-title-sub {
+    .os-package-content .package-title-sub {
         font-family: 'Be Vietnam Pro', sans-serif;
         color: white;
         font-size: 16px;
@@ -174,6 +178,17 @@
         background: var(--Alias-Button-Primary-Pink, #E50C75);
 
     }
+    .os-box-package .os-overlay{
+        position: absolute;
+    }
+
+    .os-box-package:hover .os-overlay{
+        display: block !important;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        transition: 0.5s;
+    }
 
     @media screen and (max-width: 767px) {
         .flex-container {
@@ -186,7 +201,7 @@
             padding: 54px 0px;
         }
 
-        .box-package {
+        .os-box-package {
             height: 500px;
         }
 
