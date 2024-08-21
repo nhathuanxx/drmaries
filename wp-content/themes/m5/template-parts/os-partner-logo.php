@@ -58,10 +58,9 @@
             <?php if (get_field('partner_logo_list', pll_current_language('slug'))) : ?>
                 <?php while (the_repeater_field('partner_logo_list', pll_current_language('slug'))) : ?>
                     <div>
-                        <!-- <a href="<?php //echo get_sub_field('partner_link'); 
-                                        ?>"> -->
+                        <div class="os-slider-nav-img-container">
                         <img class="os-slider-nav-img" src="<?php echo get_sub_field('logo_image'); ?>" alt="Partner logo" />
-                        <!-- </a> -->
+                        </div>
                     </div>
                 <?php endwhile; ?>
             <?php endif; ?>
@@ -137,10 +136,21 @@
         height: 150px;
     }
 
-    .os-slider-nav-img {
-        width: 204px;
-        height: 101px;
+    .os-slider-nav-img-container{
+        width: 180px;
+        height: 90px;
         border-radius: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        overflow: hidden;
+    }
+
+    .os-slider-nav-img {
+        /* width: 204px;
+        height: 101px; */
+        /* border-radius: 16px; */
     }
 
     .slick-dots li button:before {
@@ -172,6 +182,10 @@
     .slick-slide img{
         background: white;
         padding: 20px;
+    }
+
+    .os-partner-content .slick-dots{
+bottom: -66px;
     }
 
     @media screen and (max-width: 767px) {
@@ -215,12 +229,19 @@
             padding-bottom: 0;
         }
 
-        .os-slider-nav-img {
+        .os-slider-nav-img-container{
             width: 97.37px;
             height: 48.69px;
             gap: 0px;
             border-radius: 7.64px;
-        }
+    }
+
+        /* .os-slider-nav-img {
+            width: 97.37px;
+            height: 48.69px;
+            gap: 0px;
+            border-radius: 7.64px;
+        } */
     }
 
     /* .mask_group_partner {
