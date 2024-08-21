@@ -30,7 +30,7 @@ body {
 
 @media screen and (min-width: 1200px) {
     .container {
-        max-width: 1400px;
+        max-width: 1500px;
     }
 }
 
@@ -2319,9 +2319,13 @@ h6,
 }
 
 .primary-menu li:not(.mega-menu)>ul ul {
-    top: 0;
-    left: 100% !important;
+    /* top: 0;
+    left: 100% !important; */
     transform: inherit !important;
+
+    /* custom for Q&A */
+    top: 42px;
+    left: -100% !important;
 }
 
 .primary-menu>li {
@@ -2525,17 +2529,34 @@ h6,
 }
 
 .header {
-    padding: 0 15px;
+    padding: 0 100px;
     height: 154.88px;
     background-color: #fff;
 }
 
 .header__lang select {
-    width: 82px;
+    width: 72px;
     height: 48px;
     background-color: #F7F7F7;
     border-color: transparent;
     border-radius: 100px;
+    text-align: right;
+}
+.header__lang {
+    width: 86px;
+    height: 48px;
+    background-color: #F7F7F7;
+    border-color: transparent;
+    border-radius: 100px;
+    position: relative;
+}
+
+.header__lang img{
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 12px;
+    left: 8px;
 }
 
 @media screen and (min-width: 1701px) {
@@ -2552,7 +2573,7 @@ h6,
 
 @media screen and (min-width: 1701px) {
     .header__info>*:not(:last-child) {
-        margin-right: 15px;
+        margin-right: 10px;
     }
 }
 
@@ -2574,6 +2595,7 @@ h6,
 
 .header.sticky-hide .header__nav>ul>li,
 .header.sticky .header__nav>ul>li {
+    margin-bottom: 0px;
     line-height: calc($header_height - 10px);
 }
 
@@ -2669,6 +2691,8 @@ h6,
 
 .header__menu__mobile .header__search {
     margin-bottom: 40px;
+    margin-left: 16px;
+    margin-right: 16px;
 }
 
 .header__menu__mobile .header__search form{
@@ -2679,27 +2703,32 @@ h6,
     width: calc(100% - 32px);
 }
 
+.header__menu__mobile__info {
+    padding: 0 16px;
+}
+
+.custom-call-btn {
+    width: 183px;
+    position: relative;
+}
 .call-button {
     display: flex;
-    align-items: center;
-    padding: 4px 12px 4px 4px;
+    align-items: flex-start;
+    padding: 0px 16px 0px 0px;
     background-color: #E50C75; /* Your pink color */
     border-radius: 40px; /* Adjust to your preference */
-    color: #ffffff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     font-family: 'Be Vietnam Pro', sans-serif;
     color: #fff;
+    width: 147px;
 }
 
-.call-button .icon {
-    background-color: #fff;
-    color: #E50C75; /* Your pink color */
-    border-radius: 50%;
-    padding: 10px;
-    margin-right: 10px;
-    font-size: 20px;
+.call-button .header__book-icon {
+    height: 54px;
+    width: 54px;
+    margin-right: 8px;
+    z-index: 99;
 }
-
 .call-button .text {
     display: flex;
     flex-direction: column;
@@ -2707,22 +2736,51 @@ h6,
     color: #fff;
 }
 
-.call-button .text .phone-number {
-    font-weight: bold;
-    font-size: 1.2em;
-}
-
 .call-button .text span:first-child {
     margin-bottom: 5px;
     font-size: 12px;
     font-weight: 400;
     line-height: 18px;
+    padding-top: 3px;
 }
 
+.custom-call-btn .phone-number {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #fff;
+    padding: 4px 12px 4px 24px;
+    color: #e50c75;
+    border-radius: 0px 100px 100px 0;
+    border: 3px solid #E50C75;
+    font-family: Be Vietnam Pro;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    text-align: left;
+}
 
+@media screen and (max-width: 1636px) {
+    .custom-call-btn {
+        width: auto;
+    }
+
+    .call-button {
+        padding: 0px;
+        width: auto;
+    }
+    .call-button .header__book-icon {
+        margin-right: 0px; 
+    }
+    .call-button .text, .custom-call-btn .phone-number {
+        display: none;
+    }
+     
+}
 @media screen and (min-width: 1200px) and (max-width: 1399px) {
     .call-button {
-        padding: 4px;
+        padding: 0px;
+        width: auto;
     }
 
     .call-button .header__book-icon {
@@ -2748,6 +2806,11 @@ h6,
     }
 }
 
+@media screen and (min-width: 1300px) and (max-width: 1499px) {
+    .header {
+        padding: 0 8px;
+    }
+}
 @media screen and (min-width: 1200px) and (max-width: 1299px) {
     .header__book,
     .header__desc p {
@@ -2755,6 +2818,7 @@ h6,
     }
     .header {
         height: 120px;
+        padding: 0 8px;
     }
 }
 
@@ -2767,29 +2831,37 @@ h6,
         font-size: 11px;
     }
 
-    .call-button {
-        padding: 4px;
+    .call-button, .header__book {
+        padding: 3px;
+    }
+    .custom-call-btn .call-button {
+        padding: 0px;
+        width: auto;
     }
 
-    .call-button .header__book-icon {
+    .call-button .header__book-icon, .header__book .header__book-icon {
         margin-right: 0px; 
     }
 
-    .call-button .text {
+    .call-button .text, .header__book .header__book-text {
         display: none;
     }
     .header {
         height: 114px;
+        padding: 0 24px;
     }
+    
 }
 
 @media screen and (max-width: 991px) {
     .header {
         height: 70px;
+        padding: 0px 15px;
     }
     
     .call-button {
-        padding: 4px;
+        padding: 0px;
+        width: auto;
     }
 
     .call-button .header__book-icon {
@@ -5976,7 +6048,7 @@ body {
 }
 
 .list-doctors__slider {
-    margin-top: 56px;
+    margin-top: 18px;
 }
 .list-doctors__slider .slick-list{
     padding: 24px 0;
@@ -6098,7 +6170,7 @@ body {
 }
 
 .list-doctors__see-more {
-    margin-top: 56px;
+    margin-top: 36px;
 }
 
 .list-doctors__see-more .list-doctors__see-more_text {
@@ -6152,7 +6224,7 @@ body {
     }
 
     .list-doctors__slider_item-img img {
-        height: 400px;
+        height: 300px;
         width: 100%;
     }
     
@@ -6171,9 +6243,12 @@ body {
         font-size: 32px;
         line-height: 48px;
     }
+    .list-doctors__slider_item {
+        border-radius: 24px;
+    }
     
     .list-doctors__slider_item-img img {
-        height: 400px;
+        height: 278px;
         width: 100%;
     }
     
@@ -6182,6 +6257,9 @@ body {
     }
     .list-doctors__slider .slick-list {
         padding: 0px;
+    }
+    .list-doctors__slider_item-content_language_title {
+        margin-top: 16px;
     }
 }
 
@@ -6196,7 +6274,91 @@ body {
     }
     
     .list-doctors__slider_item-img img {
-        height: 328px;
+        height: 278px;
         width: 100%;
     }
 }
+
+/* custom menu 2 column */
+
+	.dropdown-menu {
+    	padding: 0 !important;
+    	margin: 0 !important;
+    	list-style: none !important;
+    	display: none !important;
+    	grid-template-columns: repeat(2, 1fr) !important; /* Tạo 2 cột đều nhau */
+    	gap: 10px !important; /* Khoảng cách giữa các mục */
+	}
+
+	/* Hiển thị menu con khi hover vào mục cha */
+	.nav-item:hover > .dropdown-menu {
+    	display: grid !important; /* Chỉ hiển thị menu khi hover vào mục cha */
+		}
+
+	/* Xử lý menu con cấp 3 (submenu của submenu) */
+	.dropdown-menu .menu-item:hover > .dropdown-menu {
+    	display: grid !important;
+	}
+
+	/* Style cho các mục menu */
+	.dropdown-menu .menu-item {
+    padding: 5px !important;
+	}
+
+	.dropdown-menu .menu-item a {
+    	display: block !important;
+    	text-align: left !important;
+    	text-decoration: none !important;
+    	color: #292929 !important; /* Điều chỉnh màu chữ */
+		white-space: nowrap !important;
+		font-family: 'Be Vietnam Pro', sans-serif;
+		font-weight: 500;
+		line-height: 24px;
+	}
+
+	/* Style cho hover của các mục menu */
+	.dropdown-menu .menu-item a:hover {
+    	/* background-color: #f0f0f0 !important; */
+    	color: #00ACEE !important; /* Màu chữ khi hover */
+	}
+	.item-child-menu li:before, .mega-menu__list ul li:before, .primary-menu li:not(.mega-menu) ul li:before{
+		position: relative;
+		top: 0px !important;
+		left: 0px !important; 
+	}
+	.primary-menu li:not(.mega-menu) ul li{
+		display: flex !important;
+		align-items: center !important;
+		gap: 12px !important;
+	}
+	.primary-menu li:not(.mega-menu) ul{
+		padding: 40px !important;
+		column-gap: 100px !important;
+		row-gap: 8px !important;
+	}
+
+	/* custom icon menu Service */
+	#nav-item-4711 ul li:nth-child(1):before {
+		background-image: url(../../../../../wp-content/themes/m5/assets/images/os/ic_menu_sv_1.svg);
+	}
+	#nav-item-4711 ul li:nth-child(2):before {
+		background-image: url(../../../../../wp-content/themes/m5/assets/images/os/ic_menu_sv_2.svg);
+	}
+	#nav-item-4711 ul li:nth-child(3):before {
+		background-image: url(../../../../../wp-content/themes/m5/assets/images/os/ic_menu_sv_3.svg);
+	}
+	#nav-item-4711 ul li:nth-child(4):before {
+		background-image: url(../../../../../wp-content/themes/m5/assets/images/os/ic_menu_sv_4.svg);
+	}
+	#nav-item-4711 ul li:nth-child(5):before {
+		background-image: url(../../../../../wp-content/themes/m5/assets/images/os/ic_menu_sv_5.svg);
+	}
+	#nav-item-4711 ul li:nth-child(6):before {
+		background-image: url(../../../../../wp-content/themes/m5/assets/images/os/ic_menu_sv_6.svg);
+	}
+	#nav-item-4711 ul li:nth-child(7):before {
+		background-image: url(../../../../../wp-content/themes/m5/assets/images/os/ic_menu_sv_7.svg);
+	}
+	#nav-item-4711 ul li:nth-child(8):before {
+		background-image: url(../../../../../wp-content/themes/m5/assets/images/os/ic_menu_sv_8.svg);
+	}

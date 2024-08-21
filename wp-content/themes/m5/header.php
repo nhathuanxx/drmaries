@@ -179,24 +179,38 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					</span>
 					<span class="header__book-text"><?php echo get_field('book_an_appointment', pll_current_language('slug')); ?></span>
 				</a>
-				<a href="tel:1900 55 88 82" class="call-button">
-				    <div class="header__book-icon">
-						<img class="icon-calendar" src="<?php bloginfo('wpurl'); ?>/wp-content/themes/m5/assets/images/os/icon-phone.svg" alt="icon-calendar">
-				    </div>
-				    <div class="text">
-				        <span>Call us now!</span>
-				        <span class="phone-number">1900 55 88 82</span>
-				    </div>
+				<a href="tel:1900 55 88 82" class="custom-call-btn">
+					<div class="call-button">
+				    	<div class="header__book-icon">
+							<img src="<?php bloginfo('wpurl'); ?>/wp-content/themes/m5/assets/images/os/icon-phone.svg" alt="icon-calendar">
+				    	</div>
+				    	<div class="text">
+				    	    <span>Call us now!</span>
+				    	</div>
+					</div>
+					<span class="phone-number">1900 55 88 82</span>
 				</a>
 
 				<div class="header__lang only-desktop">
 					<?php $translations = pll_the_languages(array('raw' => 1)); ?>
 
 					<?php if (!empty($translations)) : ?>
-						<select class="select-circle" onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
+						<?php
+							$url = get_bloginfo('wpurl') . '/wp-content/themes/m5/assets/images/os/';
+    						if (pll_current_language('slug') == 'vi') {
+    						    echo '<img src="' . $url . 'flag-vi.png" alt="flag">';
+    						} elseif (pll_current_language('slug') == 'en') {
+    						    echo '<img src="' . $url . 'flag-en.png" alt="flag">';
+    						} elseif (pll_current_language('slug') == 'zh') {
+    						    echo '<img src="' . $url . 'flag-cn.png" alt="flag">';
+    						}
+                		?>
 
+						<select class="select-circle" onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
 							<?php foreach ($translations as $translation) : ?>
-								<option <?php if ($translation['current_lang'] == true) : ?> selected="selected" <?php endif; ?> value="<?php echo $translation['url']; ?>"><?php echo $translation['slug']; ?></option>
+								<option <?php if ($translation['current_lang'] == true) : ?> selected="selected" <?php endif; ?> value="<?php echo $translation['url']; ?>">
+									<?php echo $translation['slug']; ?>
+								</option>
 							<?php endforeach; ?>
 						</select>
 					<?php endif; ?>
@@ -302,9 +316,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					</ul> -->
 				</div>
 				<div class="header__menu__mobile__info">
+
+					
+
 					<div class="header__lang">
 
 						<?php if (!empty($translations)) : ?>
+							<?php
+								$url = get_bloginfo('wpurl') . '/wp-content/themes/m5/assets/images/os/';
+    							if (pll_current_language('slug') == 'vi') {
+    							    echo '<img src="' . $url . 'flag-vi.png" alt="flag">';
+    							} elseif (pll_current_language('slug') == 'en') {
+    							    echo '<img src="' . $url . 'flag-en.png" alt="flag">';
+    							} elseif (pll_current_language('slug') == 'zh') {
+    							    echo '<img src="' . $url . 'flag-cn.png" alt="flag">';
+    							}
+                			?>
 							<select class="select-circle" onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
 
 							<?php foreach ($translations as $translation) : ?>
