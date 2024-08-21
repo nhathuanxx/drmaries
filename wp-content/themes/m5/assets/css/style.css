@@ -4202,6 +4202,9 @@ body {
 .home-page .home-banner .sun-slider.slick-slider {
     margin-bottom: 0;
 }
+/* .home-page .home-banner .sun-slider.slick-slider .item__img {
+    height: 1010px;
+} */
 .home-page .home-banner .sun-slider.slick-slider img{
     max-height: fit-content;
     width: 100%;
@@ -5608,9 +5611,11 @@ body {
 
 .clinic-nearby-u-slider:hover .clinic-nearby-u-slider__item{
     transform: translateY(-10px);
+    transition: .8s;
 }
 .clinic-nearby-u-slider:hover .clinic-nearby-u-slider__item .clinic-nearby-u-slider__item_img img{
     transform: scale(1.03);
+    transition: .8s;
 }
 
 .clinic-nearby-u-slider .clinic-nearby-u-slider__item {
@@ -5939,7 +5944,7 @@ body {
 }
 
 .list-doctors__head { 
-    max-width: 665px;
+    /* max-width: 665px; */
 }
 
 .list-doctors__head .list-doctors__head_title {
@@ -5967,10 +5972,14 @@ body {
     line-height: 24px;
     text-align: center;
     color: #000000;
+    max-width: 800px;
 }
 
 .list-doctors__slider {
     margin-top: 56px;
+}
+.list-doctors__slider .slick-list{
+    padding: 24px 0;
 }
 
 .list-doctors__slider_item {
@@ -5987,6 +5996,7 @@ body {
 .list-doctors__slider_item:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    transition: 1s;
 }
 
 /* .list-doctors__slider_item:hover .list-doctors__slider_item-img img{
@@ -6004,7 +6014,7 @@ body {
 .list-doctors__slider_item-img img {
     /* max-width: 329px; */
     border-radius: 16px;
-    height: 320px;
+    height: 372px;
     object-fit: cover;
     /* padding-left: 28px; */
     background-color: #fff;
@@ -6126,16 +6136,16 @@ body {
     }
 
     .list-doctors__slider_item {
-        margin-left: 8px;
-        margin-right: 8px;
+        margin-left: 0px;
+        margin-right: 0px;
     }
 
     .list-doctors__slider_item {
-        padding: 24px 16px 24px 16px;
+        padding: 16px;
     }
 
     .list-doctors__slider_item-img {
-        margin-bottom: 32px;
+        margin-bottom: 24px;
         max-width: 100%;
         width: 100%;
         padding: 0;
@@ -6165,6 +6175,13 @@ body {
     .list-doctors__slider_item-img img {
         height: 400px;
         width: 100%;
+    }
+    
+    .list-doctors__see-more {
+        margin-top: 0px;
+    }
+    .list-doctors__slider .slick-list {
+        padding: 0px;
     }
 }
 

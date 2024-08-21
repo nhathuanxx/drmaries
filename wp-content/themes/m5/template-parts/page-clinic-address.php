@@ -50,35 +50,37 @@ $url = get_template_directory_uri();
                         $city = get_sub_field('city'); // Lấy thành phố
                         while (the_repeater_field('content')): ?>
                             <div class="clinic-nearby-u-slider col-12 col-sm-12 col-lg-6 col-xl-4"
-                                data-city="<?php echo esc_attr($city); ?>">
+                                data-city="<?php echo $city; ?>">
                                 <div class="clinic-nearby-u-slider__item">
-                                    <a href="#map_clinic" data-map="<?php echo esc_attr(get_sub_field('map_embed')); ?>"
-                                        class="clinic-nearby-u-slider__item_img">
-                                        <figure>
-                                            <img src="<?php echo esc_url(get_sub_field('image')); ?>"
-                                                alt="<?php echo esc_attr(get_sub_field('name')); ?>" />
-                                        </figure>
-                                    </a>
-                                    <a href="#map_clinic" data-map="<?php echo esc_attr(get_sub_field('map_embed')); ?>"
-                                        class="clinic-nearby-u-slider__item_content">
-                                        <div class="clinic-nearby-u-slider__item_title">
-                                            <?php echo esc_html(get_sub_field('name')); ?>
+                                    <a href="#map_clinic" class="clinic-nearby-u-slider__item-map" data-map="<?php echo get_sub_field('map_embed'); ?>">
+                                        <div
+                                            class="clinic-nearby-u-slider__item_img">
+                                            <figure>
+                                                <img src="<?php echo esc_url(get_sub_field('image')); ?>"
+                                                    alt="<?php echo get_sub_field('name'); ?>" />
+                                            </figure>
                                         </div>
-                                        <div class="clinic-nearby-u-slider__item_subtitle">
-                                            <div class="clinic-nearby-u-slider__item_info d-flex align-items-start">
-                                                <img src="<?php bloginfo('wpurl'); ?>/wp-content/themes/m5/assets/images/os/icon-marked.svg"
-                                                    alt="icon-marked">
-                                                <span><?php echo esc_html(get_sub_field('address')); ?></span>
+                                        <div
+                                            class="clinic-nearby-u-slider__item_content">
+                                            <div class="clinic-nearby-u-slider__item_title">
+                                                <?php echo get_sub_field('name'); ?>
                                             </div>
-                                            <div class="clinic-nearby-u-slider__item_info d-flex align-items-start">
-                                                <img src="<?php bloginfo('wpurl'); ?>/wp-content/themes/m5/assets/images/os/icon-time.svg"
-                                                    alt="icon-marked">
-                                                <span><?php echo esc_html(get_sub_field('on_time')); ?></span>
+                                            <div class="clinic-nearby-u-slider__item_subtitle">
+                                                <div class="clinic-nearby-u-slider__item_info d-flex align-items-start">
+                                                    <img src="<?php bloginfo('wpurl'); ?>/wp-content/themes/m5/assets/images/os/icon-marked.svg"
+                                                        alt="icon-marked">
+                                                    <span><?php echo get_sub_field('address'); ?></span>
+                                                </div>
+                                                <div class="clinic-nearby-u-slider__item_info d-flex align-items-start">
+                                                    <img src="<?php bloginfo('wpurl'); ?>/wp-content/themes/m5/assets/images/os/icon-time.svg"
+                                                        alt="icon-marked">
+                                                    <span><?php echo get_sub_field('on_time'); ?></span>
+                                                </div>
                                             </div>
                                         </div>
                                     </a>
                                     <div class="clinic-nearby-u-slider__item_action d-flex justify-content-start">
-                                        <a href="tel:<?php echo esc_attr(get_sub_field('number_phone')); ?>"
+                                        <a href="tel:<?php echo get_sub_field('number_phone'); ?>"
                                             class="clinic-nearby-u-slider__item_action-item clinic-nearby-u-slider__item_action-call">
                                             <?php
                                             if (pll_current_language('slug') == 'vi') {
@@ -160,6 +162,12 @@ $url = get_template_directory_uri();
         min-height: 280px;
     }
 
+    .page-clinic-address__map {
+        position: relative;
+        background-color: #fff;
+        margin-bottom: 160px;
+    }
+
     @media screen and (min-width: 991px) and (max-width: 1199px) {
         .clinic-nearby-u {
             padding-top: 48px;
@@ -198,6 +206,10 @@ $url = get_template_directory_uri();
         .clinic-nearby-u-slider .clinic-nearby-u-slider__item {
             padding-left: 0px;
             padding-right: 0px;
+        }
+        
+        .page-clinic-address__map {
+            margin-bottom: 40px;
         }
     }
 </style>

@@ -63,6 +63,10 @@ get_header();
                                                 <?php echo get_the_title($team_id); ?>
                                             </div>
                                         </div>
+                                        <div class="list-doctors__slider_item-content_rate">
+                                            <img src="<?php bloginfo('wpurl'); ?>/wp-content/themes/m5/assets/images/os/icon-start.svg"
+                                                alt="icon-start">
+                                        </div>
                                         <div class="list-doctors__slider_item-content_subtitle">
                                             <?php echo get_field('descriptions', $team_id); ?>
                                         </div>

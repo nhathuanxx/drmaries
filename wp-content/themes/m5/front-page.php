@@ -11,7 +11,7 @@ get_header(); ?>
                 <?php while (the_repeater_field('banner', pll_current_language('slug'))) :
                 ?>
                     <div class="item">
-                        <figure class="item__img aspect-ratio margin-0">
+                        <figure class="item__img margin-0 home-page-img">
                             <a href="<?php echo get_sub_field('cta_link', pll_current_language('slug')); ?>">
                                 <!-- <img src="<?php //echo get_sub_field('banner_image'); 
                                                 ?>" alt="slider banner"> -->

@@ -29,7 +29,6 @@
                     ?>
                 </p>
                 <p class="list-doctors__head_subtitle">
-                    Mọi người yêu thích sản phẩm của chúng tôi và 70% khách hàng của chúng tôi là khách hàng quay lại. Chúng tôi tin rằng cách duy nhất để kinh doanh lâu dài là giúp đỡ mọi người.
                     <?php
                     if (pll_current_language('slug') == 'vi') {
                         echo 'Mọi người yêu thích sản phẩm của chúng tôi và 70% khách hàng của chúng tôi là khách hàng quay lại. Chúng tôi tin rằng cách duy nhất để kinh doanh lâu dài là giúp đỡ mọi người.';
@@ -64,19 +63,17 @@
                             <a href="<?php the_permalink($team_id); ?>"
                                 class="list-doctors__slider_item row align-items-center justify-content-around">
                                 <div class="list-doctors__slider_item-img col-12 col-lg-6 pl-0 pr-0">
-                                    <div>
-                                        <!-- <?php $image = wp_get_attachment_image_src(get_post_thumbnail_id($team_id), 'full'); ?> -->
-                                        <?php
-                                        if (has_post_thumbnail($team_id)):
-                                            $image = wp_get_attachment_image_src(get_post_thumbnail_id($team_id), 'full');
-                                            $image_url = $image[0];
-                                        else:
-                                            $link = get_bloginfo('wpurl');
-                                            $image_url = $link . '/wp-content/themes/m5/assets/images/os/icon-menu-item.svg';
-                                        endif;
-                                        ?>
-                                        <img src="<?php echo $image_url; ?>" alt="<?php echo get_the_title($team_id); ?>" />
-                                    </div>
+                                    <!-- <?php $image = wp_get_attachment_image_src(get_post_thumbnail_id($team_id), 'full'); ?> -->
+                                    <?php
+                                    if (has_post_thumbnail($team_id)):
+                                        $image = wp_get_attachment_image_src(get_post_thumbnail_id($team_id), 'full');
+                                        $image_url = $image[0];
+                                    else:
+                                        $link = get_bloginfo('wpurl');
+                                        $image_url = $link . '/wp-content/themes/m5/assets/images/os/icon-menu-item.svg';
+                                    endif;
+                                    ?>
+                                    <img src="<?php echo $image_url; ?>" alt="<?php echo get_the_title($team_id); ?>" />
                                 </div>
                                 <div href="<?php echo get_permalink($team_id); ?>"
                                     title="<?php echo get_the_title($team_id); ?>"
