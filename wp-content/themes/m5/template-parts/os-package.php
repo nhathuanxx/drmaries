@@ -72,7 +72,7 @@
     }
 
     .os-box-package {
-        transition: all 0.3s ease;
+        transition: all 0.5s ease;
         padding: 10px;
         text-align: center;
         background-color: lightgray;
