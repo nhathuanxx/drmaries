@@ -72,7 +72,7 @@
     }
 
     .os-box-package {
-        transition: all 0.3s ease;
+        transition: all 0.5s ease;
         padding: 10px;
         text-align: center;
         background-color: lightgray;
@@ -188,6 +188,17 @@
         height: 100%;
         background-color: rgba(0, 0, 0, 0.5);
         transition: 0.5s;
+    }
+
+    @media screen and (min-width: 1200px) {
+        .secondary-box .os-package-content .package-title-sub{
+            display: none;
+        }
+        .os-box-package:hover .package-title-sub{
+            display: block;
+            transition: 0.5s;
+        }
+
     }
 
     @media screen and (max-width: 767px) {

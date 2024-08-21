@@ -14,6 +14,7 @@ get_header();
 $current_page_ID = get_the_ID();
 $page_content = get_post($current_page_ID)->post_content;
 ?>
+<?php get_template_part('template-parts/page-title'); ?>
 <main class="main-content service-page">
 	<div class="service-intro bg-f9">
 		<div class="container">
