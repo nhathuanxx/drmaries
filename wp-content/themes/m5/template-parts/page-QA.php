@@ -502,4 +502,7 @@ $url = get_template_directory_uri();
             padding-left: 0px;
         }
     }
+    .os-page-qa .post-thumbnail-img img{
+		height: 350px;
+	}
 </style>

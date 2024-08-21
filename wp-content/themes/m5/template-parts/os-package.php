@@ -190,6 +190,17 @@
         transition: 0.5s;
     }
 
+    @media screen and (min-width: 1200px) {
+        .secondary-box .os-package-content .package-title-sub{
+            display: none;
+        }
+        .os-box-package:hover .package-title-sub{
+            display: block;
+            transition: 0.5s;
+        }
+
+    }
+
     @media screen and (max-width: 767px) {
         .flex-container {
             display: grid;
