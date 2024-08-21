@@ -529,6 +529,8 @@ get_header(); ?>
         padding: 16px;
         background: var(--Alias-Button-Primary-Bluex, #DEF3FF);
         border-radius: 40px;
+        display: flex;
+        align-items: center;
     }
 
     .news__list__small .item .item__head {
@@ -547,7 +549,7 @@ get_header(); ?>
         line-height: 38px;
         text-align: left;
         color: white;
-
+        margin-bottom: 24px;
     }
 
     .news__list__small .item .item__head .item__title {
@@ -576,7 +578,6 @@ get_header(); ?>
 
     .os_btn_news_detail-2 {
         display: flex;
-        /* justify-content: center; */
         align-items: center;
     }
 
@@ -585,10 +586,7 @@ get_header(); ?>
         height: 48px;
         margin-right: 8px;
         align-items: center;
-        /* padding: 12px 24px 12px 24px; */
-        /* gap: 10px; */
         border-radius: 100px;
-        /* opacity: 0px; */
         background: var(--Alias-Button-Primary-Bluex, #DEF3FF);
         display: flex;
         justify-content: center;
@@ -601,19 +599,29 @@ get_header(); ?>
     }
 
     .os_btn_news_detail-2 a {
-        /* width: 137px;
-        height: 48px; */
         margin-right: 8px;
         align-items: center;
-        /* padding: 12px 24px 12px 24px; */
-        /* gap: 10px; */
         border-radius: 100px;
-        /* opacity: 0px; */
-        /* background: var(--Alias-Button-Primary-Bluex, #DEF3FF); */
         display: flex;
-        /* justify-content: center; */
         color: #0072AB;
         z-index: 99;
+        font-family: 'Be Vietnam Pro', sans-serif;
+font-size: 16px;
+font-weight: 500;
+line-height: 24px;
+text-align: left;
+color: var(--Alias-Button-Primary-DarkBlue, #0072AB);
+
+    }
+
+    .news__list__small .item__date{
+   font-family: 'Be Vietnam Pro', sans-serif;
+font-size: 16px;
+font-weight: 400;
+line-height: 24px;
+text-align: left;
+color: #000000;
+padding: 8px 0px;
     }
 
     .os_btn_news_detail-2 img {
@@ -622,6 +630,48 @@ get_header(); ?>
 
     .news__list__small {
         padding: 0px;
+    }
+
+    .os_news .news__list__small .item__title a{
+        font-family: 'Be Vietnam Pro', sans-serif;
+font-size: 24px;
+font-weight: 600;
+line-height: 30px;
+text-align: left;
+color: #000000;
+    }
+
+    .os_news .news__list__big{
+        padding: 0px;
+    }
+    .os_news .news__list{
+        display: flex;
+        gap: 32px;
+    }
+    .os_news .os_header_news h2{
+    margin: 0px;
+    }
+
+    .os_news .os_header_news .nav-item{
+        margin: 0px;
+    }
+
+    .os_news  .home-tab-menu{
+        display: flex;
+        gap:24px
+    }
+    .os_news .os_header_news{
+        margin-bottom: 56px;
+    }
+    .os_news .container{
+        padding: 0px;
+    }
+    .os_news{
+        padding: 0px;
+        margin-bottom: 200px;
+    }
+    .os_news .news__list{
+        margin: 0px;
     }
 
     @media screen and (max-width: 767px) {

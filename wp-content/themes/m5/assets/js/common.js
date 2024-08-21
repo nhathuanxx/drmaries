@@ -7,18 +7,19 @@
         });
 
         $('.slider-nav').slick({
-            slidesToShow: 6,
+            slidesToShow: 7, // Hiển thị 7 slide cùng lúc
             slidesToScroll: 4,
             dots: true,
             autoplay: true,
             autoplaySpeed: 3000,
+            infinite: true, // Vòng lặp vô hạn
             responsive: [
                 {
-                    breakpoint: 767, // màn hình nhỏ hơn hoặc bằng 1024px
+                    breakpoint: 767, // màn hình nhỏ hơn hoặc bằng 767px
                     settings: {
                         slidesToShow: 3,
-                    slidesToScroll: 1,
-                        infinite: true,
+                        slidesToScroll: 1,
+                        infinite: true, // Vẫn giữ vòng lặp vô hạn ở kích thước màn hình nhỏ
                         dots: true
                     }
                 }
