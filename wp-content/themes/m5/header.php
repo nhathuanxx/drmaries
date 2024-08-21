@@ -335,5 +335,61 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				<span></span>
 			</div>
 		</header>
+
+		<style>
+.dropdown-menu {
+    padding: 0 !important;
+    margin: 0 !important;
+    list-style: none !important;
+    display: none !important;
+    grid-template-columns: repeat(2, 1fr) !important; /* Tạo 2 cột đều nhau */
+    gap: 10px !important; /* Khoảng cách giữa các mục */
+}
+
+/* Hiển thị menu con khi hover vào mục cha */
+.nav-item:hover > .dropdown-menu {
+    display: grid !important; /* Chỉ hiển thị menu khi hover vào mục cha */
+}
+
+/* Xử lý menu con cấp 3 (submenu của submenu) */
+.dropdown-menu .menu-item:hover > .dropdown-menu {
+    display: grid !important;
+}
+
+/* Style cho các mục menu */
+.dropdown-menu .menu-item {
+    padding: 5px !important;
+}
+
+.dropdown-menu .menu-item a {
+    display: block !important;
+    text-align: left !important;
+    text-decoration: none !important;
+    color: #000 !important; /* Điều chỉnh màu chữ */
+	white-space: nowrap !important;
+}
+
+/* Style cho hover của các mục menu */
+.dropdown-menu .menu-item a:hover {
+    background-color: #f0f0f0 !important;
+    color: #333 !important; /* Màu chữ khi hover */
+}
+.item-child-menu li:before, .mega-menu__list ul li:before, .primary-menu li:not(.mega-menu) ul li:before{
+	position: relative;
+	top: 0px !important;
+	left: 0px !important; 
+}
+.primary-menu li:not(.mega-menu) ul li{
+	display: flex !important;
+	align-items: center !important;
+	gap: 12px !important;
+}
+.primary-menu li:not(.mega-menu) ul{
+	padding: 40px !important;
+	column-gap: 100px !important;
+	row-gap: 8px !important;
+}
+
+		</style>
 		
 		<!-- tạm ẩn background đầu trang -->
