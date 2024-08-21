@@ -667,18 +667,31 @@ color: #000000;
         padding: 0px;
     }
     .os_news{
-        padding: 0px;
-        margin-bottom: 200px;
+        padding: 0px 0px 200px 0px;
+        /* margin-bottom: 200px; */
     }
     .os_news .news__list{
         margin: 0px;
     }
 
+    .os_news .news__list__small .item:not(:last-child){
+        margin-bottom: 32px;
+    }
+
     @media screen and (max-width: 767px) {
+        .os_news{
+            padding: 0px 16px 54px 16px;
+        }
+        .os_news .news__list{
+            display: block;
+        }
         .news__list__big {
             padding: 0;
             /* height: 420px; */
             margin-bottom: 32px;
+        }
+        .news__list__big .item{
+            height: auto;
         }
 
         .news__list__big .item__body {
@@ -722,7 +735,7 @@ color: #000000;
             line-height: 24px;
             text-align: left;
             margin-bottom: 16px;
-
+            padding: 0px;
         }
 
         .os_header_news {
@@ -747,5 +760,55 @@ color: #000000;
             font-size: 24px;
             line-height: 30px;
         }
+        .os_header_news h2{
+        margin-bottom: 24px !important;
+        }
+        .os_header_news .nav{
+            display: flex;
+            gap: 16px;
+        }
+        .os_news .os_header_news {
+    margin-bottom: 24px;
+}
+.os_btn_news_detail a{
+    margin-right: 10px;
+}
+.os_btn_news_detail a{
+    font-family: 'Be Vietnam Pro', sans-serif;
+font-size: 16px;
+font-weight: 500;
+line-height: 24px;
+text-align: left;
+
+}
+.news__list__small .item .item__head{
+    margin-bottom: 40px;
+}
+.news__list__small .item__body {
+    width: 100%;
+}
     }
+    .os_btn_news_detail a{
+    font-family: 'Be Vietnam Pro', sans-serif;
+font-size: 16px;
+font-weight: 500;
+line-height: 24px;
+text-align: left;
+
+}
+    .os_news .os_header_news .nav-item .nav-link {
+height: 48px;
+gap: 10px;
+border-radius: 100px;
+opacity: 0px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-family: 'Be Vietnam Pro', sans-serif;
+font-size: 16px;
+font-weight: 500 !important;
+line-height: 24px;
+text-align: left;
+
+        }
 </style>
