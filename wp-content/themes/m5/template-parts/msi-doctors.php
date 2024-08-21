@@ -3,15 +3,44 @@
         <div class="text-center d-flex justify-content-center">
             <div class="list-doctors__head text-center">
                 <p class="list-doctors__head_title">
-                    Gặp gỡ
+                    <?php
+                    if (pll_current_language('slug') == 'vi') {
+                        echo 'Gặp gỡ';
+                    }
+                    if (pll_current_language('slug') == 'en') {
+                        echo 'Meet Our';
+                    }
+                    if (pll_current_language('slug') == 'zh') {
+                        echo '认识我们的';
+                    }
+                    ?>
                 </p>
                 <p class="list-doctors__head_title-2">
-                    Các chuyên gia của chúng tôi
+                    <?php
+                    if (pll_current_language('slug') == 'vi') {
+                        echo 'Các chuyên gia của chúng tôi';
+                    }
+                    if (pll_current_language('slug') == 'en') {
+                        echo 'Professionals Doctors';
+                    }
+                    if (pll_current_language('slug') == 'zh') {
+                        echo '专业人士 医生';
+                    }
+                    ?>
                 </p>
                 <p class="list-doctors__head_subtitle">
-                    Mọi người yêu thích sản phẩm của chúng tôi và 70% khách hàng của chúng tôi là khách hàng quay lại.
-                    Chúng
-                    tôi tin rằng cách duy nhất để kinh doanh lâu dài là giúp đỡ mọi người.
+                    Mọi người yêu thích sản phẩm của chúng tôi và 70% khách hàng của chúng tôi là khách hàng quay lại. Chúng tôi tin rằng cách duy nhất để kinh doanh lâu dài là giúp đỡ mọi người.
+                    <?php
+                    if (pll_current_language('slug') == 'vi') {
+                        echo 'Mọi người yêu thích sản phẩm của chúng tôi và 70% khách hàng của chúng tôi là khách hàng quay lại. Chúng tôi tin rằng cách duy nhất để kinh doanh lâu dài là giúp đỡ mọi người.';
+                    }
+                    if (pll_current_language('slug') == 'en') {
+                        echo 'People love our products and 70% our customers are returned customers.We believe that only way to make a long-term business is helping people.';
+                    }
+                    if (pll_current_language('slug') == 'zh') {
+                        echo '人们喜欢我们的产品，70% 的客户都是回头客。我们相信，建立长期业务的唯一途径就是帮助人们。';
+                    }
+                    ?>
                 </p>
             </div>
         </div>
@@ -32,9 +61,10 @@
                         $team_id = get_the_ID();
                         ?>
                         <div>
-                            <div class="list-doctors__slider_item row align-items-center justify-content-around">
+                            <a href="<?php the_permalink($team_id); ?>"
+                                class="list-doctors__slider_item row align-items-center justify-content-around">
                                 <div class="list-doctors__slider_item-img col-12 col-lg-6 pl-0 pr-0">
-                                    <a href="<?php the_permalink($team_id); ?>">
+                                    <div>
                                         <!-- <?php $image = wp_get_attachment_image_src(get_post_thumbnail_id($team_id), 'full'); ?> -->
                                         <?php
                                         if (has_post_thumbnail($team_id)):
@@ -46,41 +76,66 @@
                                         endif;
                                         ?>
                                         <img src="<?php echo $image_url; ?>" alt="<?php echo get_the_title($team_id); ?>" />
-                                    </a>
+                                    </div>
                                 </div>
-                                <div class="list-doctors__slider_item-content col-12 col-lg-6">
-                                    <a href="<?php echo get_permalink($team_id); ?>"
-                                        title="<?php echo get_the_title($team_id); ?>">
+                                <div href="<?php echo get_permalink($team_id); ?>"
+                                    title="<?php echo get_the_title($team_id); ?>"
+                                    class="list-doctors__slider_item-content col-12 col-lg-6">
+                                    <div>
                                         <div class="list-doctors__slider_item-content_title">
                                             <?php echo get_the_title($team_id); ?>
                                         </div>
-                                    </a>
+                                    </div>
+                                    <div class="list-doctors__slider_item-content_rate">
+                                        <img src="<?php bloginfo('wpurl'); ?>/wp-content/themes/m5/assets/images/os/icon-start.svg"
+                                            alt="icon-start">
+                                    </div>
                                     <div class="list-doctors__slider_item-content_subtitle">
                                         <?php echo get_field('descriptions', $team_id); ?>
                                     </div>
                                     <div class="list-doctors__slider_item-content_language_title">
                                         <?php
                                         if (pll_current_language('slug') == 'vi') {
-                                            echo 'Ngôn ngữ:';
+                                            echo 'Liên hệ:';
                                         }
                                         if (pll_current_language('slug') == 'en') {
-                                            echo 'Language:';
+                                            echo 'Contact:';
                                         }
                                         if (pll_current_language('slug') == 'zh') {
-                                            echo '语言:';
+                                            echo '接触:';
                                         }
                                         ?>
                                     </div>
                                     <div class="list-doctors__slider_item-content_language">
-                                        <div class="list-doctors__slider_item-content_language__item vietnamese">
-                                            VietNamese
+                                        <div class="list-doctors__slider_item-content_language__item vietnamese book-calendar">
+                                            <?php
+                                            if (pll_current_language('slug') == 'vi') {
+                                                echo 'Đặt lịch';
+                                            }
+                                            if (pll_current_language('slug') == 'en') {
+                                                echo 'Book now';
+                                            }
+                                            if (pll_current_language('slug') == 'zh') {
+                                                echo '立即预订';
+                                            }
+                                            ?>
                                         </div>
-                                        <div class="list-doctors__slider_item-content_language__item english">
-                                            English
-                                        </div>
+                                        <!-- <div class="list-doctors__slider_item-content_language__item english book-calendar">
+                                            <?php
+                                            if (pll_current_language('slug') == 'vi') {
+                                                echo 'Đặt lịch';
+                                            }
+                                            if (pll_current_language('slug') == 'en') {
+                                                echo 'Book now';
+                                            }
+                                            if (pll_current_language('slug') == 'zh') {
+                                                echo '立即预订';
+                                            }
+                                            ?>
+                                        </div> -->
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <?php
                     endwhile;

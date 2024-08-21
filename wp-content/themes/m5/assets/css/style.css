@@ -5605,6 +5605,14 @@ body {
 .clinic-nearby-u-slider {
     margin-top: 40px;
 }
+
+.clinic-nearby-u-slider:hover .clinic-nearby-u-slider__item{
+    transform: translateY(-10px);
+}
+.clinic-nearby-u-slider:hover .clinic-nearby-u-slider__item .clinic-nearby-u-slider__item_img img{
+    transform: scale(1.03);
+}
+
 .clinic-nearby-u-slider .clinic-nearby-u-slider__item {
     /* margin-right: 56px; */
     padding-left: 28px;
@@ -5629,7 +5637,7 @@ body {
     line-height: 30px;
     text-align: left;
     color: #292929;
-    height: 60px;
+    /* height: 60px; */
 
     overflow: hidden;
     text-overflow: ellipsis;
@@ -5654,7 +5662,7 @@ body {
 .clinic-nearby-u-slider .clinic-nearby-u-slider__item .clinic-nearby-u-slider__item_content .clinic-nearby-u-slider__item_subtitle .clinic-nearby-u-slider__item_info span {
     font-family: 'Be Vietnam Pro', sans-serif;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 24px;
     text-align: left;
     color: #292929;
@@ -5672,7 +5680,7 @@ body {
     font-family: 'Be Vietnam Pro', sans-serif;
     font-size: 16px;
     font-weight: 500;
-    line-height: 24px;
+    line-height: 25px;
     text-align: left;
     color: #fff;
 }
@@ -5683,6 +5691,14 @@ body {
 
 .clinic-nearby-u-slider .clinic-nearby-u-slider__item .clinic-nearby-u-slider__item_action .clinic-nearby-u-slider__item_action-book {
     background-color: #E50C75;
+}
+
+.clinic-nearby-u-slider:hover .clinic-nearby-u-slider__item .clinic-nearby-u-slider__item_action .clinic-nearby-u-slider__item_action-call {
+    background-color: #53ceff;
+}
+
+.clinic-nearby-u-slider:hover .clinic-nearby-u-slider__item .clinic-nearby-u-slider__item_action .clinic-nearby-u-slider__item_action-book {
+    background-color: #ff2c92;
 }
 
 .clinic-nearby-u__nav {
@@ -5799,9 +5815,15 @@ body {
 
 .care-service-item__container .care-service-item__container-content:hover .care-service-item__container_img{
     filter: drop-shadow(2px 4px 6px black);
+    transform: translateY(-10px);
+    transition: all 0.3s ease-in-out;
 }
 
 .care-service-item__container .care-service-item__container-content:hover {
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.3);
+    background-color: #f6f6fb;
+    transform: scale(1.05);
 }
 
 .care-service-item__container_img {
@@ -5861,6 +5883,7 @@ body {
 
     .care-service .care-service-item {
         gap: 16px;
+        margin-top: 24px;
     }
     .care-service-item__container_img {
         width: 40px;
@@ -5880,6 +5903,7 @@ body {
         text-align: left;
         color: #292929;
     }
+
 }
 
 @media screen and (max-width: 576px) {
@@ -5951,13 +5975,26 @@ body {
 
 .list-doctors__slider_item {
     background-color: #F7F7F7;
-    padding: 24px 56px 24px 24px;
+    padding: 24px 48px 24px 24px;
     margin-left: 28px;
     margin-right: 28px;
     border-radius: 40px;
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+
+.list-doctors__slider_item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* .list-doctors__slider_item:hover .list-doctors__slider_item-img img{
+    transform: scale(1.1);
+} */
+
+.list-doctors__slider_item:hover .list-doctors__slider_item-content_language__item {
+    background-color: #fbd6ec;
 }
 
 .list-doctors__slider_item-img {
@@ -5969,7 +6006,8 @@ body {
     border-radius: 16px;
     height: 320px;
     object-fit: cover;
-    padding-left: 28px;
+    /* padding-left: 28px; */
+    background-color: #fff;
 }
 
 
@@ -5977,6 +6015,7 @@ body {
     /* margin-left: 40px; */
     display: flex;
     flex-direction: column;
+    padding-left: 32px;
 }
 
 .list-doctors__slider_item-content_title {
@@ -5988,6 +6027,11 @@ body {
     color: #000000;
 }
 
+.list-doctors__slider_item-content_rate {
+    max-height: 18px;
+    margin-top: 16px;
+}
+
 .list-doctors__slider_item-content_subtitle {
     font-family: 'Be Vietnam Pro', sans-serif;
     font-size: 16px;
@@ -5997,6 +6041,7 @@ body {
     color: #292929;
     margin-top: 16px;
     max-height: 144px;
+    overflow: hidden;
 }
 
 .list-doctors__slider_item-content_language_title {
@@ -6017,14 +6062,14 @@ body {
 }
 
 .list-doctors__slider_item-content_language__item {
-    padding: 8px 12px;
+    padding: 12px 20px;
     font-family: 'Be Vietnam Pro', sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
     text-align: left;
     border-radius: 100px;
-    /* cursor: pointer; */
+    cursor: pointer;
 }
 
 .list-doctors__slider_item-content_language__item.vietnamese {
@@ -6064,7 +6109,12 @@ body {
     cursor: pointer;
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (min-width: 992px) {
+    .list-doctors__slider_item {
+        padding: 24px;
+    }
+}
+@media screen and (max-width: 991px) and (max-width: 1200px) {
 
     .list-doctors {
         padding-top: 120px;

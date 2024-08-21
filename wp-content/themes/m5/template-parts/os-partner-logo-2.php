@@ -140,7 +140,7 @@
         /* display: none !important; */
     }
 
-    .slick-slide img {
+    .os-partner-content .slick-slide img {
         background: white;
     }
 

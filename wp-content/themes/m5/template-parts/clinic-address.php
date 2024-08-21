@@ -46,11 +46,17 @@
         </div>
         <div class="clinic-nearby-u__select d-flex justify-content-between align-items-center">
             <span class="clinic-nearby-u__select-city">
-                <select id="city">
-                    <option value="">Chọn 1 thành phố</option>
-                    <option value="hanoi">Hà Nội</option>
-                    <option value="vinh">Vinh</option>
-                    <option value="hcm">Tp Hồ Chí Minh</option>
+                <select id="home-city">
+                        <option value="">Chọn 1 thành phố</option>
+                        <option value="Hà Nội">Hà Nội</option>
+                        <option value="Nghệ An">Nghệ An</option>
+                        <option value="Hà Tĩnh">Hà Tĩnh</option>
+                        <option value="Đà Nẵng">Đà Nẵng</option>
+                        <option value="Nha Trang">Nha Trang</option>
+                        <option value="Hồ Chí Minh">Tp Hồ Chí Minh</option>
+                        <option value="Bình Dương">Bình Dương</option>
+                        <option value="Đồng Nai">Đồng Nai</option>
+                        <option value="Cần Thơ">Cần Thơ</option>
                 </select>
             </span>
         </div>
