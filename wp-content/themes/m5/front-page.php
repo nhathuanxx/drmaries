@@ -223,7 +223,7 @@ get_header(); ?>
                                                             }
                                                             ?>
                                                         </a>
-                                                        <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/os/arrow_circle_right.svg'); ?>">
+                                                        <img style="cursor:pointer" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/os/arrow_circle_right.svg'); ?>">
                                                     </div>
                                                 </div>
                                             </div>
@@ -292,7 +292,7 @@ get_header(); ?>
                                                             }
                                                             ?>
                                                         </a>
-                                                        <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/os/arrow_circle_right.svg'); ?>">
+                                                        <img style="cursor:pointer" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/os/arrow_circle_right.svg'); ?>">
                                                     </div>
                                                 </div>
                                             </div>
@@ -366,7 +366,7 @@ get_header(); ?>
                                                             }
                                                             ?>
                                                         </a>
-                                                        <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/os/arrow_circle_right.svg'); ?>">
+                                                        <img style="cursor:pointer" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/os/arrow_circle_right.svg'); ?>">
                                                     </div>
                                                     <!-- <p class="item__date"><?php echo get_the_date(); ?></p> -->
                                                 </div>
@@ -433,7 +433,7 @@ get_header(); ?>
                                                             }
                                                             ?>
                                                         </a>
-                                                        <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/os/arrow_circle_right.svg'); ?>">
+                                                        <img style="cursor:pointer" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/os/arrow_circle_right.svg'); ?>">
                                                     </div>
                                                 </div>
                                             </div>

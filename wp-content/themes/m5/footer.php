@@ -18,7 +18,7 @@
     <div class="footer__main">
         <div class="container">
             <div class="row">
-                <div class="col-md-4 col-lg-4 footer__item">
+                <div class="col-md-4 col-lg-4 footer__item os_listing_1">
                     <div class="footer__menu">
                         <?php if (get_field('listing_1', pll_current_language('slug'))) : ?>
                             <?php while (the_repeater_field('listing_1', pll_current_language('slug'))) : ?>
@@ -80,11 +80,19 @@
                                 <p class="footer__item__title">
                                     <?php echo get_sub_field('title'); ?>
                                 </p>
-                                <div class="footer__intro__content">
+                                <div class="os_footer_address">
+                                 <p class="os_footer_address_title">
+                                 Địa chỉ trụ sở chính:
+                                 </p>
+                                 <p class="os_footer_address_detail">
+                                 Phòng 201-202, Nhà A1, Khu Ngoại Giao Đoàn Vạn Phúc, Số 298, Đường Kim Mã, Phường Kim Mã, Quận Ba Đình, Thành phố Hà Nội, Việt Nam
+                                 </p>
+                                </div>
+                                <div class="footer__intro__content os_footer__intro__content">
                                     <ul>
-                                        <li class="item">
+                                        <!-- <li class="item">
                                             <?php echo get_sub_field('address'); ?>
-                                        </li>
+                                        </li> -->
                                         <li class="item">
                                             <?php echo get_sub_field('hotline'); ?>
                                         </li>
@@ -378,6 +386,7 @@
         font-weight: 600;
         line-height: 38px;
         text-align: left;
+        margin-bottom: 32px;
     }
 
     .footer__main ul li {
@@ -387,6 +396,7 @@
         line-height: 24px;
         text-align: left;
         color: #292929 !important;
+        margin-bottom: 16px;
     }
 
     .footer__main ul li a {
@@ -534,6 +544,16 @@
         object-fit: cover;
     }
 
+    .os_listing_1 ul li a{
+        font-family: 'Be Vietnam Pro', sans-serif;
+font-size: 16px;
+font-weight: 700;
+line-height: 24px;
+text-align: left;
+color: var(--Alias-Text-Primary-blue, #00ACEE) !important;
+
+    }
+
     
     @media screen and (max-width: 991px) {
         .book-now__custom {
@@ -660,6 +680,32 @@
             display: none;
         }
     }
+    .os_footer__intro__content ul li{
+        margin-bottom: 8px ;
+    }
+    .os_footer_address{
+        font-family: 'Be Vietnam Pro', sans-serif;
+font-size: 16px;
+font-weight: 400;
+line-height: 24px;
+text-align: left;
+color: var(--Alias-Text-Neutral, #292929);
+
+    }
+    .os_footer_address p{
+        margin: 0px;
+    }
+    .os_footer_address{
+        margin-bottom: 32px;
+    }
+    .os_footer__intro__content ul li{
+        display: flex;
+        gap: 4px;
+    }
+    .disabled-link {
+    pointer-events: none;
+    cursor: default;
+}
 </style>
 
 </body>
