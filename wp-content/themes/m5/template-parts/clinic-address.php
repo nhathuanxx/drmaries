@@ -63,9 +63,10 @@
 
         <div class="sun-slider sun-slider--center"
             data-slick='{"slidesToShow": 3, "nextArrow": ".clinic-nearby-u__next", "prevArrow": ".clinic-nearby-u__prev", "centerPadding": "20px", "dots": false, "autoplay": true, "infinite": true, "autoplaySpeed": 2000, "responsive": [ { "breakpoint": 1200, "settings": { "centerMode": false, "slidesToShow": 2 } }, { "breakpoint": 776, "settings": { "centerMode": false, "slidesToShow": 1 } } ]}'>
-            <?php if (get_field('clinic_nearby_you', pll_current_language('slug'))): ?>
-                <?php while (the_repeater_field('clinic_nearby_you', pll_current_language('slug'))): ?>
-                    <div class="clinic-nearby-u-slider">
+            <?php if (get_field('clinic_nearby_you_v2', pll_current_language('slug'))): ?>
+                <?php while (the_repeater_field('clinic_nearby_you_v2', pll_current_language('slug'))): ?>
+                    <?php while (the_repeater_field('content')): ?>
+                        <div class="clinic-nearby-u-slider">
                         <div class="clinic-nearby-u-slider__item">
                             <a href="#" data-map="<?php echo get_sub_field('map_embed'); ?>" class="clinic-nearby-u-slider__item_img clinic-nearby-u-slider__item-map">
                                 <figure>
@@ -107,7 +108,7 @@
                                     }
                                     ?>
                                 </a>
-                                <a href="javascript:;" class="clinic-nearby-u-slider__item_action-item clinic-nearby-u-slider__item_action-book book-calendar">
+                                <a href="javascript:;" class="clinic-nearby-u-slider__item_action-item clinic-nearby-u-slider__item_action-book book-calendar" data-clinic="<?php echo get_sub_field('value_form_contact');?>" >
                                     <?php
                                     if (pll_current_language('slug') == 'vi') {
                                         echo 'Đặt lịch';
@@ -122,7 +123,8 @@
                                 </a>
                             </div>
                         </div>
-                    </div>
+                        </div>
+                    <?php endwhile; ?>
                 <?php endwhile; ?>
             <?php endif; ?>
         </div>
@@ -136,10 +138,11 @@
                     alt="icon-next" />
             </button>
         </div>
+
         <div class="row map_iframe" id="map_clinic">
             <div class="col-12 pl-0">
                 <iframe id="map_frame"
-                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3724.414269783198!2d105.7947488!3d21.0161038!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac9787d4def3%3A0x65205b8781585239!2zQ2h1bmcgY8awIFnDqm4gSMOyYQ!5e0!3m2!1svi!2s!4v1666067932401!5m2!1svi!2s"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.8250797010614!2d105.7894751506404!3d21.039683885923726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab379b922995%3A0x35dafdcd8bab9392!2sMarie%20Stopes%20Vi%E1%BB%87t%20Nam!5e0!3m2!1svi!2s!4v1595851822503!5m2!1svi!2s"
                     width="600" height="677" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
                     tabindex="0"></iframe>
             </div>

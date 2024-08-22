@@ -93,7 +93,7 @@ $url = get_template_directory_uri();
                                             ?>
                                         </a>
                                         <a href="javascript:;"
-                                            class="clinic-nearby-u-slider__item_action-item clinic-nearby-u-slider__item_action-book book-calendar">
+                                            class="clinic-nearby-u-slider__item_action-item clinic-nearby-u-slider__item_action-book book-calendar" data-clinic="<?php echo get_sub_field('value_form_contact');?>" >
                                             <?php
                                             if (pll_current_language('slug') == 'vi') {
                                                 echo 'Đặt lịch';
@@ -120,7 +120,7 @@ $url = get_template_directory_uri();
             <div class="row">
                 <div class="col-12 pl-0">
                     <iframe id="map_frame"
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3724.414269783198!2d105.7947488!3d21.0161038!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac9787d4def3%3A0x65205b8781585239!2zQ2h1bmcgY8awIFnDqm4gSMOyYQ!5e0!3m2!1svi!2s!4v1666067932401!5m2!1svi!2s"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.8250797010614!2d105.7894751506404!3d21.039683885923726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab379b922995%3A0x35dafdcd8bab9392!2sMarie%20Stopes%20Vi%E1%BB%87t%20Nam!5e0!3m2!1svi!2s!4v1595851822503!5m2!1svi!2s"
                         width="600" height="677" frameborder="0" style="border:0;" allowfullscreen=""
                         aria-hidden="false" tabindex="0"></iframe>
                 </div>
