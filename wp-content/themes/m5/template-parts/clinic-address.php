@@ -1,6 +1,6 @@
 <div class="clinic-nearby-u">
     <div class="container">
-        <div class="clinic-nearby-u__header d-flex justify-content-between align-items-center">
+        <div class="clinic-nearby-u__header d-flex justify-content-between align-items-start">
             <div class="clinic-nearby-u__header_title">
                 <?php
                 if (pll_current_language('slug') == 'vi') {
@@ -67,13 +67,13 @@
                 <?php while (the_repeater_field('clinic_nearby_you', pll_current_language('slug'))): ?>
                     <div class="clinic-nearby-u-slider">
                         <div class="clinic-nearby-u-slider__item">
-                            <a href="<?php bloginfo('wpurl'); ?>/phong-kham-gan-ban/" class="clinic-nearby-u-slider__item_img">
+                            <a href="#" data-map="<?php echo get_sub_field('map_embed'); ?>" class="clinic-nearby-u-slider__item_img clinic-nearby-u-slider__item-map">
                                 <figure>
                                     <img src="<?php echo get_sub_field('image') ?>" alt="<?php echo get_sub_field('name') ?>" />
                                 </figure>
                             </a>
-                            <a href="<?php bloginfo('wpurl'); ?>/phong-kham-gan-ban/"
-                                class="clinic-nearby-u-slider__item_content">
+                            <a href="#" data-map="<?php echo get_sub_field('map_embed'); ?>"
+                                class="clinic-nearby-u-slider__item_content clinic-nearby-u-slider__item-map">
                                 <div class="clinic-nearby-u-slider__item_title">
                                     <?php echo get_sub_field('name') ?>
                                 </div>
@@ -136,7 +136,7 @@
                     alt="icon-next" />
             </button>
         </div>
-        <div class="row map_iframe">
+        <div class="row map_iframe" id="map_clinic">
             <div class="col-12 pl-0">
                 <iframe id="map_frame"
                     src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3724.414269783198!2d105.7947488!3d21.0161038!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac9787d4def3%3A0x65205b8781585239!2zQ2h1bmcgY8awIFnDqm4gSMOyYQ!5e0!3m2!1svi!2s!4v1666067932401!5m2!1svi!2s"

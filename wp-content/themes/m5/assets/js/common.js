@@ -113,6 +113,12 @@
             var link = $this.data('map');
             $('.branch__map iframe').attr('src', link);
         })
+        $('.clinic-nearby-u .clinic-nearby-u-slider .clinic-nearby-u-slider__item a.clinic-nearby-u-slider__item-map').on('click', function(e) {
+            e.preventDefault();
+            var $this = $(this);
+            var link = $this.data('map');
+            $('#map_clinic iframe').attr('src', link);
+        })
 
         // Open modal schedule book
         $('.book-calendar').on('click', function(e) {

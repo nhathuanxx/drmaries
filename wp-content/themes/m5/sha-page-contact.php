@@ -221,7 +221,7 @@ get_footer(); ?>
 
     .w-form-custom .form-group input:first-child {
         color: #989898;
-        background-image: url(<? get_bloginfo('wpurl'); ?>.'/wp-content/themes/m5/assets/images/os/icon-form-name.svg');
+        background-image: url(<?php bloginfo('wpurl'); ?>.'/wp-content/themes/m5/assets/images/os/icon-form-name.svg');
         background-position: right 10px center;
         background-repeat: no-repeat;
         padding-right: 30px;

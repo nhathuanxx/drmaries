@@ -36,7 +36,7 @@ get_header();
                         $query_teams->the_post();
                         $team_id = get_the_ID();
                         ?>
-                        <div class=" col-12 col-lg-6">
+                        <div class=" col-12 col-lg-6 list-doctors__slider_item-col">
                             <a href="<?php the_permalink($team_id); ?>" class="list-doctors__slider_item row align-items-center justify-content-between">
                                 <div class="col-12 col-lg-6 list-doctors__slider_item-col">
                                     <div class="list-doctors__slider_item-img">
@@ -62,6 +62,10 @@ get_header();
                                             <div class="list-doctors__slider_item-content_title">
                                                 <?php echo get_the_title($team_id); ?>
                                             </div>
+                                        </div>
+                                        <div class="list-doctors__slider_item-content_rate">
+                                            <img src="<?php bloginfo('wpurl'); ?>/wp-content/themes/m5/assets/images/os/icon-start.svg"
+                                                alt="icon-start">
                                         </div>
                                         <div class="list-doctors__slider_item-content_subtitle">
                                             <?php echo get_field('descriptions', $team_id); ?>
@@ -158,9 +162,9 @@ get_header();
         margin-bottom: 72px;
     }
 
-    .list-doctors__slider_item-img img {
+    /* .list-doctors__slider_item-img img {
         height: 300px;
-    }
+    } */
 
     
     @media screen and (min-width: 992px) and (max-width: 1200px) {
@@ -175,16 +179,20 @@ get_header();
             line-height: 54px;
         }
 
-        .list-doctors__slider_item-img img {
+        /* .list-doctors__slider_item-img img {
             height: 400px;
             object-position: top;
-        }
+        } */
     }
 
     @media screen and (max-width: 767px) {
+        .page-doctor {
+            padding: 24px 16px;
+        }
         .doctor-title {
             font-size: 28px;
             line-height: 35.73px;
+            margin-bottom: 24px;
         }
         .list-doctors__slider_item-col {
             padding: 0px;
@@ -192,6 +200,11 @@ get_header();
         .list-doctors__slider_item {
             margin-left: 0px;
             margin-right: 0px;
+            margin-bottom: 24px;
+        }
+
+        .page-doctor .teams.row .list-doctors__slider_item-col {
+            padding: 0;
         }
     }
 </style>

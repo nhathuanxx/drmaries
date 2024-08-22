@@ -172,7 +172,7 @@
                                     ?>
                                 </div>
                                 <img class="book-now__custom-head_icon"
-                                    src="http://localhost/drmarie/wp-content/themes/m5/assets/images/os/icon_bufterfly.svg">
+                                    src="<?php bloginfo('wpurl'); ?>/wp-content/themes/m5/assets/images/os/icon_bufterfly.svg">
                             </div>
                             <div class="book-now__custom-subtitle">
                                 <?php
@@ -339,18 +339,30 @@
     });
 
     document.getElementById('city').addEventListener('change', function() {
-        var selectedCity = this.value;
-        var clinics = document.querySelectorAll('.clinic-nearby-u-slider');
+    var selectedCity = this.value;
+    var clinics = document.querySelectorAll('.clinic-nearby-u-slider');
+
+    const mapFrame = document.getElementById('map_frame');
 
         clinics.forEach(function(clinic) {
-            const z = clinic.getAttribute('data-city');
-            if (selectedCity === "" || z == selectedCity) {
+            const clinicCity = clinic.getAttribute('data-city');
+            if (selectedCity === "" || clinicCity === selectedCity) {
                 clinic.style.display = "block";
+
+                const mapLink = clinic.querySelector('.clinic-nearby-u-slider__item-map');
+                if (mapLink && clinicCity === selectedCity) {
+                    const mapUrl = mapLink.getAttribute('data-map');
+                    mapFrame.src = mapUrl;
+                }
+
             } else {
                 clinic.style.display = "none";
             }
         });
     });
+
+</script>
+
     
 </script>
 <style>
