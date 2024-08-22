@@ -70,7 +70,7 @@ $current_cat_description = get_queried_object()->description;
 														<?php $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'large'); ?>
 														<img class="" alt="Post Thumbnail" src="<?php echo $image[0]; ?>">
 													<?php endif; ?>
-													<img class="" alt="Post Thumbnail" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/os/qapost.png'); ?>">
+													<img class="" alt="Post Thumbnail" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/os/qadefault.png'); ?>">
 												</a>
 											</div>
 											<div class="col-md-12 post-item-content">

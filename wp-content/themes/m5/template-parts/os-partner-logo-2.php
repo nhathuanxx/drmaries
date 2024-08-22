@@ -70,7 +70,7 @@
         display: flex;
         justify-content: left;
         align-items: start;
-
+        margin: 0;
         gap: 40px;
 
     }
@@ -79,11 +79,13 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        margin: 0;
     }
 
     .partner-row-header-2 img {
         width: 40.68px;
         height: 48.25px;
+        margin: 0;
 
     }
 
@@ -97,12 +99,14 @@
         justify-content: center;
         align-items: center;
         color: #FFFFFF;
+        margin: 0;
     }
 
     .partner-row-header-4 {
         display: flex;
         justify-content: right;
         align-items: center;
+        margin: 0;
     }
 
     .partner-row-header-4 img {

@@ -811,4 +811,17 @@ line-height: 24px;
 text-align: left;
 
         }
+        .aspect-ratio>* *, .news__list__small .item__head>* *, .experienced__list .item__head>* *{
+            height: 100%;
+        }
+        .aspect-ratio>* *, .news__list__small .item__head:hover img{
+            transform: scale(1.1);
+            transition: all 0.3s;
+        }
+        figure{
+            height: 100% !important;
+        }
+        figure img{
+            height: 100% !important;
+        }
 </style>

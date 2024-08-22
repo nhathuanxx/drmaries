@@ -1,10 +1,13 @@
 <div class="os-partner-container">
+
     <!-- <div class="mask_group_partner">
         <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/os/mask_group_partner.svg'); ?>">
+        
 
     </div> -->
-    <div class="container os-partner-content">
+    <img class="mask_group_partner" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/os/mask_group_partner.svg'); ?>" alt="">
 
+    <div class="container os-partner-content">
         <!-- <div class="home__title">
             <h2>Đối tác MSI</h2>
         </div> -->
@@ -73,6 +76,8 @@
             /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
         ;
         /* padding: 100px 0px; */
+        position: relative;
+        overflow: hidden;
     }
 
     .os-partner-content {
@@ -181,18 +186,33 @@
     }
     .os-partner-content .slick-slide img{
         background: white;
-        padding: 20px;
+        height: 100%;
+        width: 100%;
+        /* padding: 20px; */
+    }
+    .mask_group_partner{
+        position: absolute;
+        right: 0px;
+        bottom: -350px;
     }
 
     .os-partner-content .slick-dots{
 bottom: -66px;
     }
 
+    @media screen and (min-width: 767px) {
+        .partner-row-header-1,.partner-row-header-1,.partner-row-header-1,.partner-row-header-1{
+            padding: 0px;
+        }
+    }
+
     @media screen and (max-width: 767px) {
 
         .os-partner-content .slick-slide img{
         background: white;
-        padding: 12px;
+        height: 100%;
+        width: 100%;
+        /* padding: 12px; */
     }        .os-partner-content {
             padding: 40px 16px;
         }

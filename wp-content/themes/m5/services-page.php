@@ -317,3 +317,12 @@ $page_content = get_post($current_page_ID)->post_content;
 </main>
 
 <?php get_footer(); ?>
+<style>
+    .service-page{
+        font-family: 'Be Vietnam Pro', sans-serif !important; 
+		background-color: white;
+    }
+    /* .service-intro__content{
+        width: 100%;
+    } */
+</style>

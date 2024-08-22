@@ -92,6 +92,15 @@
             margin-left: 64px;
         }
 
+        @media screen and (min-width: 767px){
+.content-us-now-content-1,.content-us-now-content-2{
+    padding: 0px;
+}
+.content-us-now-content-1 .on,.under{
+    padding: 0px;
+}
+        }
+
         @media screen and (max-width: 767px) {
             .os-content-us-now-container .content-us-now-content .on {
                 width: 70%;

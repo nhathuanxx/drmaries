@@ -26,10 +26,18 @@ $current_cat_description = $category->description;
 					?>
 				</div>
 				<div class="page-qa__banner-subtitle">
-					<?php
-					echo $current_cat_description
-					?>
-				</div>
+                    <?php
+                    if (pll_current_language('slug') == 'vi') {
+                        echo 'Cung cấp những thông tin mới nhất về sức khỏe phụ nữ, các kiến thức chuyên môn, cùng những cập nhật từ phòng khám.';
+                    }
+                    if (pll_current_language('slug') == 'en') {
+                        echo "Discover how we can empower you to not just survive, but thrive. Dive deeper into prioritizing your well being<br />and gain the knowledge needed to make informed decisions that will lead to a healthier lifestyle.";
+                    }
+                    if (pll_current_language('slug') == 'zh') {
+                        echo '了解我们如何帮助您不仅生存，而且蓬勃发展。更深入地优先考虑您的健康<br />并获得做出明智决策所需的知识，从而实现更健康的生活方式。';
+                    }
+                    ?>
+                </div>
 			</div>
 		</div>
 	</div>
