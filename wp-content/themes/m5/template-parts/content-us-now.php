@@ -1,7 +1,7 @@
 <div class="os-content-us-now-container">
     <div class="container">
         <div class="content-us-now-content row" style="padding: 200px 0px 80px 0px;">
-            <div class="col-md-12 col-lg-6 content-us-now-content-1">
+            <div class="col-md-12 col-lg-7 content-us-now-content-1">
                 <div class="on col-12">
                     <p>Contact us now to get started!</p>
                 </div>
@@ -30,7 +30,7 @@
                     </a>
                 </div>
             </div>
-            <div class="col-md-12 col-lg-6 content-us-now-content-2">
+            <div class="col-md-12 col-lg-5 content-us-now-content-2">
                 <div class="content-2">
                     <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/os/icon_bufterfly.svg'); ?>">
                 </div>

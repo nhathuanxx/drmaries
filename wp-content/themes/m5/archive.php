@@ -44,6 +44,20 @@ $current_cat_description = $category->description;
 </div>
 <div class="os-page-qa">
 	<div class="container">
+	<ul class="nav nav-pills msi-post-tab-nav" id="pills-tab" role="tablist">
+            <!-- <li class="nav-item">
+                <a class="nav-link active" id="msi-post-cat-0-tab" data-toggle="pill" href="#msi-post-cat-0" role="tab" aria-controls="msi-post-cat-0" aria-selected="true">All</a>
+            </li> -->
+            <li class="nav-item">
+                <a class="nav-link active" id="msi-post-cat-1-tab" data-toggle="pill" href="#msi-post-cat-1" role="tab" aria-controls="msi-post-cat-1" aria-selected="true">Thông tin dịch vụ</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="msi-post-cat-2-tab" data-toggle="pill" href="#msi-post-cat-2" role="tab" aria-controls="msi-post-cat-2" aria-selected="false">Chăm sóc sức khỏe phụ nữ</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="msi-post-cat-3-tab" data-toggle="pill" href="#msi-post-cat-3" role="tab" aria-controls="msi-post-cat-3" aria-selected="false">Chương trình khuyến mãi</a>
+            </li>
+        </ul>
 		<div class="tab-content" id="pills-tabContent">
 			<div class="tab-pane fade show active" id="msi-post-cat-1" role="tabpanel" aria-labelledby="msi-post-cat-1-tab">
 				<div class="row msi-post-tab-content">
@@ -58,7 +72,221 @@ $current_cat_description = $category->description;
 								'post_type' => 'post',
 								'paged' => $paged,
 								'posts_per_page' => 12,
-								'cat' => $current_cat_ID
+								'cat' => 76
+							);
+							$query = new WP_Query($args); ?>
+
+							<?php if ($query->have_posts()) : ?>
+								<?php while ($query->have_posts()) : $query->the_post(); ?>
+									<div class="msi-post-item col-md-6 col-lg-4">
+										<div class="row" style="height: 100%; position:relative">
+											<div class="col-md-12 post-thumbnail-img">
+												<a href="<?php the_permalink(); ?>">
+													<?php if (has_post_thumbnail($post->ID)) : ?>
+														<?php $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'large'); ?>
+														<img class="" alt="Post Thumbnail" src="<?php echo $image[0]; ?>">
+													<?php endif; ?>
+												</a>
+											</div>
+											<div class="col-md-12 post-item-content">
+												<h3 class="post-item-title">
+													<a href="<?php the_permalink(); ?>">
+														<?php the_title(); ?>
+													</a>
+												</h3>
+												<div class="msi-post-created">
+													<?php the_date(); ?>
+												</div>
+												<div class="post-item-description">
+													<?php echo wp_trim_words(get_the_content(), 40, '...'); ?>
+												</div>
+												<div class="msi-read-more">
+													<a href="<?php the_permalink(); ?>">Xem chi tiết</a>
+												</div>
+											</div>
+										</div>
+									</div><!-- End .msi-post-item -->
+								<?php endwhile; ?>
+								<?php
+								if ($query->max_num_pages > 1) { ?>
+									<div id="wp_pagination" class="text-center">
+										<nav aria-label="Page navigation example">
+											<ul class="pagination">
+												<!-- Nút Previous -->
+												<li class="page-item <?php echo ($curpage == 1 ? 'disabled' : ''); ?>">
+													<a style="width:auto;height:auto" class="previous page button page-link" href="<?php echo get_pagenum_link(($curpage - 1 > 0 ? $curpage - 1 : 1)); ?>">&lsaquo; Previous</a>
+												</li>
+
+												<!-- Hiển thị trang đầu tiên -->
+												<li class="page-item <?php echo ($curpage == 1 ? 'active' : ''); ?>">
+													<a class="page-link page button" href="<?php echo get_pagenum_link(1); ?>">1</a>
+												</li>
+
+												<!-- Hiển thị dấu ba chấm nếu cần -->
+												<?php if ($curpage > 3) { ?>
+													<?php if ($curpage > 4) { ?>
+														<li class="page-item">
+															<span class="page-link">...</span>
+														</li>
+													<?php } ?>
+												<?php } ?>
+
+												<!-- Hiển thị hai trang trước và hai trang sau trang hiện tại -->
+												<?php for ($i = max(2, $curpage - 2); $i <= min($query->max_num_pages - 1, $curpage + 2); $i++) { ?>
+													<li class="page-item <?php echo ($i == $curpage ? 'active' : ''); ?>">
+														<a class="page-link page button" href="<?php echo get_pagenum_link($i); ?>"><?php echo $i; ?></a>
+													</li>
+												<?php } ?>
+
+												<!-- Hiển thị dấu ba chấm và trang cuối cùng -->
+												<?php if ($curpage < $query->max_num_pages - 2) { ?>
+													<?php if ($curpage < $query->max_num_pages - 3) { ?>
+														<li class="page-item">
+															<span class="page-link">...</span>
+														</li>
+													<?php } ?>
+													<li class="page-item">
+														<a class="page-link page button" href="<?php echo get_pagenum_link($query->max_num_pages); ?>"><?php echo $query->max_num_pages; ?></a>
+													</li>
+												<?php } ?>
+
+												<!-- Nút Next -->
+												<li class="page-item <?php echo ($curpage == $query->max_num_pages ? 'disabled' : ''); ?>">
+													<a style="width:auto;height:auto" class="next page button page-link" href="<?php echo get_pagenum_link(($curpage + 1 <= $query->max_num_pages ? $curpage + 1 : $query->max_num_pages)); ?>">Next &rsaquo;</a>
+												</li>
+											</ul>
+										</nav>
+									</div>
+								<?php }
+								?>
+								<?php wp_reset_postdata(); ?>
+							<?php endif; ?>
+						</div>
+
+					</div>
+				</div><!-- .msi-post-tab-content -->
+			</div>
+			<div class="tab-pane fade" id="msi-post-cat-2" role="tabpanel" aria-labelledby="msi-post-cat-1-tab">
+				<div class="row msi-post-tab-content">
+					<div class="col-md-12 msi-post-tab-content-left">
+						<div class="msi-post-list row">
+
+							<?php
+							global $paged;
+							$curpage = $paged ? $paged : 1;
+
+							$args = array(
+								'post_type' => 'post',
+								'paged' => $paged,
+								'posts_per_page' => 12,
+								'cat' => 86
+							);
+							$query = new WP_Query($args); ?>
+
+							<?php if ($query->have_posts()) : ?>
+								<?php while ($query->have_posts()) : $query->the_post(); ?>
+									<div class="msi-post-item col-md-6 col-lg-4">
+										<div class="row" style="height: 100%; position:relative">
+											<div class="col-md-12 post-thumbnail-img">
+												<a href="<?php the_permalink(); ?>">
+													<?php if (has_post_thumbnail($post->ID)) : ?>
+														<?php $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'large'); ?>
+														<img class="" alt="Post Thumbnail" src="<?php echo $image[0]; ?>">
+													<?php endif; ?>
+												</a>
+											</div>
+											<div class="col-md-12 post-item-content">
+												<h3 class="post-item-title">
+													<a href="<?php the_permalink(); ?>">
+														<?php the_title(); ?>
+													</a>
+												</h3>
+												<div class="msi-post-created">
+													<?php the_date(); ?>
+												</div>
+												<div class="post-item-description">
+													<?php echo wp_trim_words(get_the_content(), 40, '...'); ?>
+												</div>
+												<div class="msi-read-more">
+													<a href="<?php the_permalink(); ?>">Xem chi tiết</a>
+												</div>
+											</div>
+										</div>
+									</div><!-- End .msi-post-item -->
+								<?php endwhile; ?>
+								<?php
+								if ($query->max_num_pages > 1) { ?>
+									<div id="wp_pagination" class="text-center">
+										<nav aria-label="Page navigation example">
+											<ul class="pagination">
+												<!-- Nút Previous -->
+												<li class="page-item <?php echo ($curpage == 1 ? 'disabled' : ''); ?>">
+													<a style="width:auto;height:auto" class="previous page button page-link" href="<?php echo get_pagenum_link(($curpage - 1 > 0 ? $curpage - 1 : 1)); ?>">&lsaquo; Previous</a>
+												</li>
+
+												<!-- Hiển thị trang đầu tiên -->
+												<li class="page-item <?php echo ($curpage == 1 ? 'active' : ''); ?>">
+													<a class="page-link page button" href="<?php echo get_pagenum_link(1); ?>">1</a>
+												</li>
+
+												<!-- Hiển thị dấu ba chấm nếu cần -->
+												<?php if ($curpage > 3) { ?>
+													<?php if ($curpage > 4) { ?>
+														<li class="page-item">
+															<span class="page-link">...</span>
+														</li>
+													<?php } ?>
+												<?php } ?>
+
+												<!-- Hiển thị hai trang trước và hai trang sau trang hiện tại -->
+												<?php for ($i = max(2, $curpage - 2); $i <= min($query->max_num_pages - 1, $curpage + 2); $i++) { ?>
+													<li class="page-item <?php echo ($i == $curpage ? 'active' : ''); ?>">
+														<a class="page-link page button" href="<?php echo get_pagenum_link($i); ?>"><?php echo $i; ?></a>
+													</li>
+												<?php } ?>
+
+												<!-- Hiển thị dấu ba chấm và trang cuối cùng -->
+												<?php if ($curpage < $query->max_num_pages - 2) { ?>
+													<?php if ($curpage < $query->max_num_pages - 3) { ?>
+														<li class="page-item">
+															<span class="page-link">...</span>
+														</li>
+													<?php } ?>
+													<li class="page-item">
+														<a class="page-link page button" href="<?php echo get_pagenum_link($query->max_num_pages); ?>"><?php echo $query->max_num_pages; ?></a>
+													</li>
+												<?php } ?>
+
+												<!-- Nút Next -->
+												<li class="page-item <?php echo ($curpage == $query->max_num_pages ? 'disabled' : ''); ?>">
+													<a style="width:auto;height:auto" class="next page button page-link" href="<?php echo get_pagenum_link(($curpage + 1 <= $query->max_num_pages ? $curpage + 1 : $query->max_num_pages)); ?>">Next &rsaquo;</a>
+												</li>
+											</ul>
+										</nav>
+									</div>
+								<?php }
+								?>
+								<?php wp_reset_postdata(); ?>
+							<?php endif; ?>
+						</div>
+
+					</div>
+				</div><!-- .msi-post-tab-content -->
+			</div>
+			<div class="tab-pane fade" id="msi-post-cat-3" role="tabpanel" aria-labelledby="msi-post-cat-1-tab">
+				<div class="row msi-post-tab-content">
+					<div class="col-md-12 msi-post-tab-content-left">
+						<div class="msi-post-list row">
+
+							<?php
+							global $paged;
+							$curpage = $paged ? $paged : 1;
+
+							$args = array(
+								'post_type' => 'post',
+								'paged' => $paged,
+								'posts_per_page' => 12,
+								'cat' => 88
 							);
 							$query = new WP_Query($args); ?>
 
@@ -405,6 +633,17 @@ $current_cat_description = $category->description;
 	.os-page-qa .nav-container .nav-arrow.show {
 		z-index: 99;
 	}
+	.os-page-qa .msi-post-tab-nav {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		top: unset;
+		right: unset;
+		gap: 24px;
+		flex-wrap: nowrap;
+		width: 100%;
+	}
 
 	@media screen and (min-width: 991px) and (max-width: 1199px) {}
 
@@ -458,6 +697,13 @@ $current_cat_description = $category->description;
 
 		.os-page-qa .msi-post-tab-content-left {
 			padding-left: 0px;
+		}
+		.os-page-qa .msi-post-tab-nav {
+			display: flex;
+			justify-content: start;
+			flex-wrap: nowrap;
+			white-space: nowrap;
+			overflow: scroll;
 		}
 	}
 
@@ -549,4 +795,49 @@ $current_cat_description = $category->description;
 	.os-page-qa .post-thumbnail-img img{
 		height: 350px;
 	}
+	.msi-post-tab-content {
+		border: none;
+	}
+
+	.os-page-qa .nav-pills .nav-link.active,
+	.nav-pills .show>.nav-link {
+		color: var(--Alias-Text-White, #FFFFFF);
+
+		background: var(--Alias-Button-Primary-Pink, #E50C75);
+
+	}
+
+	.os-page-qa .msi-post-tab-nav .nav-item a {
+		background: var(--Alias-Button-Primary-Pinkex, #FFE4F4);
+		padding: 12px 24px;
+		border-radius: 100px;
+		color: var(--Alias-Button-Primary-DarkPink, #D40261);
+		font-family: 'Be Vietnam Pro', sans-serif;
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 24px;
+		text-align: left;
+
+	}
+
+
+	.os-page-qa .nav-item {
+		margin: 0;
+	}
+
+	.os-page-qa .msi-post-tab-content-left {
+		padding-right: 0;
+		padding-top: 72px;
+		border-right: none;
+	}
+
+	.os-page-qa .msi-post-item {
+		margin-bottom: 120px;
+		padding: 0px 28px;
+	}
+
+	.os-page-qa .nav-item {
+		margin: 0;
+	}
+	
 </style>
