@@ -84,8 +84,16 @@
                                         </div>
                                     </div>
                                     <div class="list-doctors__slider_item-content_rate">
-                                        <img src="<?php bloginfo('wpurl'); ?>/wp-content/themes/m5/assets/images/os/icon-start.svg"
-                                            alt="icon-start">
+                                        <?php
+                                            $rating_images = array(
+                                                get_bloginfo('wpurl') . '/wp-content/themes/m5/assets/images/os/icon-star-4.svg',
+                                                get_bloginfo('wpurl') . '/wp-content/themes/m5/assets/images/os/icon-star-4.5.svg',
+                                                get_bloginfo('wpurl') . '/wp-content/themes/m5/assets/images/os/icon-star-5.svg'
+                                            );
+
+                                            $random_image = $rating_images[array_rand($rating_images)];
+                                        ?>
+                                        <img src="<?php echo $random_image; ?>" alt="icon-start">
                                     </div>
                                     <div class="list-doctors__slider_item-content_subtitle">
                                         <?php echo get_field('descriptions', $team_id); ?>

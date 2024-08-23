@@ -601,63 +601,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			</div>
 		</header>
 
-		<style>
-.dropdown-menu {
-    padding: 0 !important;
-    margin: 0 !important;
-    list-style: none !important;
-    display: none !important;
-    grid-template-columns: repeat(2, 1fr) !important; /* Tạo 2 cột đều nhau */
-    gap: 10px !important; /* Khoảng cách giữa các mục */
-}
-
-/* Hiển thị menu con khi hover vào mục cha */
-.nav-item:hover > .dropdown-menu {
-    display: grid !important; /* Chỉ hiển thị menu khi hover vào mục cha */
-}
-
-/* Xử lý menu con cấp 3 (submenu của submenu) */
-.dropdown-menu .menu-item:hover > .dropdown-menu {
-    display: grid !important;
-}
-
-/* Style cho các mục menu */
-.dropdown-menu .menu-item {
-    padding: 5px !important;
-}
-
-.dropdown-menu .menu-item a {
-    display: block !important;
-    text-align: left !important;
-    text-decoration: none !important;
-    color: #000 !important; /* Điều chỉnh màu chữ */
-	white-space: nowrap !important;
-}
-
-/* Style cho hover của các mục menu */
-.dropdown-menu .menu-item a:hover {
-    background-color: #f0f0f0 !important;
-    color: #333 !important; /* Màu chữ khi hover */
-}
-.item-child-menu li:before, .mega-menu__list ul li:before, .primary-menu li:not(.mega-menu) ul li:before{
-	position: relative;
-	top: 0px !important;
-	left: 0px !important; 
-}
-.primary-menu li:not(.mega-menu) ul li{
-	display: flex !important;
-	align-items: center !important;
-	gap: 12px !important;
-}
-.primary-menu li:not(.mega-menu) ul{
-	padding: 40px !important;
-	column-gap: 100px !important;
-	row-gap: 8px !important;
-}
-
-		</style>
-		
-		<!-- tạm ẩn background đầu trang -->
+<!-- tạm ẩn background đầu trang -->
 
 <main class="main-content home-page">
     <div class="slider-main home-banner">
@@ -1197,13 +1141,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     alt="icon-next" /></noscript>
             </button>
         </div>
+
         <div class="row map_iframe" id="map_clinic">
             <div class="col-12 pl-0">
                 <iframe loading="lazy" id="map_frame"
                     src="about:blank"
                     width="600" height="677" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
-                    tabindex="0" data-rocket-lazyload="fitvidscompatible" data-lazy-src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3724.414269783198!2d105.7947488!3d21.0161038!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac9787d4def3%3A0x65205b8781585239!2zQ2h1bmcgY8awIFnDqm4gSMOyYQ!5e0!3m2!1svi!2s!4v1666067932401!5m2!1svi!2s"></iframe><noscript><iframe id="map_frame"
-                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3724.414269783198!2d105.7947488!3d21.0161038!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac9787d4def3%3A0x65205b8781585239!2zQ2h1bmcgY8awIFnDqm4gSMOyYQ!5e0!3m2!1svi!2s!4v1666067932401!5m2!1svi!2s"
+                    tabindex="0" data-rocket-lazyload="fitvidscompatible" data-lazy-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.8250797010614!2d105.7894751506404!3d21.039683885923726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab379b922995%3A0x35dafdcd8bab9392!2sMarie%20Stopes%20Vi%E1%BB%87t%20Nam!5e0!3m2!1svi!2s!4v1595851822503!5m2!1svi!2s"></iframe><noscript><iframe id="map_frame"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.8250797010614!2d105.7894751506404!3d21.039683885923726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab379b922995%3A0x35dafdcd8bab9392!2sMarie%20Stopes%20Vi%E1%BB%87t%20Nam!5e0!3m2!1svi!2s!4v1595851822503!5m2!1svi!2s"
                     width="600" height="677" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
                     tabindex="0"></iframe></noscript>
             </div>
@@ -1491,9 +1436,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                             Bác sĩ Trần Thị Hải                                        </div>
                                     </div>
                                     <div class="list-doctors__slider_item-content_rate">
-                                        <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"
-                                            alt="icon-start" data-lazy-src="https://localhost/drmarie/wp-content/themes/m5/assets/images/os/icon-start.svg"><noscript><img src="https://localhost/drmarie/wp-content/themes/m5/assets/images/os/icon-start.svg"
-                                            alt="icon-start"></noscript>
+                                                                                <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" alt="icon-start" data-lazy-src="https://localhost/drmarie/wp-content/themes/m5/assets/images/os/icon-star-4.svg"><noscript><img src="https://localhost/drmarie/wp-content/themes/m5/assets/images/os/icon-star-4.svg" alt="icon-start"></noscript>
                                     </div>
                                     <div class="list-doctors__slider_item-content_subtitle">
                                         Giám đốc Phòng khám Dr.Marie Hà Tĩnh.<br />Chuyên môn: khám bệnh, chữa bệnh chuyên khoa Sản phụ khoa.<br />Chứng chỉ hành nghề số 0002670 HT-CCHN Sở Y tế Hà Tĩnh cấp Ngày 08/01/2015                                    </div>
@@ -1523,9 +1466,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                             Bác sĩ Hồ Thị Khánh Linh                                        </div>
                                     </div>
                                     <div class="list-doctors__slider_item-content_rate">
-                                        <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"
-                                            alt="icon-start" data-lazy-src="https://localhost/drmarie/wp-content/themes/m5/assets/images/os/icon-start.svg"><noscript><img src="https://localhost/drmarie/wp-content/themes/m5/assets/images/os/icon-start.svg"
-                                            alt="icon-start"></noscript>
+                                                                                <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" alt="icon-start" data-lazy-src="https://localhost/drmarie/wp-content/themes/m5/assets/images/os/icon-star-4.svg"><noscript><img src="https://localhost/drmarie/wp-content/themes/m5/assets/images/os/icon-star-4.svg" alt="icon-start"></noscript>
                                     </div>
                                     <div class="list-doctors__slider_item-content_subtitle">
                                         Giám đốc phòng khám Dr.Marie Nghệ An.<br />Chuyên môn: khám bệnh, chữa bệnh chuyên khoa Sản phụ khoa.<br />Chứng chỉ hành nghề số 003987/NA/CCHN – Sở Y tế Nghệ An                                    </div>
@@ -1555,9 +1496,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                             Bác sĩ Nguyễn Thị Thanh Thuy                                        </div>
                                     </div>
                                     <div class="list-doctors__slider_item-content_rate">
-                                        <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"
-                                            alt="icon-start" data-lazy-src="https://localhost/drmarie/wp-content/themes/m5/assets/images/os/icon-start.svg"><noscript><img src="https://localhost/drmarie/wp-content/themes/m5/assets/images/os/icon-start.svg"
-                                            alt="icon-start"></noscript>
+                                                                                <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" alt="icon-start" data-lazy-src="https://localhost/drmarie/wp-content/themes/m5/assets/images/os/icon-star-4.5.svg"><noscript><img src="https://localhost/drmarie/wp-content/themes/m5/assets/images/os/icon-star-4.5.svg" alt="icon-start"></noscript>
                                     </div>
                                     <div class="list-doctors__slider_item-content_subtitle">
                                         Bác sĩ điều trị tại Phòng khám Dr.Marie Hồ Chí Minh 01.<br />Chuyên môn: khám bệnh, chữa bệnh chuyên khoa Sản phụ khoa.<br />Chứng chỉ hành nghề số: 00225530/HCM-CCHN do Sở Y Tế TP.HCM                                    </div>
@@ -1587,9 +1526,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                             Bác sĩ Lê Thị Yến Nhi                                        </div>
                                     </div>
                                     <div class="list-doctors__slider_item-content_rate">
-                                        <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"
-                                            alt="icon-start" data-lazy-src="https://localhost/drmarie/wp-content/themes/m5/assets/images/os/icon-start.svg"><noscript><img src="https://localhost/drmarie/wp-content/themes/m5/assets/images/os/icon-start.svg"
-                                            alt="icon-start"></noscript>
+                                                                                <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" alt="icon-start" data-lazy-src="https://localhost/drmarie/wp-content/themes/m5/assets/images/os/icon-star-5.svg"><noscript><img src="https://localhost/drmarie/wp-content/themes/m5/assets/images/os/icon-star-5.svg" alt="icon-start"></noscript>
                                     </div>
                                     <div class="list-doctors__slider_item-content_subtitle">
                                         Bác sĩ tại Phòng khám Dr.Marie Hồ Chí Minh 01.<br />Chuyên môn: khám bệnh, chữa bệnh chuyên khoa Sản phụ khoa.<br />Chứng chỉ hành nghề Số 012433/HCM-CCHN do Sở Y Tế TP.HCM cấp ngày 5/12/2003.<br> Kinh nghiệm: 1995 – 1997: Trung tâm Y tế Củ Chi (nay là Bệnh viện Củ Chi) - Chức danh: Bác sĩ điều trị chuyên khoa khoa Sản                                    </div>
@@ -1619,9 +1556,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                             Bác sĩ Nguyễn Thu Hằng                                        </div>
                                     </div>
                                     <div class="list-doctors__slider_item-content_rate">
-                                        <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"
-                                            alt="icon-start" data-lazy-src="https://localhost/drmarie/wp-content/themes/m5/assets/images/os/icon-start.svg"><noscript><img src="https://localhost/drmarie/wp-content/themes/m5/assets/images/os/icon-start.svg"
-                                            alt="icon-start"></noscript>
+                                                                                <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" alt="icon-start" data-lazy-src="https://localhost/drmarie/wp-content/themes/m5/assets/images/os/icon-star-5.svg"><noscript><img src="https://localhost/drmarie/wp-content/themes/m5/assets/images/os/icon-star-5.svg" alt="icon-start"></noscript>
                                     </div>
                                     <div class="list-doctors__slider_item-content_subtitle">
                                         Giám đốc phòng khám Dr.Marie Cần Thơ.<br />Chuyên môn: Khám, chữa bệnh chuyên khoa phụ sản.<br />Chứng chỉ hành nghề số 000950/CT-CCHN – Sở Y tế Cần Thơ                                    </div>
@@ -1651,9 +1586,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                             Bác sĩ Nguyễn Thị Việt Hồng                                        </div>
                                     </div>
                                     <div class="list-doctors__slider_item-content_rate">
-                                        <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"
-                                            alt="icon-start" data-lazy-src="https://localhost/drmarie/wp-content/themes/m5/assets/images/os/icon-start.svg"><noscript><img src="https://localhost/drmarie/wp-content/themes/m5/assets/images/os/icon-start.svg"
-                                            alt="icon-start"></noscript>
+                                                                                <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" alt="icon-start" data-lazy-src="https://localhost/drmarie/wp-content/themes/m5/assets/images/os/icon-star-4.5.svg"><noscript><img src="https://localhost/drmarie/wp-content/themes/m5/assets/images/os/icon-star-4.5.svg" alt="icon-start"></noscript>
                                     </div>
                                     <div class="list-doctors__slider_item-content_subtitle">
                                         Bác sĩ tại Phòng khám Dr.Marie Nha Trang.<br />Chuyên môn: Siêu âm sản phụ khoa, khám Phụ khoa, soi cổ tử cung, xét nghiệm, tháo/cấy que tránh thai.<br />Kinh nghiệm: 1985 – 1987: Khoa Sản bệnh viện Đại Từ – Thái Nguyên - Bác sĩ chuyên khoa Sản                                    </div>
@@ -1683,9 +1616,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                             Bác sĩ Lê Thị Hồng Thắm                                        </div>
                                     </div>
                                     <div class="list-doctors__slider_item-content_rate">
-                                        <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"
-                                            alt="icon-start" data-lazy-src="https://localhost/drmarie/wp-content/themes/m5/assets/images/os/icon-start.svg"><noscript><img src="https://localhost/drmarie/wp-content/themes/m5/assets/images/os/icon-start.svg"
-                                            alt="icon-start"></noscript>
+                                                                                <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" alt="icon-start" data-lazy-src="https://localhost/drmarie/wp-content/themes/m5/assets/images/os/icon-star-5.svg"><noscript><img src="https://localhost/drmarie/wp-content/themes/m5/assets/images/os/icon-star-5.svg" alt="icon-start"></noscript>
                                     </div>
                                     <div class="list-doctors__slider_item-content_subtitle">
                                         Bác sĩ tại Phòng khám Dr.Marie Bình Dương.<br />Chuyên môn cao trong khám bệnh, chữa bệnh chuyên khoa Sản – Phụ – KHHGĐ.<br />Chứng chỉ hành nghề số 003481 / BD – CCHN do Sở y tế Bình Dương                                    </div>
@@ -1715,9 +1646,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                             Bác sĩ Nguyễn Thị Diệu Lý                                        </div>
                                     </div>
                                     <div class="list-doctors__slider_item-content_rate">
-                                        <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"
-                                            alt="icon-start" data-lazy-src="https://localhost/drmarie/wp-content/themes/m5/assets/images/os/icon-start.svg"><noscript><img src="https://localhost/drmarie/wp-content/themes/m5/assets/images/os/icon-start.svg"
-                                            alt="icon-start"></noscript>
+                                                                                <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" alt="icon-start" data-lazy-src="https://localhost/drmarie/wp-content/themes/m5/assets/images/os/icon-star-4.svg"><noscript><img src="https://localhost/drmarie/wp-content/themes/m5/assets/images/os/icon-star-4.svg" alt="icon-start"></noscript>
                                     </div>
                                     <div class="list-doctors__slider_item-content_subtitle">
                                         Giám đốc phòng khám Dr.Marie Đà Nẵng.<br />Chuyên môn: siêu âm sản phụ khoa, đình chỉ thai nghén bằng thủ thuật/ thuốc, tháo/cấy que/vòng tránh thai                                    </div>
@@ -1747,9 +1676,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                             Bác sĩ Trần Thị Minh Nguyệt                                        </div>
                                     </div>
                                     <div class="list-doctors__slider_item-content_rate">
-                                        <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"
-                                            alt="icon-start" data-lazy-src="https://localhost/drmarie/wp-content/themes/m5/assets/images/os/icon-start.svg"><noscript><img src="https://localhost/drmarie/wp-content/themes/m5/assets/images/os/icon-start.svg"
-                                            alt="icon-start"></noscript>
+                                                                                <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" alt="icon-start" data-lazy-src="https://localhost/drmarie/wp-content/themes/m5/assets/images/os/icon-star-4.5.svg"><noscript><img src="https://localhost/drmarie/wp-content/themes/m5/assets/images/os/icon-star-4.5.svg" alt="icon-start"></noscript>
                                     </div>
                                     <div class="list-doctors__slider_item-content_subtitle">
                                         Bác sĩ tại Dr.Marie Hà Nội 03.<br />Chuyên môn: Khám chữa bệnh sản phụ khoa - KHHGĐ, siêu âm sản phụ khoa, đình chỉ thai nghén thủ thuật/thuốc, cấy/tháo que tránh thai                                    </div>
@@ -1779,9 +1706,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                             Bác sĩ Nguyễn Thị Thắng Vân                                        </div>
                                     </div>
                                     <div class="list-doctors__slider_item-content_rate">
-                                        <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"
-                                            alt="icon-start" data-lazy-src="https://localhost/drmarie/wp-content/themes/m5/assets/images/os/icon-start.svg"><noscript><img src="https://localhost/drmarie/wp-content/themes/m5/assets/images/os/icon-start.svg"
-                                            alt="icon-start"></noscript>
+                                                                                <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" alt="icon-start" data-lazy-src="https://localhost/drmarie/wp-content/themes/m5/assets/images/os/icon-star-4.svg"><noscript><img src="https://localhost/drmarie/wp-content/themes/m5/assets/images/os/icon-star-4.svg" alt="icon-start"></noscript>
                                     </div>
                                     <div class="list-doctors__slider_item-content_subtitle">
                                         Giám đốc phòng khám Dr.Marie Hà Nội 02, đảm nhiệm chuyên môn cho phòng khám.<br /> Chuyên môn: siêu âm sản phụ khoa, khám chữa bệnh phụ khoa, đình chỉ thai nghén bằng thủ thuật hoặc thuốc, cấy/tháo que tránh thai                                    </div>
@@ -1811,9 +1736,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                             Bác sĩ Vũ Thị Mai                                        </div>
                                     </div>
                                     <div class="list-doctors__slider_item-content_rate">
-                                        <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"
-                                            alt="icon-start" data-lazy-src="https://localhost/drmarie/wp-content/themes/m5/assets/images/os/icon-start.svg"><noscript><img src="https://localhost/drmarie/wp-content/themes/m5/assets/images/os/icon-start.svg"
-                                            alt="icon-start"></noscript>
+                                                                                <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" alt="icon-start" data-lazy-src="https://localhost/drmarie/wp-content/themes/m5/assets/images/os/icon-star-4.svg"><noscript><img src="https://localhost/drmarie/wp-content/themes/m5/assets/images/os/icon-star-4.svg" alt="icon-start"></noscript>
                                     </div>
                                     <div class="list-doctors__slider_item-content_subtitle">
                                         Giám đốc phòng khám Dr.Marie Hà Nội 01.<br />Chuyên khoa: siêu âm sản phụ khoa, đình chỉ thai nghén bằng các thủ thuật hoặc thuốc, cấy/tháo que tránh thai.<br />Số chứng chỉ hành nghề của bác sĩ: 000787/HNO-CCHN.                                    </div>
@@ -3520,6 +3443,9 @@ if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_c
         border-radius: 40px;
         box-shadow: 0px 9px 30px 0px #00000012;
     }
+    .book-now__custom .modal-body {
+        padding: 0;
+    }
 
     .book-now__custom-head {
         display: flex;
@@ -3667,6 +3593,12 @@ color: var(--Alias-Text-Primary-blue, #00ACEE) !important;
     /* end custom css book now */
 
     /* custom contact bar */
+
+    #contact-bar {
+        bottom: 0px;
+        right: 75px;
+        top: auto;
+    }
 
     #contact-bar li {
         margin: 24px 0;

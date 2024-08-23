@@ -118,12 +118,31 @@
             var $this = $(this);
             var link = $this.data('map');
             $('#map_clinic iframe').attr('src', link);
+            
+            var targetElement = document.getElementById('map_clinic');
+            var elementRect = targetElement.getBoundingClientRect();
+            if (targetElement && elementRect) {
+                window.scrollTo({
+                    top: elementRect.top + window.pageYOffset -200,
+                    behavior: 'smooth' // Cuộn mượt mà
+                });
+            }
+            
         })
 
         // Open modal schedule book
         $('.book-calendar').on('click', function(e) {
             e.preventDefault();
-            $('#modal_schedule_book').modal({ show: true })
+            $('#modal_schedule_book').modal({ show: true });
+
+            
+            // fill clinic vào booking
+            var name = this.getAttribute('data-clinic');
+            if(name) {
+                document.getElementById('clinic-showroom').value = name;
+            } else {
+                document.getElementById('clinic-showroom').value = 'Chọn cơ sở'
+            }
         })
 
         // Header fixed
@@ -202,5 +221,83 @@
             console.log(heightMapContent)
             $('#map_frame').css('height', heightMapContent + 'px');
         }
+
+
+        // add thêm content dưới menu level 2
+
+        // menu giới thiệu
+        var ulElementAbout = document.querySelector('#nav-item-4849 ul');
+        var newHtml = '<div class="menu-bonus"><div class="menu-bonus__content d-flex justify-content-between align-items-center"><div class="menu-bonus__content-title">Khám phá thêm trang web của chúng tôi có thể giúp phụ nữ chăm sóc sức khỏe của họ.</div><div class="menu-bonus__content-btn">Xem thêm</div></div></div>';
+        ulElementAbout.insertAdjacentHTML('beforeend', newHtml);
+
+        // menu dịch vụ
+        var ulElementAbout = document.querySelector('#nav-item-4711 ul');
+        var newHtml = '<div class="menu-bonus"><div class="menu-bonus__content d-flex justify-content-between align-items-center"><div class="menu-bonus__content-title">Khám phá chương trình chăm sóc sức khỏe độc ​​đáo của chúng tôi được tùy chỉnh dành cho phụ nữ, được thiết kế để nâng cao và duy trì sức khỏe cũng như tinh thần tổng thể của bạn.</div><div class="menu-bonus__content-btn">Xem thêm</div></div></div>';
+        ulElementAbout.insertAdjacentHTML('beforeend', newHtml);
+
+        // menu Q&A
+        var ulElementAbout = document.querySelector('#nav-item-4802 ul');
+        var newHtml = '<div class="menu-bonus"><div class="menu-bonus__content d-flex justify-content-between align-items-center"><div class="menu-bonus__content-title">Đây là “Thư viện Giáo dục Phụ nữ” của chúng tôi, nơi phụ nữ có thể điều hướng qua các chủ đề đa dạng của chúng tôi, giúp người phụ nữ của chúng tôi sống với tâm hồn trong sáng.</div><div class="menu-bonus__content-btn">Xem thêm</div></div></div>';
+        ulElementAbout.insertAdjacentHTML('beforeend', newHtml);
+
+        // end add thêm content dưới menu level 2
+
+
+        // add icon form liên hệ, booknow
+        var inputFormUser = document.querySelectorAll('.form-group-custom .wpcf7-form-control-wrap.text-905');
+        var inputFormCall = document.querySelectorAll('.form-group-custom .wpcf7-form-control-wrap.tel-834');
+        var inputFormMail = document.querySelectorAll('.form-group-custom .wpcf7-form-control-wrap.email-691');
+        
+        var imgUser = document.createElement('img');
+        var imgCall = document.createElement('img');
+        var imgMail = document.createElement('img');
+
+        // imgUser = '../../../../../drmarie/wp-content/themes/m5/assets/images/os/ic_form_user.svg';
+        // imgCall = '../../../../../drmarie/wp-content/themes/m5/assets/images/os/ic_form_call.svg';
+        // imgMail = '../../../../../drmarie/wp-content/themes/m5/assets/images/os/ic_form_mail.svg';
+
+        // for prod
+        imgUser.src = '../images/os/ic_form_user.svg';
+        imgCall.src = '../images/os/ic_form_cal.svg';
+        imgMail.src = '../images/os/ic_form_mail.svg';
+
+        inputFormUser.forEach(function(wrapper) {
+            const img = document.createElement('img');
+            img.src = imgUser;
+            img.className = 'icon-inside-input';
+        
+            wrapper.appendChild(img);
+        });
+
+        inputFormCall.forEach(function(wrapper) {
+            const img = document.createElement('img');
+            img.src = imgCall;
+            img.className = 'icon-inside-input';
+        
+            wrapper.appendChild(img);
+        });
+
+        inputFormMail.forEach(function(wrapper) {
+            const img = document.createElement('img');
+            img.src = imgMail;
+            img.className = 'icon-inside-input';
+        
+            wrapper.appendChild(img);
+        });
+
+        // end add icon form liên hệ, booknow
+
+
+        // random đánh sao bác sĩ
+
+        var images = document.querySelectorAll('.list-doctors__slider_item-content_rate .rating-image');
+        if (images.length > 0) {
+            var randomIndex = Math.floor(Math.random() * images.length);
+            images.forEach(function(img) {
+                img.style.display = 'none';
+            });
+            images[randomIndex].style.display = 'inline';
+        }
+
     });
 }(jQuery, jQuery(window), jQuery(document), window, document, jQuery('body')));

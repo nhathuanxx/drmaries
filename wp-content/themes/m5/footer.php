@@ -480,6 +480,9 @@
         border-radius: 40px;
         box-shadow: 0px 9px 30px 0px #00000012;
     }
+    .book-now__custom .modal-body {
+        padding: 0;
+    }
 
     .book-now__custom-head {
         display: flex;
@@ -627,6 +630,12 @@ color: var(--Alias-Text-Primary-blue, #00ACEE) !important;
     /* end custom css book now */
 
     /* custom contact bar */
+
+    #contact-bar {
+        bottom: 0px;
+        right: 75px;
+        top: auto;
+    }
 
     #contact-bar li {
         margin: 24px 0;
