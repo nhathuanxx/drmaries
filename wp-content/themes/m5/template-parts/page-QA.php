@@ -88,11 +88,12 @@ $url = get_template_directory_uri();
                                         <div class="row" style="height: 100%; position:relative">
                                             <div class="col-md-12 post-thumbnail-img">
                                                 <a href="<?php the_permalink(); ?>">
-                                                    <?php if (has_post_thumbnail($post->ID)) : ?>
-                                                        <?php $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'large'); ?>
-                                                        <img class="" alt="Post Thumbnail" src="<?php echo $image[0]; ?>">
-                                                    <?php endif; ?>
-                                                    <img class="" alt="Post Thumbnail" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/os/qadefault.png'); ?>">
+                                                <?php if (get_post_thumbnail_id($post->ID)) : ?>
+    <?php $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'large'); ?>
+    <img class="" alt="Post Thumbnail" src="<?php echo esc_url($image[0]); ?>">
+<?php else : ?>
+    <img class="" alt="Post Thumbnail" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/os/qadefault.png'); ?>">
+<?php endif; ?>
                                                 </a>
                                             </div>
                                             <div class="col-md-12 post-item-content">
@@ -157,11 +158,12 @@ $url = get_template_directory_uri();
                                         <div class="row" style="height: 100%; position:relative">
                                             <div class="col-md-12 post-thumbnail-img">
                                                 <a href="<?php the_permalink(); ?>">
-                                                    <?php if (has_post_thumbnail($post->ID)) : ?>
-                                                        <?php $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'large'); ?>
-                                                        <img class="" alt="Post Thumbnail" src="<?php echo $image[0]; ?>">
-                                                    <?php endif; ?>
-                                                    <img class="" alt="Post Thumbnail" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/os/qapost.png'); ?>">
+                                                <?php if (get_post_thumbnail_id($post->ID)) : ?>
+    <?php $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'large'); ?>
+    <img class="" alt="Post Thumbnail" src="<?php echo esc_url($image[0]); ?>">
+<?php else : ?>
+    <img class="" alt="Post Thumbnail" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/os/qadefault.png'); ?>">
+<?php endif; ?>
                                                 </a>
                                             </div>
                                             <div class="col-md-12 post-item-content">
@@ -226,11 +228,12 @@ $url = get_template_directory_uri();
                                         <div class="row" style="height: 100%; position:relative">
                                             <div class="col-md-12 post-thumbnail-img">
                                                 <a href="<?php the_permalink(); ?>">
-                                                    <?php if (has_post_thumbnail($post->ID)) : ?>
-                                                        <?php $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'large'); ?>
-                                                        <img class="" alt="Post Thumbnail" src="<?php echo $image[0]; ?>">
-                                                    <?php endif; ?>
-                                                    <img class="" alt="Post Thumbnail" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/os/qapost.png'); ?>">
+                                                <?php if (get_post_thumbnail_id($post->ID)) : ?>
+    <?php $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'large'); ?>
+    <img class="" alt="Post Thumbnail" src="<?php echo esc_url($image[0]); ?>">
+<?php else : ?>
+    <img class="" alt="Post Thumbnail" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/os/qadefault.png'); ?>">
+<?php endif; ?>
                                                 </a>
                                             </div>
                                             <div class="col-md-12 post-item-content">
@@ -504,5 +507,6 @@ $url = get_template_directory_uri();
     }
     .os-page-qa .post-thumbnail-img img{
 		height: 350px;
+        width: 100%;
 	}
 </style>

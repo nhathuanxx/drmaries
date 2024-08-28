@@ -794,6 +794,7 @@ $current_cat_description = $category->description;
 	}
 	.os-page-qa .post-thumbnail-img img{
 		height: 350px;
+		width: 100%;
 	}
 	.msi-post-tab-content {
 		border: none;
