@@ -45,7 +45,7 @@
         </div>
         <div class="list-doctors__slider">
             <div class="sun-slider sun-slider--center"
-                data-slick='{"slidesToShow": 2, "nextArrow": ".list-doctors__see-more_next", "prevArrow": "", "centerPadding": "20px", "dots": false, "autoplay": false, "infinite": true, "autoplaySpeed": 2000, "responsive": [{"breakpoint": 1200, "settings": {"centerMode": false, "slidesToShow": 1 } } ]}'>
+                data-slick='{"slidesToShow": 2, "nextArrow": ".list-doctors__see-more_next", "prevArrow": "", "centerPadding": "20px", "dots": false, "autoplay": true, "infinite": true, "autoplaySpeed": 2000, "responsive": [{"breakpoint": 1200, "settings": {"centerMode": false, "slidesToShow": 1 } } ]}'>
                 <?php
                 $arg_team = array(
                     'post_type' => 'sha-teams',
