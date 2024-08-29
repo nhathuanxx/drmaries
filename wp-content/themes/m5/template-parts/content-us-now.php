@@ -3,7 +3,19 @@
         <div class="content-us-now-content row" style="padding: 200px 0px 80px 0px;">
             <div class="col-md-12 col-lg-7 content-us-now-content-1">
                 <div class="on col-12">
-                    <p>Contact us now to get started!</p>
+                    <p>
+                    <?php
+                            if (pll_current_language('slug') == 'vi') {
+                                echo 'Liên hệ với chúng tôi ngay để bắt đầu!';
+                            }
+                            if (pll_current_language('slug') == 'en') {
+                                echo 'Contact us now to get started!';
+                            }
+                            if (pll_current_language('slug') == 'zh') {
+                                echo '立即联系我们，开始吧！';
+                            }
+                            ?>
+                    </p>
                 </div>
                 <div class="bufterfly-mobile">
                     <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/os/icon_bufterfly.svg'); ?>">
