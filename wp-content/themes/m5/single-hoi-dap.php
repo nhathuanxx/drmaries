@@ -20,7 +20,17 @@ get_header();
 				<div class="msi-single-post-title text-center">
 					<div class="overlay"></div>
 					<?php the_title('<h1 class="entry-title">', '</h1>'); ?>
-					<a class="os-similar-btn" href="<?php bloginfo('wpurl'); ?>/qa">Tìm thông tin tương tự</a>
+					<a class="os-similar-btn" href="<?php bloginfo('wpurl'); ?>/qa"><?php
+                    if (pll_current_language('slug') == 'vi') {
+                        echo 'Tìm thông tin tương tự';
+                    }
+                    if (pll_current_language('slug') == 'en') {
+                        echo "Find similar information";
+                    }
+                    if (pll_current_language('slug') == 'zh') {
+                        echo '了解我们如何帮助您不仅生存';
+                    }
+                    ?></a>
 				</div>
 				<?php
 				// Start the Loop.

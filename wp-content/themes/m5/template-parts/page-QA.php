@@ -215,7 +215,17 @@ $url = get_template_directory_uri();
                         </div>
                     </div>
                     <div class="col-md-12 os-read-more">
-                    <a href="<?php bloginfo('wpurl'); ?>/danh-muc-hoi-dap/dinh-chi-thai/"> <span>XEM THÊM <i class="fas fa-angle-double-right"></i></span></a>
+                    <a href="<?php bloginfo('wpurl'); ?>/danh-muc-hoi-dap/dinh-chi-thai/"> <span><?php
+                    if (pll_current_language('slug') == 'vi') {
+                        echo 'XEM THÊM';
+                    }
+                    if (pll_current_language('slug') == 'en') {
+                        echo "READ MORE";
+                    }
+                    if (pll_current_language('slug') == 'zh') {
+                        echo '了解我们如何';
+                    }
+                    ?> <i class="fas fa-angle-double-right"></i></span></a>
                     </div>
                     <!-- <div class="col-md-4  msi-post-tab-sidebar-right">
                         
@@ -285,7 +295,17 @@ $url = get_template_directory_uri();
                         </div>
                     </div>
                     <div class="col-md-12 os-read-more">
-                    <a href="<?php bloginfo('wpurl'); ?>/danh-muc-hoi-dap/suc-khoe-sinh-san/"> <span>XEM THÊM <i class="fas fa-angle-double-right"></i></span></a>
+                    <a href="<?php bloginfo('wpurl'); ?>/danh-muc-hoi-dap/suc-khoe-sinh-san/"> <span><?php
+                    if (pll_current_language('slug') == 'vi') {
+                        echo 'XEM THÊM';
+                    }
+                    if (pll_current_language('slug') == 'en') {
+                        echo "READ MORE";
+                    }
+                    if (pll_current_language('slug') == 'zh') {
+                        echo '了解我们如何';
+                    }
+                    ?> <i class="fas fa-angle-double-right"></i></span></a>
                     </div>
                    
                     <!-- <div class="col-md-4  msi-post-tab-sidebar-right">
