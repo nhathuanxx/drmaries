@@ -51,13 +51,43 @@ $url = get_template_directory_uri();
                 <a class="nav-link active" id="msi-post-cat-0-tab" data-toggle="pill" href="#msi-post-cat-0" role="tab" aria-controls="msi-post-cat-0" aria-selected="true">All</a>
             </li> -->
             <li class="nav-item">
-                <a class="nav-link active" id="msi-post-cat-1-tab" data-toggle="pill" href="#msi-post-cat-1" role="tab" aria-controls="msi-post-cat-1" aria-selected="true">Sức khỏe sinh sản</a>
+                <a class="nav-link active" id="msi-post-cat-1-tab" data-toggle="pill" href="#msi-post-cat-1" role="tab" aria-controls="msi-post-cat-1" aria-selected="true"><?php
+                    if (pll_current_language('slug') == 'vi') {
+                        echo 'Sức khỏe sinh sản';
+                    }
+                    if (pll_current_language('slug') == 'en') {
+                        echo "Reproductive health";
+                    }
+                    if (pll_current_language('slug') == 'zh') {
+                        echo '了解我们如何帮助您不仅生存';
+                    }
+                    ?></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="msi-post-cat-2-tab" data-toggle="pill" href="#msi-post-cat-2" role="tab" aria-controls="msi-post-cat-2" aria-selected="false">Biện pháp tránh thai</a>
+                <a class="nav-link" id="msi-post-cat-2-tab" data-toggle="pill" href="#msi-post-cat-2" role="tab" aria-controls="msi-post-cat-2" aria-selected="false"><?php
+                    if (pll_current_language('slug') == 'vi') {
+                        echo 'Biện pháp tránh thai';
+                    }
+                    if (pll_current_language('slug') == 'en') {
+                        echo "Birth control methods";
+                    }
+                    if (pll_current_language('slug') == 'zh') {
+                        echo '了解我们如何帮助您不仅生存';
+                    }
+                    ?></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="msi-post-cat-3-tab" data-toggle="pill" href="#msi-post-cat-3" role="tab" aria-controls="msi-post-cat-3" aria-selected="false">Đình chỉ thai</a>
+                <a class="nav-link" id="msi-post-cat-3-tab" data-toggle="pill" href="#msi-post-cat-3" role="tab" aria-controls="msi-post-cat-3" aria-selected="false"><?php
+                    if (pll_current_language('slug') == 'vi') {
+                        echo 'Đình chỉ thai';
+                    }
+                    if (pll_current_language('slug') == 'en') {
+                        echo "Termination of pregnancy";
+                    }
+                    if (pll_current_language('slug') == 'zh') {
+                        echo '了解我们如何帮助您不仅生存';
+                    }
+                    ?></a>
             </li>
         </ul>
         <div class="tab-content" id="pills-tabContent">
