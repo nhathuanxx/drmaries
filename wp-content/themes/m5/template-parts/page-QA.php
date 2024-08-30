@@ -98,6 +98,20 @@ $url = get_template_directory_uri();
                         <div class="msi-post-list row">
 
                             <?php
+                            $language = pll_current_language('slug');
+    
+                            // Xác định ID của term dựa trên ngôn ngữ
+                            switch ($language) {
+                                case 'vi':
+                                    $term_id = 12; // ID của term cho tiếng Việt
+                                    break;
+                                case 'en':
+                                    $term_id = 747; // ID của term cho tiếng Anh
+                                    break;
+                                default:
+                                    $term_id = 12; // ID mặc định nếu ngôn ngữ không xác định
+                                    break;
+                            }
                             $args = array(
                                 'post_type' => 'hoi-dap',
                                 'orderby' => 'post_date',
@@ -105,7 +119,7 @@ $url = get_template_directory_uri();
                                 'tax_query' => array(
                                     array(
                                         'taxonomy' => 'hoi-dap-cat',
-                                        'terms' => 12,
+                                        'terms' => $term_id,
                                         'field' => 'term_id',
                                     )
                                 ),
@@ -188,6 +202,20 @@ $url = get_template_directory_uri();
                         <div class="msi-post-list row">
 
                             <?php
+                             $language = pll_current_language('slug');
+    
+                             // Xác định ID của term dựa trên ngôn ngữ
+                             switch ($language) {
+                                 case 'vi':
+                                     $term_id = 11; // ID của term cho tiếng Việt
+                                     break;
+                                 case 'en':
+                                     $term_id = 745; // ID của term cho tiếng Anh
+                                     break;
+                                 default:
+                                     $term_id = 11; // ID mặc định nếu ngôn ngữ không xác định
+                                     break;
+                             }
                             $args = array(
                                 'post_type' => 'hoi-dap',
                                 'orderby' => 'post_date',
@@ -195,7 +223,7 @@ $url = get_template_directory_uri();
                                 'tax_query' => array(
                                     array(
                                         'taxonomy' => 'hoi-dap-cat',
-                                        'terms' => 11,
+                                        'terms' => $term_id,
                                         'field' => 'term_id',
                                     )
                                 ),
@@ -268,6 +296,20 @@ $url = get_template_directory_uri();
                         <div class="msi-post-list row">
 
                             <?php
+                             $language = pll_current_language('slug');
+    
+                             // Xác định ID của term dựa trên ngôn ngữ
+                             switch ($language) {
+                                 case 'vi':
+                                     $term_id = 10; // ID của term cho tiếng Việt
+                                     break;
+                                 case 'en':
+                                     $term_id = 749; // ID của term cho tiếng Anh
+                                     break;
+                                 default:
+                                     $term_id = 10; // ID mặc định nếu ngôn ngữ không xác định
+                                     break;
+                             }
                             $args = array(
                                 'post_type' => 'hoi-dap',
                                 'orderby' => 'post_date',
@@ -275,7 +317,7 @@ $url = get_template_directory_uri();
                                 'tax_query' => array(
                                     array(
                                         'taxonomy' => 'hoi-dap-cat',
-                                        'terms' => 10,
+                                        'terms' => $term_id,
                                         'field' => 'term_id',
                                     )
                                 ),
