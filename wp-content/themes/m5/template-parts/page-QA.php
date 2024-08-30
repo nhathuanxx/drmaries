@@ -109,7 +109,17 @@ $url = get_template_directory_uri();
                                                     <?php echo wp_trim_words(get_the_content(), 40, '...'); ?>
                                                 </div>
                                                 <div class="msi-read-more">
-                                                    <a href="<?php the_permalink(); ?>">Xem chi tiết</a>
+                                                    <a href="<?php the_permalink(); ?>"> <?php
+                    if (pll_current_language('slug') == 'vi') {
+                        echo 'Xem chi tiết';
+                    }
+                    if (pll_current_language('slug') == 'en') {
+                        echo "Read more";
+                    }
+                    if (pll_current_language('slug') == 'zh') {
+                        echo '探索女';
+                    }
+                    ?></a>
                                                 </div>
                                             </div>
                                         </div>
@@ -125,7 +135,17 @@ $url = get_template_directory_uri();
                         </div>
                     </div> 
                     <div class="col-md-12 os-read-more">
-                    <a href="<?php bloginfo('wpurl'); ?>/danh-muc-hoi-dap/bien-phap-tranh-thai/"> <span>XEM THÊM <i class="fas fa-angle-double-right"></i></span></a>
+                    <a href="<?php bloginfo('wpurl'); ?>/danh-muc-hoi-dap/bien-phap-tranh-thai/"> <span>                    <?php
+                    if (pll_current_language('slug') == 'vi') {
+                        echo 'XEM THÊM';
+                    }
+                    if (pll_current_language('slug') == 'en') {
+                        echo "READ MORE";
+                    }
+                    if (pll_current_language('slug') == 'zh') {
+                        echo '探索女';
+                    }
+                    ?><i class="fas fa-angle-double-right"></i></span></a>
                     </div>
                     <!-- <div class="col-md-4  msi-post-tab-sidebar-right">
                         

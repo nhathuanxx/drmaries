@@ -82,10 +82,30 @@
                                 </p>
                                 <div class="os_footer_address">
                                  <p class="os_footer_address_title">
-                                 Địa chỉ trụ sở chính:
+                                 <?php
+                                    if (pll_current_language('slug') == 'vi') {
+                                        echo 'Địa chỉ trụ sở chính: ';
+                                    }
+                                    if (pll_current_language('slug') == 'en') {
+                                        echo 'Adress: ';
+                                    }
+                                    if (pll_current_language('slug') == 'zh') {
+                                        echo '预订服务: ';
+                                    }
+                                    ?>
                                  </p>
                                  <p class="os_footer_address_detail">
-                                 Phòng 201-202, Nhà A1, Khu Ngoại Giao Đoàn Vạn Phúc, Số 298, Đường Kim Mã, Phường Kim Mã, Quận Ba Đình, Thành phố Hà Nội, Việt Nam
+                                 <?php
+                                    if (pll_current_language('slug') == 'vi') {
+                                        echo 'Phòng 201-202, Nhà A1, Khu Ngoại Giao Đoàn Vạn Phúc, Số 298, Đường Kim Mã, Phường Kim Mã, Quận Ba Đình, Thành phố Hà Nội, Việt Nam';
+                                    }
+                                    if (pll_current_language('slug') == 'en') {
+                                        echo 'Room 201-202, House A1, Ngoai Giao Đoan Van Phuc, 298, Kim Mã Street, Kim Ma, Quan Ba Dinh, Ha Noi, Viet Nam';
+                                    }
+                                    if (pll_current_language('slug') == 'zh') {
+                                        echo '预订服务: ';
+                                    }
+                                    ?>
                                  </p>
                                 </div>
                                 <div class="footer__intro__content os_footer__intro__content">

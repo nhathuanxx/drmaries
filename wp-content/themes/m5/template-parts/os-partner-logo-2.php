@@ -27,9 +27,39 @@
             </div>
             <div class="col-md-6 col-lg-6 partner-row-header-2">
                 <div class="os-partner-2-btn-container">
-                    <a class="os-btn-partner-2" href="tel:<?php echo get_field('hotline', pll_current_language('slug')); ?>">Liên hệ</a>
-                    <a class="os-btn-partner-2 book-calendar" href="">Đặt lịch</a>
-                    <a class="os-btn-partner-2" href="<?php bloginfo('wpurl'); ?>/phong-kham-gan-ban/">Tìm phòng khám</a>
+                    <a class="os-btn-partner-2" href="tel:<?php echo get_field('hotline', pll_current_language('slug')); ?>"><?php
+                    if (pll_current_language('slug') == 'vi') {
+                        echo 'Liên hệ';
+                    }
+                    if (pll_current_language('slug') == 'en') {
+                        echo 'Contact';
+                    }
+                    if (pll_current_language('slug') == 'zh') {
+                        echo '我们';
+                    }
+                    ?></a>
+                    <a class="os-btn-partner-2 book-calendar" href=""><?php
+                    if (pll_current_language('slug') == 'vi') {
+                        echo 'Đặt lịch';
+                    }
+                    if (pll_current_language('slug') == 'en') {
+                        echo 'Booking';
+                    }
+                    if (pll_current_language('slug') == 'zh') {
+                        echo '我们';
+                    }
+                    ?></a>
+                    <a class="os-btn-partner-2" href="<?php bloginfo('wpurl'); ?>/phong-kham-gan-ban/"><?php
+                    if (pll_current_language('slug') == 'vi') {
+                        echo 'Tìm phòng khám';
+                    }
+                    if (pll_current_language('slug') == 'en') {
+                        echo 'Find a clinic.';
+                    }
+                    if (pll_current_language('slug') == 'zh') {
+                        echo '我们';
+                    }
+                    ?></a>
 
 
                 </div>
