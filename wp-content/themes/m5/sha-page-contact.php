@@ -113,8 +113,18 @@ $url = get_template_directory_uri();
                                 }
                                 ?>
                             </div>
-                            <a href="tel:1900 55 88 82" class="content-info-subtitle">
-                                1900 55 88 82
+                            <a href="https://maps.app.goo.gl/iBx9rr3MRULKe2B27" class="content-info-subtitle">
+                                <?php
+                                    if (pll_current_language('slug') == 'vi') {
+                                        echo 'Phòng 201-202, Nhà A1, Khu Ngoại Giao Đoàn Vạn Phúc, Số 298, Đường Kim Mã, Phường Kim Mã, Quận Ba Đình, Thành phố Hà Nội, Việt Nam';
+                                    }
+                                    if (pll_current_language('slug') == 'en') {
+                                        echo 'Room 201-202, House A1, Ngoai Giao Đoan Van Phuc, 298, Kim Mã Street, Kim Ma, Quan Ba Dinh, Ha Noi, Viet Nam';
+                                    }
+                                    if (pll_current_language('slug') == 'zh') {
+                                        echo 'Room 201-202, House A1, Ngoai Giao Đoan Van Phuc, 298, Kim Mã Street, Kim Ma, Quan Ba Dinh, Ha Noi, Viet Nam';
+                                    }
+                                ?>
                             </a>
                         </div>
                     </div>

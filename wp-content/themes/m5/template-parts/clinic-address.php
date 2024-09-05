@@ -1,49 +1,60 @@
 <div class="clinic-nearby-u">
     <div class="container">
-        <!-- Header -->
         <div class="clinic-nearby-u__header d-flex justify-content-between align-items-start">
             <div class="clinic-nearby-u__header_title">
                 <?php
-                $language_slug = pll_current_language('slug');
-                if ($language_slug == 'vi') {
+                if (pll_current_language('slug') == 'vi') {
                     echo 'Phòng Khám Gần Bạn';
-                } elseif ($language_slug == 'en') {
+                }
+                if (pll_current_language('slug') == 'en') {
                     echo 'Clinic NearBy You';
-                } elseif ($language_slug == 'zh') {
+                }
+                if (pll_current_language('slug') == 'zh') {
                     echo '诊所科';
                 }
                 ?>
             </div>
-            <a href="<?php bloginfo('wpurl'); ?>/phong-kham-gan-ban/" class="clinic-nearby-u__header_see-all">
+            <?php
+                $current_language = pll_current_language('slug');
+
+                if ($current_language == 'vi') {
+                    $href = get_bloginfo('wpurl') . '/phong-kham-gan-ban/';
+                } elseif ($current_language == 'en') {
+                    $href = get_bloginfo('wpurl') . '/en/phong-kham-gan-ban/';
+                } else {
+                    $href = get_bloginfo('wpurl') . '/phong-kham-gan-ban/';
+                }
+            ?>
+            <a href="<?php echo $href; ?>" class="clinic-nearby-u__header_see-all">
                 <span>
                     <?php
-                    if ($language_slug == 'vi') {
+                    if (pll_current_language('slug') == 'vi') {
                         echo 'Tất cả phòng khám';
-                    } elseif ($language_slug == 'en') {
+                    }
+                    if (pll_current_language('slug') == 'en') {
                         echo 'See all Clinics';
-                    } elseif ($language_slug == 'zh') {
+                    }
+                    if (pll_current_language('slug') == 'zh') {
                         echo '诊所科';
                     }
                     ?>
                 </span>
                 <img class="clinic-nearby-u__header_see-all__icon"
-                    src="<?php bloginfo('wpurl'); ?>/wp-content/themes/m5/assets/images/os/icon-see-all.svg"
+                    src="<?php bloginfo('wpurl'); ?>/wp-content/themes/m5_os/assets/images/os/icon-see-all.svg"
                     alt="icon-see-all">
             </a>
             
             <div class="clinic-nearby-u__nav_custom">
                 <button type="button" class="bg-transparent border-0 clinic-nearby-u__prev">
-                    <img src="<?php bloginfo('wpurl'); ?>/wp-content/themes/m5/assets/images/os/icon-next.svg"
+                    <img src="<?php bloginfo('wpurl'); ?>/wp-content/themes/m5_os/assets/images/os/icon-next.svg"
                         alt="icon-prev" />
                 </button>
                 <button type="button" class="bg-transparent border-0 clinic-nearby-u__next">
-                    <img src="<?php bloginfo('wpurl'); ?>/wp-content/themes/m5/assets/images/os/icon-next.svg"
+                    <img src="<?php bloginfo('wpurl'); ?>/wp-content/themes/m5_os/assets/images/os/icon-next.svg"
                         alt="icon-next" />
                 </button>
             </div>
         </div>
-
-        <!-- City Select Dropdown -->
         <div class="clinic-nearby-u__select d-flex justify-content-between align-items-center">
             <span class="clinic-nearby-u__select-city">
                 <select id="home-city">
@@ -61,67 +72,69 @@
             </span>
         </div>
 
-        <!-- Slider -->
         <div id="clinic-slider" class="os-sun-slider sun-slider--center"
             data-slick='{"slidesToShow": 3, "nextArrow": ".clinic-nearby-u__next", "prevArrow": ".clinic-nearby-u__prev", "centerPadding": "20px", "dots": false, "autoplay": true, "infinite": true, "autoplaySpeed": 2000, "responsive": [ { "breakpoint": 1200, "settings": { "centerMode": false, "slidesToShow": 2 } }, { "breakpoint": 776, "settings": { "centerMode": false, "slidesToShow": 1 } } ]}'>
-            
-            <?php if (get_field('clinic_nearby_you_v2', $language_slug)): ?>
-                <?php while (the_repeater_field('clinic_nearby_you_v2', $language_slug)): ?>
+            <?php if (get_field('clinic_nearby_you_v2', pll_current_language('slug'))): ?>
+                <?php while (the_repeater_field('clinic_nearby_you_v2', pll_current_language('slug'))): ?>
                     <?php $city = get_sub_field('city'); ?>
                     <?php while (the_repeater_field('content')): ?>
                         <div class="clinic-nearby-u-slider" data-city="<?php echo $city; ?>">
-                            <div class="clinic-nearby-u-slider__item">
-                                <a href="#" data-map="<?php echo get_sub_field('map_embed'); ?>" class="clinic-nearby-u-slider__item_img clinic-nearby-u-slider__item-map">
-                                    <figure>
-                                        <img src="<?php echo get_sub_field('image') ?>" alt="<?php echo get_sub_field('name') ?>" />
-                                    </figure>
-                                </a>
-                                <a href="#" data-map="<?php echo get_sub_field('map_embed'); ?>"
-                                    class="clinic-nearby-u-slider__item_content clinic-nearby-u-slider__item-map">
-                                    <div class="clinic-nearby-u-slider__item_title">
-                                        <?php echo get_sub_field('name') ?>
-                                    </div>
-                                    <div class="clinic-nearby-u-slider__item_subtitle">
-                                        <div class="clinic-nearby-u-slider__item_info d-flex align-items-start">
-                                            <img src="<?php bloginfo('wpurl'); ?>/wp-content/themes/m5/assets/images/os/icon-marked.svg"
-                                                alt="icon-marked">
-                                            <span><?php echo get_sub_field('address') ?></span>
-                                        </div>
-                                        <div class="clinic-nearby-u-slider__item_info d-flex align-items-start">
-                                            <img src="<?php bloginfo('wpurl'); ?>/wp-content/themes/m5/assets/images/os/icon-time.svg"
-                                                alt="icon-marked">
-                                            <span>
-                                                <?php echo get_sub_field('on_time') ?>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </a>
-                                <div class="clinic-nearby-u-slider__item_action d-flex justify-content-start">
-                                    <a href="tel:<?php echo get_sub_field('number_phone') ?>"
-                                        class="clinic-nearby-u-slider__item_action-item clinic-nearby-u-slider__item_action-call">
-                                        <?php
-                                        if ($language_slug == 'vi') {
-                                            echo 'Gọi điện';
-                                        } elseif ($language_slug == 'en') {
-                                            echo 'Call now';
-                                        } elseif ($language_slug == 'zh') {
-                                            echo '立即致电';
-                                        }
-                                        ?>
-                                    </a>
-                                    <a href="javascript:;" class="clinic-nearby-u-slider__item_action-item clinic-nearby-u-slider__item_action-book book-calendar" data-clinic="<?php echo get_sub_field('value_form_contact');?>">
-                                        <?php
-                                        if ($language_slug == 'vi') {
-                                            echo 'Đặt lịch';
-                                        } elseif ($language_slug == 'en') {
-                                            echo 'Book now';
-                                        } elseif ($language_slug == 'zh') {
-                                            echo '立即预订';
-                                        }
-                                        ?>
-                                    </a>
+                        <div class="clinic-nearby-u-slider__item">
+                            <a href="#" data-map="<?php echo get_sub_field('map_embed'); ?>" class="clinic-nearby-u-slider__item_img clinic-nearby-u-slider__item-map">
+                                <figure>
+                                    <img src="<?php echo get_sub_field('image') ?>" alt="<?php echo get_sub_field('name') ?>" />
+                                </figure>
+                            </a>
+                            <a href="#" data-map="<?php echo get_sub_field('map_embed'); ?>"
+                                class="clinic-nearby-u-slider__item_content clinic-nearby-u-slider__item-map">
+                                <div class="clinic-nearby-u-slider__item_title">
+                                    <?php echo get_sub_field('name') ?>
                                 </div>
+                                <div class="clinic-nearby-u-slider__item_subtitle">
+                                    <div class="clinic-nearby-u-slider__item_info d-flex align-items-start">
+                                        <img src="<?php bloginfo('wpurl'); ?>/wp-content/themes/m5_os/assets/images/os/icon-marked.svg"
+                                            alt="icon-marked">
+                                        <span><?php echo get_sub_field('address') ?></span>
+                                    </div>
+                                    <div class="clinic-nearby-u-slider__item_info d-flex align-items-start">
+                                        <img src="<?php bloginfo('wpurl'); ?>/wp-content/themes/m5_os/assets/images/os/icon-time.svg"
+                                            alt="icon-marked">
+                                        <span>
+                                            <?php echo get_sub_field('on_time') ?>
+                                        </span>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="clinic-nearby-u-slider__item_action d-flex justify-content-start">
+                                <a href="tel:<?php echo get_sub_field('number_phone') ?>"
+                                    class="clinic-nearby-u-slider__item_action-item clinic-nearby-u-slider__item_action-call">
+                                    <?php
+                                    if (pll_current_language('slug') == 'vi') {
+                                        echo 'Gọi điện';
+                                    }
+                                    if (pll_current_language('slug') == 'en') {
+                                        echo 'Call now';
+                                    }
+                                    if (pll_current_language('slug') == 'zh') {
+                                        echo '立即致电';
+                                    }
+                                    ?>
+                                </a>
+                                <a href="javascript:;" class="clinic-nearby-u-slider__item_action-item clinic-nearby-u-slider__item_action-book book-calendar" data-clinic="<?php echo get_sub_field('value_form_contact');?>" >
+                                    <?php
+                                    if (pll_current_language('slug') == 'vi') {
+                                        echo 'Đặt lịch';
+                                    }
+                                    if (pll_current_language('slug') == 'en') {
+                                        echo 'Book now';
+                                    }
+                                    if (pll_current_language('slug') == 'zh') {
+                                        echo '立即预订';
+                                    }
+                                    ?>
+                                </a>
                             </div>
+                        </div>
                         </div>
                     <?php endwhile; ?>
                 <?php endwhile; ?>
@@ -129,11 +142,11 @@
         </div>
         <div class="clinic-nearby-u__nav">
             <button type="button" class="bg-transparent border-0 clinic-nearby-u__prev">
-                <img src="<?php bloginfo('wpurl'); ?>/wp-content/themes/m5/assets/images/os/icon-next.svg"
+                <img src="<?php bloginfo('wpurl'); ?>/wp-content/themes/m5_os/assets/images/os/icon-next.svg"
                     alt="icon-next" />
             </button>
             <button type="button" class="bg-transparent border-0 clinic-nearby-u__next">
-                <img src="<?php bloginfo('wpurl'); ?>/wp-content/themes/m5/assets/images/os/icon-next.svg"
+                <img src="<?php bloginfo('wpurl'); ?>/wp-content/themes/m5_os/assets/images/os/icon-next.svg"
                     alt="icon-next" />
             </button>
         </div>
