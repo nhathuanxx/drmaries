@@ -607,18 +607,24 @@
 
     .os_listing_1 ul li a{
         font-family: 'Be Vietnam Pro', sans-serif;
-font-size: 16px;
-font-weight: 700;
-line-height: 24px;
-text-align: left;
-color: var(--Alias-Text-Primary-blue, #00ACEE) !important;
-
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+        text-align: left;
+        color: var(--Alias-Text-Primary-blue, #00ACEE) !important;
     }
 
     
     @media screen and (max-width: 991px) {
+        #modal_schedule_book {
+            padding-right: 0px !important;
+        }
         .book-now__custom {
             padding: 40px;
+        }
+        
+        .book-now__custom .modal-body {
+            padding: auto;
         }
         .book-now__custom-title {
             font-size: 48px;
@@ -639,13 +645,14 @@ color: var(--Alias-Text-Primary-blue, #00ACEE) !important;
         }
 
         .book-now__custom .form-book-exam {
-            padding: 0px;
+            padding: 0px 16px;
         }
     }
 
     @media screen and (max-width: 767px) {
         .book-now__custom {
             padding: 24px;
+            border-radius: 24px;
         }
         .book-now__custom-title {
             font-size: 40px;
@@ -665,6 +672,7 @@ color: var(--Alias-Text-Primary-blue, #00ACEE) !important;
     @media screen and (max-width: 575px) {
         .book-now__custom {
             padding: 16px;
+            border-radius: 24px;
         }
 
         .book-now__custom-title {
@@ -740,6 +748,11 @@ color: var(--Alias-Text-Primary-blue, #00ACEE) !important;
         top: 28px;
         left: -40px;
     }
+    @media screen and (max-width: 991px) {
+        #contact-bar {
+                right: 16px;
+        }
+    }
     /* end custom contact bar */
 
     @media screen and (max-width: 767px) {
@@ -752,11 +765,11 @@ color: var(--Alias-Text-Primary-blue, #00ACEE) !important;
     }
     .os_footer_address{
         font-family: 'Be Vietnam Pro', sans-serif;
-font-size: 16px;
-font-weight: 400;
-line-height: 24px;
-text-align: left;
-color: var(--Alias-Text-Neutral, #292929);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: left;
+        color: var(--Alias-Text-Neutral, #292929);
 
     }
     .os_footer_address p{

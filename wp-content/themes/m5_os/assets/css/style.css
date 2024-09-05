@@ -6334,7 +6334,7 @@ body {
 }
 
 /* custom menu 2 column */
-
+@media screen and (min-width: 992px) {
 	.dropdown-menu {
     	padding: 0 !important;
     	margin: 0 !important;
@@ -6448,6 +6448,7 @@ body {
         cursor: pointer;
     }
 
+}
 
 	/* custom icon menu Service */
 	#nav-item-6214 ul li:nth-child(1):before, #nav-item-6296 ul li:nth-child(1):before {
@@ -6488,6 +6489,12 @@ body {
     pointer-events: none;
     height: 24px;
     width: 24px;
+}
+
+@media screen and (max-width: 767px) {
+    .form-group-custom .icon-inside-input {
+        right: 0px;
+    }
 }
 
 
