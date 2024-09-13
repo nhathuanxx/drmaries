@@ -12,7 +12,7 @@ get_header(); ?>
                 ?>
                     <div class="item">
                         <figure class="item__img margin-0 home-page-img">
-                            <a href="<?php echo get_sub_field('cta_link', pll_current_language('slug')); ?>">
+                            <a href="javascript:;" class="book-calendar">
                                 <!-- <img src="<?php //echo get_sub_field('banner_image'); 
                                                 ?>" alt="slider banner"> -->
                                 <?php if (wp_is_mobile()) { ?>

@@ -227,14 +227,14 @@
         // add thêm content dưới menu level 2
 
         // menu giới thiệu
-        var ulElementAbout = document.querySelector('#nav-item-6207 ul');
+        var ulElementAbout = document.querySelector('#nav-item-4849 ul');
         if(ulElementAbout) {
             var newHtml = '<div class="menu-bonus"><div class="menu-bonus__content d-flex justify-content-between align-items-center"><div class="menu-bonus__content-title">Khám phá thêm trang web của chúng tôi có thể giúp phụ nữ chăm sóc sức khỏe của họ.</div><div class="menu-bonus__content-btn">Xem thêm</div></div></div>';
             ulElementAbout.insertAdjacentHTML('beforeend', newHtml);
         }
 
         // menu dịch vụ
-        var ulElementService = document.querySelector('#nav-item-6214 ul');
+        var ulElementService = document.querySelector('#nav-item-4711 ul');
         if(ulElementService) {
             var newHtml = '<div class="menu-bonus"><div class="menu-bonus__content d-flex justify-content-between align-items-center"><div class="menu-bonus__content-title">Khám phá chương trình chăm sóc sức khỏe độc ​​đáo của chúng tôi được tùy chỉnh dành cho phụ nữ, được thiết kế để nâng cao và duy trì sức khỏe cũng như tinh thần tổng thể của bạn.</div><div class="menu-bonus__content-btn">Xem thêm</div></div></div>';
             ulElementService.insertAdjacentHTML('beforeend', newHtml);

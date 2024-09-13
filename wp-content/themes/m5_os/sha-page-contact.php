@@ -283,6 +283,11 @@ get_footer(); ?>
         .contact-content .page-content-info__content {
             padding: 40px;
         }
+        
+        .clinic-nearby-u__nav_custom button img {
+            width: 32px;
+            height: 32px;
+        }
     }
     @media screen and (max-width: 767px) {
         .page-content-info__content .page-content-info__content-title {
@@ -299,6 +304,10 @@ get_footer(); ?>
         .page-content-info {
             margin-top: 40px;
         }
+        .clinic-nearby-u__nav_custom button img {
+            width: 32px;
+            height: 32px;
+        }
     }
 
     @media screen and (max-width: 575px) {
@@ -312,6 +321,10 @@ get_footer(); ?>
         }
         .page-content-info {
             margin-top: 40px;
+        }
+        .clinic-nearby-u__nav_custom button img {
+            width: 32px;
+            height: 32px;
         }
     }
     /* end  css for form contact*/

@@ -318,7 +318,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				<div class="header__menu__mobile__info">
 
 					
-
+					<a href="javascript:;" class="header__book btn btn-custom btn-secondary btn-secondary--gradient font-size-16 font-weight-bold book-calendar btn-box-shadow btn-h50 btn-i-lg-12 text-uppercase">
+						<span class="header__book-icon">
+							<!-- <i class="icon-calendar"></i> -->
+							<img class="icon-calendar" src="<?php bloginfo('wpurl'); ?>/wp-content/themes/m5_os/assets/images/os/icon-calendar.svg" alt="icon-calendar">
+						</span>
+						<span class="header__book-text"><?php echo get_field('book_an_appointment', pll_current_language('slug')); ?></span>
+					</a>
+					
+					<a href="tel:1900 55 88 82" class="custom-call-btn">
+						<div class="call-button">
+					    	<div class="header__book-icon">
+								<img src="<?php bloginfo('wpurl'); ?>/wp-content/themes/m5_os/assets/images/os/icon-phone.svg" alt="icon-calendar">
+					    	</div>
+					    	<div class="text">
+					    	    <span>Call us now!</span>
+					    	</div>
+						</div>
+						<span class="phone-number">1900 55 88 82</span>
+					</a>
+					
 					<div class="header__lang">
 
 						<?php if (!empty($translations)) : ?>
@@ -351,9 +370,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 							<p class="text-uppercase margin-0"><?php echo get_field('sub_title', pll_current_language('slug')); ?></p>
 						<?php endwhile; ?>
 					</div>
-					<a href="javascript:;" class="header__book btn btn-secondary btn-secondary--gradient font-size-16 font-weight-bold book-calendar btn-box-shadow btn-h50 btn-i-lg-12 text-uppercase">
-						<i class="icon-calendar"></i> <?php echo get_field('book_an_appointment', pll_current_language('slug')); ?>
-					</a>
 				</div>
 			</div>
 			<div class="header__icon__menu d-lg-none icon-menu-mobile">
