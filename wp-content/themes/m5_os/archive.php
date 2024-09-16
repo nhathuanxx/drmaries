@@ -72,6 +72,8 @@ $current_cat_description = $category->description;
 								'post_type' => 'post',
 								'paged' => $paged,
 								'posts_per_page' => 12,
+								'orderby'        => 'date',
+								'order'          => 'DESC'
 							);
 							$query = new WP_Query($args); ?>
 
@@ -178,7 +180,9 @@ $current_cat_description = $category->description;
 								'post_type' => 'post',
 								'paged' => $paged,
 								'posts_per_page' => 12,
-								'cat' => 76
+								'cat' => 76,
+								'orderby'        => 'date',
+								'order'          => 'DESC'
 							);
 							$query = new WP_Query($args); ?>
 
@@ -285,7 +289,9 @@ $current_cat_description = $category->description;
 								'post_type' => 'post',
 								'paged' => $paged,
 								'posts_per_page' => 12,
-								'cat' => 86
+								'cat' => 86,
+								'orderby'        => 'date',
+								'order'          => 'DESC'
 							);
 							$query = new WP_Query($args); ?>
 
@@ -392,7 +398,9 @@ $current_cat_description = $category->description;
 								'post_type' => 'post',
 								'paged' => $paged,
 								'posts_per_page' => 12,
-								'cat' => 88
+								'cat' => 88,
+								'orderby'        => 'date',
+								'order'          => 'DESC'
 							);
 							$query = new WP_Query($args); ?>
 
