@@ -229,20 +229,20 @@
         // menu giới thiệu
         var ulElementAbout = document.querySelector('#nav-item-4849 ul');
         if(ulElementAbout) {
-            var newHtml = '<div class="menu-bonus"><div class="menu-bonus__content d-flex justify-content-between align-items-center"><div class="menu-bonus__content-title">Khám phá thêm trang web của chúng tôi có thể giúp phụ nữ chăm sóc sức khỏe của họ.</div><div class="menu-bonus__content-btn">Xem thêm</div></div></div>';
+            var newHtml = '<div class="menu-bonus"><div class="menu-bonus__content d-flex justify-content-between align-items-center"><div class="menu-bonus__content-title">Khám phá thêm trang web của chúng tôi có thể giúp phụ nữ chăm sóc sức khỏe của họ.</div><a href="#" class="menu-bonus__content-btn">Xem thêm</a></div></div>';
             ulElementAbout.insertAdjacentHTML('beforeend', newHtml);
         }
 
         // menu dịch vụ
         var ulElementService = document.querySelector('#nav-item-4711 ul');
         if(ulElementService) {
-            var newHtml = '<div class="menu-bonus"><div class="menu-bonus__content d-flex justify-content-between align-items-center"><div class="menu-bonus__content-title">Khám phá chương trình chăm sóc sức khỏe độc ​​đáo của chúng tôi được tùy chỉnh dành cho phụ nữ, được thiết kế để nâng cao và duy trì sức khỏe cũng như tinh thần tổng thể của bạn.</div><div class="menu-bonus__content-btn">Xem thêm</div></div></div>';
+            var newHtml = '<div class="menu-bonus"><div class="menu-bonus__content d-flex justify-content-between align-items-center"><div class="menu-bonus__content-title">Khám phá chương trình chăm sóc sức khỏe độc ​​đáo của chúng tôi được tùy chỉnh dành cho phụ nữ, được thiết kế để nâng cao và duy trì sức khỏe cũng như tinh thần tổng thể của bạn.</div><a href="#" class="menu-bonus__content-btn">Xem thêm</a></div></div>';
             ulElementService.insertAdjacentHTML('beforeend', newHtml);
         }
 
         // menu Q&A
         // var ulElementQA = document.querySelector('#nav-item-6226 ul');
-        // var newHtml = '<div class="menu-bonus"><div class="menu-bonus__content d-flex justify-content-between align-items-center"><div class="menu-bonus__content-title">Đây là “Thư viện Giáo dục Phụ nữ” của chúng tôi, nơi phụ nữ có thể điều hướng qua các chủ đề đa dạng của chúng tôi, giúp người phụ nữ của chúng tôi sống với tâm hồn trong sáng.</div><div class="menu-bonus__content-btn">Xem thêm</div></div></div>';
+        // var newHtml = '<div class="menu-bonus"><div class="menu-bonus__content d-flex justify-content-between align-items-center"><div class="menu-bonus__content-title">Đây là “Thư viện Giáo dục Phụ nữ” của chúng tôi, nơi phụ nữ có thể điều hướng qua các chủ đề đa dạng của chúng tôi, giúp người phụ nữ của chúng tôi sống với tâm hồn trong sáng.</div><a href="#" class="menu-bonus__content-btn">Xem thêm</a></div></div>';
         // ulElementQA.insertAdjacentHTML('beforeend', newHtml);
 
         // end add thêm content dưới menu level 2
